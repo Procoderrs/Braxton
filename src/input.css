@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+
+
+@theme{
+  --font-display:"Syne","sans-serif";
+  --breakpoint-before-lg:62rem; /* 992px */
+  --breakpoint-before-sm:36rem;/* 576px */
+  --breakpoint-before-xl:75rem; /* 1200px */
+  --breakpoint-before-2xl:87.5rem; /* 1400px */
+  --breakpoint-before-3xl:93.75rem:/* 1500px */
+  --breakpoint--before-4xl:100rem;/* 1600px */
+}
+
+
+html {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+
+/* pre-animation before-main-content */
+.animate {
+    animation: cornerFlip 0.6s ease-in-out infinite;
+    transform-origin: top left; /* or top right for a different pivot */
+  }
+
+  @keyframes cornerFlip {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    
+    100% {
+      transform: rotate(90deg) scale(1);
+    }
+  }
+
+
+  /* flip vertical animation on alex walker grid-1  social media icons */
+
+ .flip-wrapper{
+  perspective: 800px;
+  width: 20px;
+  height: 20px;
+  position: relative;
+ }
+ .flip-inner{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.4s ease-in-out;
+  transform-style: preserve-3d;
+ }
+ .flip-wrapper:hover .flip-inner{
+  transform: rotateX(180deg);
+ }
+ .flip-face{
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+ }
+
+ .flip-face.back{
+  transform: rotateX(180deg);
+ }
