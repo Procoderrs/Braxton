@@ -46,3 +46,44 @@ html {
   @apply text-[#8b8a91] border border-transparent px-3 py-3 transition-all duration-300 hover:text-black dark:hover:text-[white]
 }
 
+
+.swiper {
+            width: 100%;
+            height: 100%;
+        }
+        .feedback-card {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        .swiper-slide-active .feedback-card {
+            transform: scale(1.05);
+        }
+        .swiper-button-prev, .swiper-button-next {
+            background: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            color: #4f46e5;
+            transition: all 0.3s ease;
+        }
+        .swiper-button-prev:hover, .swiper-button-next:hover {
+            background: #4f46e5;
+            color: white;
+        }
+        .swiper-button-prev::after, .swiper-button-next::after {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .star-rating i {
+            color: #d1d5db;
+        }
+        .star-rating i.active {
+            color: #fbbf24;
+        }
+.feedback-slide {
+    display: none;
+  }
+  .feedback-slide.active {
+    display: block;
+  }
