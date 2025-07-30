@@ -183,3 +183,30 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         initSlider();
+
+
+
+const spinText = document.getElementById("spinText");
+  let rotation = 0;
+  let isScrolling;
+  let spinning = false;
+
+  function startSpinning() {
+    if (spinning) return;
+    spinning = true;
+    function rotate() {
+      if (!spinning) return;
+      rotation += 4; // slow rotation
+      spinText.style.transform = `rotate(${rotation}deg)`;
+      requestAnimationFrame(rotate);
+    }
+    rotate();
+  }
+
+  window.addEventListener("scroll", () => {
+    startSpinning();
+    clearTimeout(isScrolling);
+    isScrolling = setTimeout(() => {
+      spinning = false;
+    }, 150); // Stop after 150ms of no scroll
+  });

@@ -100,4 +100,21 @@ html {
 .icon-svg.bounce-reverse {
     animation-name: bounce-twice-reverse;
 }
- 
+ @keyframes spinForward {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinBackward {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
