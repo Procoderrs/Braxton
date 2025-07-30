@@ -77,83 +77,92 @@ document.addEventListener("DOMContentLoaded", () => {
   sections.forEach(section => observer.observe(section));
 });
 
- const feedbacks = [
-      {
-        img: "./src/images/400x400_t01.webp",
-        name: "Alex Tomato",
-        pre:'Brand Manager in',
-        role: " instant Design",
-        
-        message: "lorem ipsum dollar emit lorem ipsum dollar emitlorem ipsum dollar emitlorem ipsum dollar emitlorem ipsum dollar emitlorem ipsum dollar emit lorem ipsum dollar emitlorem ipsum dollar emitlorem ipsum dollar emitlorem ipsum dollar emit",
-      },
-      {
-        img: "./src/images/400x400_t02.webp",
-        name: "Jenny Pineapple",
-        pre:'SEO in',
-        role: " creative people",
-       
-        message: "lorem ipsum dollar emit lorem ipsum dollar emitlorem ipsum dollar emitlorem ipsum dollar emitlorem ipsum dollar emitlorem ipsum dollar emit lorem ipsum dollar emitlorem ipsum dollar emitlorem ipsum dollar emitlorem ipsum dollar emit",
-      },
-    ];
-
-    const wrapper = document.getElementById("feedbackWrapper");
-
-    feedbacks.forEach((item,index)=>{
-      const slide=document.createElement('div')
-      slide.className=`feedback-slide ${index===0?"active":""}`;
-      slide.innerHTML=`
-      <div class="p-8 bg-[#e6ebf5] dark:bg-black">
-      <div class="flex gap-4 items-center mb-4">
-      <img src='${item.img}' alt="${item.name}" class=" w-32 h-32 rounded-2xl" />
-      <div class=" flex flex-col">  
-      <p class="font-semibold text-[26px]">${item.name} </p> 
-      <p class="text-sm text-gray-500"> ${item.role} </p>
-      <div class=" flex items-start  gap-1">
-      <i class="ri-star-s-line text-purple-500 w-3 h-3"></i>
-      <i class="ri-star-s-line text-purple-500 w-3 h-3"></i>
-      <i class="ri-star-s-line text-purple-500 w-3 h-3"></i>
-      <i class="ri-star-s-line text-purple-500 w-3 h-3"></i>
-      <i class="ri-star-s-line text-purple-500 w-3 h-3"></i>
-      </div>
-      </div>
-      </div>
-      <p class=" text-gray-700 "> ${item.message} </p>
-      `;
-      wrapper.appendChild(slide)
-    });
-    let currentIndex=0;
-    const slides=document.querySelectorAll('.feedback-slide')
 
 
-    function showSlide(index){
-      slides.forEach ((slidee,i)=>{
-     slidee.classList.toggle('active',i===index);
-      })
-    }
 
-    function nextSlide(){
-      currentIndex=(currentIndex+1)%slides.length;
-      showSlide(currentIndex);
-    }
-    function prevSlide(){
-      currentIndex=(currentIndex -1 +slides.length)% slides.length;
-      showSlide(currentIndex);
-    }
-    
-    document.getElementById('nextBtn').addEventListener('click',function(){
-      nextSlide();
-      resetAutoplay();
-    })
+   
 
-    document.getElementById('prevBtn').addEventListener('click',function(){
-      prevSlide();
-      resetAutoplay()
-    })
-    let autoPlay=setInterval(nextSlide,2000);
+   const testimonials = [
+          {
+            name: "Alex Tomato",
+            position: "Brand Manager",
+            company: "Instant Design",
+            stars: 5,
+            text: "lorem ipsum dollar sit amet lorem ipsum dollar sit amet lorem ipsum dollar sit amet lorem ipsum dollar sit amet lorem ipsum dollar sit amet lorem ipsum dollar sit ametlorem ipsum dollar sit amet lorem ipsum dollar sit amet lorem ipsum dollar sit amet",
+            img: "./src/images/400x400_t01.webp"
+          },
+          {
+            name: "Jenny Pineapple",
+            position: "SEO Specialist",
+            company: "Creative People",
+            stars: 5,
+           text: "lorem ipsum dollar sit amet lorem ipsum dollar sit amet lorem ipsum dollar sit amet lorem ipsum dollar sit amet lorem ipsum dollar sit amet lorem ipsum dollar sit ametlorem ipsum dollar sit amet lorem ipsum dollar sit amet lorem ipsum dollar sit amet",  
+          img: "./src/images/400x400_t02.webp"
+          },
+         
+        ];
 
-    function resetAutoplay(){
-      clearInterval(autoPlay);
-      autoPlay=setInterval(nextSlide,2000)
-    };
-    
-  
+        const feedbackWrapper = document.getElementById('feedbackWrapper');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        let currentIndex = 0;
+        let autoPlayInterval;
+        const slideDuration = 5000;
+
+        function initSlider() {
+          testimonials.forEach((t) => {
+            const slide = document.createElement('div');
+            slide.className = 'flex-shrink-0 w-full  flex flex-col justify-center';
+            slide.innerHTML = `
+              <div class=" rounded-2xl md:p-8 p-4 border-1 border-[#d1d5e0] ">
+                <div class="flex flex-row md:flex-row items-start gap-5 mb-6 ">
+                  <img src="${t.img}" alt="${t.name}" class="md:w-[100px] md:h-[100px] w-[50px] h-auto object-cover rounded-2xl " />
+                  <div class="flex-1 text-left">
+                    <h3 class="text-xl text-black dark:text-[#c7c6d3]  font-bold">${t.name}</h3>
+                    <p class="text-[#424550] dark:text-[#c7c6d3]  text-base"> <span class="font-thin dark:text-[#c7c6d3] text-[#424550]">${t.position}</span> in <span class="font-semibold dark:text-[#c7c6d3] text-black">${t.company}</span></p>
+                    <div class="flex justify-start gap-1 mt-2">
+                      ${'<i class="ri-star-fill text-transparent bg-clip-text bg-gradient-to-br from-[#aa70e0] to-[#7059e2] dark:from-[#e4b8bf] dark:to-[#cec4ef] text-lg"></i>'.repeat(t.stars)}
+                    </div>
+                  </div>
+                </div>
+                <p class="text-[#424550] dark:text-[#c7c6d3] text-lg leading-relaxed">${t.text}</p>
+                <div class=" mt-4"><span class="text-xl text-[#424550] font-bold">  <a href="/">Project Page</a> </span>  <span class="text-xl text-[#424550] font-bold"> <i class="ri-arrow-right-line"></i> </span></div>
+              </div>
+            `;
+            feedbackWrapper.appendChild(slide);
+          });
+
+          startAutoPlay();
+        }
+
+        function updateSlider() {
+          feedbackWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function nextSlide() {
+          currentIndex = (currentIndex + 1) % testimonials.length;
+          updateSlider();
+        }
+
+        function prevSlide() {
+          currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+          updateSlider();
+        }
+
+        function startAutoPlay() {
+          clearInterval(autoPlayInterval);
+          autoPlayInterval = setInterval(nextSlide, slideDuration);
+        }
+
+        prevBtn.addEventListener('click', () => {
+          prevSlide();
+          startAutoPlay();
+        });
+
+        nextBtn.addEventListener('click', () => {
+          nextSlide();
+          startAutoPlay();
+        });
+
+        initSlider();
