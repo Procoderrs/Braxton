@@ -7,6 +7,23 @@ setTimeout(() => {
 })
 
 
+// jump animation for icon
+document.querySelectorAll('.icon-container').forEach(container => {
+    const svg = container.querySelector('.icon-svg');
+ 
+    container.addEventListener('mouseenter', () => {
+        svg.classList.remove('bounce-reverse');
+        void svg.offsetWidth; // Reset animation
+        svg.classList.add('bounce');
+    });
+ 
+    container.addEventListener('mouseleave', () => {
+        svg.classList.remove('bounce');
+        void svg.offsetWidth; // Reset animation
+        svg.classList.add('bounce-reverse');
+    });
+});
+
 /* checking dark and light theme */
 
 var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');

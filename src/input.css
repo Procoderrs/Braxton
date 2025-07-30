@@ -46,6 +46,7 @@ html {
   @apply text-[#8b8a91] border border-transparent px-3 py-3 transition-all duration-300 hover:text-black dark:hover:text-[white]
 }
 
+/* Bounce forward */
 @keyframes bounce-twice {
     0% {
         transform: translateY(0);
@@ -63,7 +64,26 @@ html {
         transform: translateY(0);
     }
 }
-/* Add class to trigger forward */
+ 
+/* Bounce reverse */
+@keyframes bounce-twice-reverse {
+    0% {
+        transform: translateY(0);
+    }
+ 
+    60% {
+        transform: translateY(200%);
+    }
+ 
+    61% {
+        transform: translateY(-200%);
+    }
+ 
+    100% {
+        transform: translateY(0);
+    }
+}
+ 
 .icon-svg {
     transition: transform 0.3s ease;
     animation-duration: 0.4s;
@@ -75,3 +95,9 @@ html {
 .icon-svg.bounce {
     animation-name: bounce-twice;
 }
+ 
+/* Add class to trigger reverse */
+.icon-svg.bounce-reverse {
+    animation-name: bounce-twice-reverse;
+}
+ 
