@@ -78,7 +78,7 @@
   <!-- main-content-loaded -->
   <div id="main-content" class=" hidden    w-full   ">
     <!-- Home-component -->
-    <div class="relative  ">
+    <div class="relative   ">
       <div class=" before-lg:pl-[30px] before-lg:pr-[20px] before-xl:pl-[60px]  before-xl:pr-[60px] px-4">
 
         <!-- splitting banner in two contaniners -->
@@ -199,7 +199,7 @@
 
               </ul>
               <button
-                class="text-white  icon-container xl:hover:scale-110 transition-all duration-200 ease-in-out overflow-hidden  dark:text-black bg-gradient-to-br   dark:from-primary-dark dark:to-secondary-dark    from-primary-light to-secondary-light mt-2 rounded-2xl font-bold px-6 py-3">
+                class="text-white  icon-container xl:hover:scale-110 transition-all duration-200 ease-in-out overflow-hidden  dark:text-black bg-gradient-to-br   dark:from-primary-dark dark:to-secondary-dark    from-btn-primary-light to-btn-secondary-light mt-2 rounded-2xl font-bold px-6 py-3">
                 <p class="icon-svg translate-y-0">
                   Let's Work together
                 </p>
@@ -233,26 +233,26 @@
                   </li>
                 </ul>
                 <!-- flex-text-list-items-navigation-before-1200 -->
-                <ul
+                <ul id="navbar"
                   class="gap-3 items-center  before-lg:justify-start  flex before-xl:hidden w-auto before-lg:w-full flex-[1]">
-                  <li class="w-7 h-7 rounded-full bg-black dark:bg-white flex items-center justify-center p-1"><a
-                      href="/">
+                  <li data-link="home" class=" nav-item w-7 h-7 rounded-full  flex items-center justify-center p-1"><a
+                      href="#home">
                       <i class="ri-home-line dark:text-black text-white"></i> </a>
                   </li>
-                  <li class="w-7 h-7 rounded-full bg-black dark:bg-white flex items-center justify-center p-1"><a
-                      href="/">
+                  <li data-link="portfolio" class=" nav-item w-7 h-7 rounded-full  flex items-center justify-center p-1"><a
+                      href="#portfolio">
                       <i class="ri-layout-grid-line dark:text-black text-white"></i> </a>
                   </li>
-                  <li class="w-7 h-7 rounded-full bg-black dark:bg-white flex items-center justify-center p-1"><a
-                      href="/">
+                  <li data-link="about"  class=" nav-item w-7 h-7 rounded-full  flex items-center justify-center p-1"><a
+                      href="#about">
                       <i class="ri-user-line dark:text-black text-white"></i> </a>
                   </li>
-                  <li class="w-7 h-7 rounded-full bg-black dark:bg-white flex items-center justify-center p-1"><a
-                      href="/">
+                  <li  data-link="resume"  class=" nav-item w-7 h-7 rounded-full  flex items-center justify-center p-1"><a
+                      href="#resume">
                       <i class="ri-message-2-line dark:text-black text-white"></i> </a>
                   </li>
-                  <li class="w-7 h-7 rounded-full bg-black dark:bg-white flex items-center justify-center p-1"><a
-                      href="/">
+                  <li data-link="contact-us" class=" nav-item w-7 h-7 rounded-full  flex items-center justify-center p-1"><a
+                      href="#contact">
                       <i class="ri-mail-line dark:text-black text-white"></i> </a>
                   </li>
                 </ul>
@@ -275,19 +275,18 @@
                   </button>
                   <button
                     class=" icon-container xl:hover:scale-110   transition-all duration-200 ease-in-out overflow-hidden text-white dark:text-black bg-gradient-to-br   dark:from-primary-dark
-              dark:to-secondary-dark    from-primary-light to-secondary-light rounded-full px-3 py-3   gap-2 flex font-bold w-full ">
+              dark:to-secondary-dark    from-btn-primary-light to-btn-secondary-light rounded-full px-3 py-3    gap-2 flex font-bold w-full ">
                     <p class="hidden before-lg:inline icon-svg translate-y-0" >Let's Talk
-
-<i class="ri-message-2-line icon-svg translate-y-0"></i>
+                       <i class="ri-message-2-line hidden before-lg:inline icon-svg translate-y-0"></i>
                     </p>
-                    <span></span>
+                    <span> <i class="ri-message-2-line icon-svg before-lg:hidden translate-y-0"></i></span>
                   </button>
                 </div>
               </header>
             </div>
             <!-- hero Section -->
             <section id="home" data-section
-              class="before-2xl:h-[calc(100vh-76px)] min-h-screen before-lg:flex before-2xl:items-end relative">
+              class="before-2xl:h-[calc(100vh-76px)]  min-h-screen before-lg:flex before-2xl:items-end relative overflow-hidden">
               <div class="before-lg:absolute bottom-18 xl:-mr-[30px] before-lg:right-4 z-[50] ">
                     <div class=" w-[180px] h-[180px] flex items-center justify-center">
                       <!-- SVG Circle with Rotating Text -->
@@ -392,7 +391,7 @@
             <!-- hero section-end -->
 
             <!-- portfolio-section-start -->
-            <section id="portfolio" data-section class="pt-18 pb-10 z-0">
+            <section id="portfolio" data-section class="pt-18 pb-10 z-0 ">
               <div class="  border border-section-badge dark:border-border-dark w-fit px-3 py-2  rounded-2xl ">
                 <p>
                   <span class="dark:text-text-dark text-text-light"> <svg xmlns="http://www.w3.org/2000/svg"
@@ -562,14 +561,14 @@
                 <div class="md:w-1/3 w-full md:px-3.5 ">
                   <!-- single-item-inner-div -->
                   <div
-                    class="p-[30px] border border-section-badge rounded-2xl flex items-center text-center justify-center flex-col">
+                    class="px-[30px] py-[24px] border border-section-badge rounded-2xl flex items-center text-center justify-center flex-col">
                     <p
                       class="text-[60px]   lining-nums font-bold text-transparent bg-clip-text bg-gradient-to-br from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark">
                       <span class="">2</span> <span
                         class=" text-transparent bg-clip-text bg-gradient-to-br from-primary-light  to-secondary-light dark:from-primary-dark dark:to-secondary-dark -ml-4">+</span>
                     </p>
                     <p
-                      class="font-bold md:text-sm  xl:text-base  text-black dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-primary-dark  dark:to-secondary-dark ">
+                      class="font-bold md:text-sm  xl:text-base  text-black leading-4 dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-primary-dark  dark:to-secondary-dark ">
                       Years of experience</p>
                   </div>
                 </div>
@@ -608,7 +607,7 @@
                     <span>was not otherwise than what you had been would have appeared to them to be otherwise.</span>
                   </p>
                   <button
-                    class=" icon-container xl:hover:scale-110 transition-all duration-200 ease-in-out overflow-hidden flex items-center cursor-pointer w-full before-sm:w-fit justify-center gap-2 px-6 py-2 rounded-4xl font-bold border border-border-dark dark:text-black    bg-transparent bg-gradient-to-br dark:from-primary-dark dark:to-secondary-dark text-text-dark from-primary-light to-secondary-light">
+                    class=" icon-container xl:hover:scale-110 transition-all duration-200 ease-in-out overflow-hidden flex items-center cursor-pointer w-full before-sm:w-fit justify-center gap-2 px-6 py-2 rounded-4xl font-bold border border-border-dark dark:text-black    bg-transparent bg-gradient-to-br dark:from-primary-dark dark:to-secondary-dark text-text-dark from-btn-primary-light to-btn-secondary-light">
                     <p class="icon-svg translate-y-0">Download CV
                     <i class="ri-download-2-fill w-4 h-4 -mt-1 icon-svg translate-y-0"></i>
 
@@ -784,7 +783,7 @@
             </section>
             <!-- About Me section-end -->
 
-            <section id="resume" data-section class="pt-28 pb-10 z-0">
+            <section id="resume" data-section class="pt-28 pb-10 z-0 ">
               <div class="">
                 <div class="  border border-section-badge dark:border-border-dark w-fit px-3 py-2  rounded-2xl ">
                   <p>
@@ -834,7 +833,7 @@
                       </div>
                       <!-- details-block -->
                       <div class="md:w-5/12">
-                        <h5 class="pr-3 text-[22px] font-bold text-text-light dark:text-text-inside-imgs">Drawing
+                        <h5 class="pr-3 text-[22px] font-bold text-text-portfolio-section dark:text-text-inside-imgs">Drawing
                           Concentration
                         </h5>
                         <p class="text-[15px]  text-text-light dark:text-text-inside-imgs mt-[3px]"> <span>Course
@@ -1142,7 +1141,7 @@
             </section>
 
             <!-- Contact-us-section start -->
-            <section class="pt-28 pb-10 z-0">
+            <section  id="contact" data-section="" class="pt-28 pb-10 z-0 ">
               <div class="">
                 <div class="  mb-8 border border-section-badge dark:border-border-dark w-fit px-3 py-2  rounded-2xl ">
                   <p>

@@ -90,7 +90,6 @@ const svgs = document.querySelectorAll("[data-speed]");
   });
  
 
-/* interaction observer to observer  every section comes into view and  */
 document.addEventListener("DOMContentLoaded", () => {
   const navItems = document.querySelectorAll('.nav-item');
   const sections = document.querySelectorAll('section[data-section]');
@@ -102,20 +101,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
         navItems.forEach((item) => {
           if (item.dataset.link === id) {
-            item.classList.add('active');   // Add border
+            if (window.innerWidth < 992) {
+              item.classList.add('bg-black', 'p-1');
+              item.classList.remove('active');
+            } else {
+              item.classList.add('active');
+              item.classList.remove('bg-black', 'p-1');
+            }
           } else {
-            item.classList.remove('active'); // Remove border
+            item.classList.remove('active', 'bg-black', 'p-1');
           }
         });
       }
     });
   }, {
-    threshold: 0 // section should be 40% visible
+    threshold: 0
   });
 
   sections.forEach(section => observer.observe(section));
 });
-
 
 
 
@@ -246,3 +250,6 @@ window.addEventListener("scroll", () => {
     spinning = false;
   }, 150);
 });
+
+
+
