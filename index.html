@@ -79,7 +79,7 @@
   <div id="main-content" class=" hidden    w-full   ">
     <!-- Home-component -->
     <div class="relative  ">
-      <div class=" before-lg:pl-[30px] before-xl:pl-[60px] md:px-12  before-lg:pr-0 before-xl:pr-[60px] px-4">
+      <div class=" before-lg:pl-[30px] before-lg:pr-[20px] before-xl:pl-[60px]  before-xl:pr-[60px] px-4">
 
         <!-- splitting banner in two contaniners -->
         <div class="flex flex-col before-lg:flex-row justify-between items-start  ">
@@ -199,8 +199,10 @@
 
               </ul>
               <button
-                class="text-white  dark:text-black bg-gradient-to-br   dark:from-primary-dark dark:to-secondary-dark    from-primary-light to-secondary-light mt-2 rounded-2xl font-bold px-6 py-3">
-                Let's Work Together!
+                class="text-white  icon-container xl:hover:scale-110 transition-all duration-200 ease-in-out overflow-hidden  dark:text-black bg-gradient-to-br   dark:from-primary-dark dark:to-secondary-dark    from-primary-light to-secondary-light mt-2 rounded-2xl font-bold px-6 py-3">
+                <p class="icon-svg translate-y-0">
+                  Let's Work together
+                </p>
               </button>
             </div>
           </div>
@@ -272,10 +274,13 @@
                     </svg>
                   </button>
                   <button
-                    class="text-white dark:text-black bg-gradient-to-br   dark:from-primary-dark
+                    class=" icon-container xl:hover:scale-110   transition-all duration-200 ease-in-out overflow-hidden text-white dark:text-black bg-gradient-to-br   dark:from-primary-dark
               dark:to-secondary-dark    from-primary-light to-secondary-light rounded-full px-3 py-3   gap-2 flex font-bold w-full ">
-                    <span class="hidden before-lg:inline">Let's Talk</span>
-                    <span><i class="ri-message-2-line "></i></span>
+                    <p class="hidden before-lg:inline icon-svg translate-y-0" >Let's Talk
+
+<i class="ri-message-2-line icon-svg translate-y-0"></i>
+                    </p>
+                    <span></span>
                   </button>
                 </div>
               </header>
@@ -283,7 +288,7 @@
             <!-- hero Section -->
             <section id="home" data-section
               class="before-2xl:h-[calc(100vh-76px)] min-h-screen before-lg:flex before-2xl:items-end relative">
-              <div class="before-lg:absolute bottom-18 -mr-[30px] before-lg:right-4 z-[50] ">
+              <div class="before-lg:absolute bottom-18 xl:-mr-[30px] before-lg:right-4 z-[50] ">
                     <div class=" w-[180px] h-[180px] flex items-center justify-center">
                       <!-- SVG Circle with Rotating Text -->
                       <svg viewBox="0 0 300 300" id="spinText" class="w-[180px]  h-[180px] absolute" fill="none">
@@ -298,20 +303,29 @@
                       </svg>
 
                       <!-- Center "A" Button -->
-                      <button class="z-0  flex items-center text-black dark:text-text-dark justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36"
+                       <div
+                            class="icon-container xl:hover:scale-110 transition-all duration-200 ease-in-out overflow-hidden cursor-pointer ">
+                           <svg  class="icon-svg z-0 text-black dark:text-text-dark  translate-y-0 flex items-center justify-center" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36"
                           fill="currentColor">
                           <path fill="none" d="M0 0h24v24H0z"></path>
                           <path
                             d="M13.0001 1.99974L11.0002 1.9996L11.0002 18.1715L7.05044 14.2218L5.63623 15.636L12.0002 22L18.3642 15.636L16.9499 14.2218L13.0002 18.1716L13.0001 1.99974Z">
                           </path>
                         </svg>
-                      </button>
+                        </div>
+
+
+
+<!-- 
+                      
+                         
+-->
+
                     </div>
                   </div>
               <div class=" before-2xl:bottom-0 ">
                 <div
-                  class=" mt-12 before-lg:mt-32 border border-[#d1d5e0] mb-5 dark:border-border-dark w-fit px-3 py-2  rounded-2xl ">
+                  class=" mt-12 before-lg:mt-36 border border-[#d1d5e0] mb-5 dark:border-border-dark w-fit px-3 py-2  rounded-2xl ">
                   <p>
                     <span class="dark:text-text-dark text-text-light"> <svg xmlns="http://www.w3.org/2000/svg"
                         class="inline" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13"
@@ -335,7 +349,7 @@
                   <div
                     class="flex flex-col before-sm:flex-row before-sm:items-center items-start before-sm:justify-start w-full gap-5 pt-5">
                     <!-- My Works Button -->
-                    <button class="flex items-center  justify-center gap-2 px-6 py-2 rounded-4xl font-bold 
+                    <button class=" icon-container xl:hover:scale-110 transition-all duration-200 ease-in-out overflow-hidden  flex items-center  justify-center gap-2 px-6 py-2 rounded-4xl font-bold 
          border border-border-light dark:border-border-dark
 
          before-lg:text-text-light before-lg:dark:text-text-dark
@@ -348,28 +362,27 @@
         
          text-[#e9e9f1] before-lg:w-fit w-full  ">
 
-                      <span>My works</span>
-                      <span>
-                        <i class="ri-layout-grid-line"></i>
-
-                      </span>
-                      <span>
-                      </span>
+                      <p class="icon-svg translate-y-0">My works
+         <i class="ri-layout-grid-line icon-svg translate-y-0"></i>
+                      </p>
+                     
                     </button>
 
 
 
                     <!-- Download CV Button -->
-                    <button class="flex items-center  justify-center gap-2 px-6 py-2 rounded-4xl font-bold 
-         border border-0 dark:border-border-dark
+                    <button class=" icon-container xl:hover:scale-110 transition-all  duration-200 ease-in-out overflow-hidden flex items-center  justify-center gap-2 px-6 py-2 rounded-4xl font-bold 
+         border border-transparent dark:border-border-dark
 
          before-lg:text-text-light before-lg:dark:text-text-dark 
          
 
        
          text-black before-lg:w-fit w-full">
-                      <span>Download CV</span>
-                      <i class="ri-download-2-line"></i>
+                      <p class="icon-svg translate-y-0">Download CV
+<i class="ri-download-2-line icon-svg translate-y-0"></i>
+                      </p>
+                      
                     </button>
                   </div>
                   
@@ -577,7 +590,7 @@
                   </div>
                 </div>
               </div>
-              <div class="grid md:grid-cols-[70%_30%] grid-cols-1 mt-[30px] mb-32 pt-[20px]">
+              <div class="grid before-xl:grid-cols-[70%_30%] grid-cols-1 mt-[30px] mb-32 pt-[20px]">
                 <!-- grid-1-paragraphs -->
                 <div>
                   <p
@@ -595,9 +608,11 @@
                     <span>was not otherwise than what you had been would have appeared to them to be otherwise.</span>
                   </p>
                   <button
-                    class="flex items-center cursor-pointer w-full before-sm:w-fit justify-center gap-2 px-6 py-2 rounded-4xl font-bold border border-border-dark dark:text-black   transition-colors duration-500 bg-transparent bg-gradient-to-br dark:from-primary-dark dark:to-secondary-dark text-text-dark from-primary-light to-secondary-light">
-                    <span>Download CV</span>
-                    <i class="ri-download-2-fill w-4 h-4 -mt-1"></i>
+                    class=" icon-container xl:hover:scale-110 transition-all duration-200 ease-in-out overflow-hidden flex items-center cursor-pointer w-full before-sm:w-fit justify-center gap-2 px-6 py-2 rounded-4xl font-bold border border-border-dark dark:text-black    bg-transparent bg-gradient-to-br dark:from-primary-dark dark:to-secondary-dark text-text-dark from-primary-light to-secondary-light">
+                    <p class="icon-svg translate-y-0">Download CV
+                    <i class="ri-download-2-fill w-4 h-4 -mt-1 icon-svg translate-y-0"></i>
+
+                    </p>
                   </button>
                 </div>
                 <!-- grid-1-end -->
