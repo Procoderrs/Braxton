@@ -79,7 +79,7 @@
   <div id="main-content" class=" hidden    w-full   ">
     <!-- Home-component -->
     <div class="relative  ">
-      <div class=" before-lg:pl-[60px] md:px-12  before-lg:pr-[30px] px-4">
+      <div class=" before-lg:pl-[30px] before-xl:pl-[60px] md:px-12  before-lg:pr-0 before-xl:pr-[60px] px-4">
 
         <!-- splitting banner in two contaniners -->
         <div class="flex flex-col before-lg:flex-row justify-between items-start  ">
@@ -199,7 +199,7 @@
 
               </ul>
               <button
-                class="text-white  dark:text-black bg-gradient-to-br   dark:from-primary-dark dark:to-secondary-dark    from-primary-light to-secondary-light mt-2 rounded-2xl font-bold p-3">
+                class="text-white  dark:text-black bg-gradient-to-br   dark:from-primary-dark dark:to-secondary-dark    from-primary-light to-secondary-light mt-2 rounded-2xl font-bold px-6 py-3">
                 Let's Work Together!
               </button>
             </div>
@@ -282,22 +282,48 @@
             </div>
             <!-- hero Section -->
             <section id="home" data-section
-              class="before-2xl:h-[calc(100vh-76px)] h-screen before-lg:flex before-2xl:items-end relative">
+              class="before-2xl:h-[calc(100vh-76px)] min-h-screen before-lg:flex before-2xl:items-end relative">
+              <div class="before-lg:absolute bottom-18 -mr-[30px] before-lg:right-4 z-[50] ">
+                    <div class=" w-[180px] h-[180px] flex items-center justify-center">
+                      <!-- SVG Circle with Rotating Text -->
+                      <svg viewBox="0 0 300 300" id="spinText" class="w-[180px]  h-[180px] absolute" fill="none">
+                        <defs>
+                          <path id="circlePath" d="M150 150 m-85,0 a85,85 0 1,1 170,0 a85,85 0 1,1 -170,0" />
+                        </defs>
+                        <text class="dark:fill-white fill-black font-bold text-[18px] -tracking-[4px] uppercase">
+                          <textPath href="#circlePath" startOffset="0" textLength="628">
+                            scroll for more * scroll for more * scroll for
+                          </textPath>
+                        </text>
+                      </svg>
+
+                      <!-- Center "A" Button -->
+                      <button class="z-0  flex items-center text-black dark:text-text-dark justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36"
+                          fill="currentColor">
+                          <path fill="none" d="M0 0h24v24H0z"></path>
+                          <path
+                            d="M13.0001 1.99974L11.0002 1.9996L11.0002 18.1715L7.05044 14.2218L5.63623 15.636L12.0002 22L18.3642 15.636L16.9499 14.2218L13.0002 18.1716L13.0001 1.99974Z">
+                          </path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
               <div class=" before-2xl:bottom-0 ">
                 <div
-                  class=" mt-12 before-lg:mt-32 border border-[#d1d5e0] dark:border-border-dark w-fit px-3 py-2  rounded-2xl ">
+                  class=" mt-12 before-lg:mt-32 border border-[#d1d5e0] mb-5 dark:border-border-dark w-fit px-3 py-2  rounded-2xl ">
                   <p>
-                    <span class="dark:text-secondary-dark text-text-light"> <svg xmlns="http://www.w3.org/2000/svg"
+                    <span class="dark:text-text-dark text-text-light"> <svg xmlns="http://www.w3.org/2000/svg"
                         class="inline" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13"
                         fill="currentColor">
                         <path fill="text-[#cec4cf]" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
                   C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
                   C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"></path>
                       </svg></span>
-                    <span class="dark:text-secondary-dark text-sm text-text-light font-bold">Let's meet!</span>
+                    <span class="dark:text-text-dark text-sm text-text-light font-bold">Let's meet!</span>
                   </p>
                 </div>
-                <p class=" before-lg:text-[50px] text-wrap   text-[35px] before-xl:text-[60px] leading-[72px] before-xl:w-[700px] pb-8    font-bold  before-lg:w-[560px] w-[320px] md:w-full text-transparent bg-clip-text bg-gradient-to-br 
+                <p class=" before-lg:text-[50px] text-wrap   text-[35px] before-xl:text-[60px] leading-[68px] before-xl:w-[700px] pb-8    font-bold  before-lg:w-[560px] w-[320px] md:w-full text-transparent bg-clip-text bg-gradient-to-br 
             from-primary-light to-secondary-light
             dark:from-primary-dark dark:to-secondary-dark ">
                   I'm Alex Walker Digital designers and illustrator.</p>
@@ -316,8 +342,10 @@
          
 
         bg-gradient-to-br from-primary-light to-secondary-light before-lg:bg-gradient-to-br before-lg:from-transparent 
-        dark:from-primary-dark dark:to-secondary-dark 
         before-lg:to-transparent
+        before-lg:dark:from-transparent before-lg:dark:to-transparent
+        dark:from-primary-dark dark:to-secondary-dark 
+        
          text-[#e9e9f1] before-lg:w-fit w-full  ">
 
                       <span>My works</span>
@@ -333,7 +361,7 @@
 
                     <!-- Download CV Button -->
                     <button class="flex items-center  justify-center gap-2 px-6 py-2 rounded-4xl font-bold 
-         border border-border-light dark:border-border-dark
+         border border-0 dark:border-border-dark
 
          before-lg:text-text-light before-lg:dark:text-text-dark 
          
@@ -344,32 +372,7 @@
                       <i class="ri-download-2-line"></i>
                     </button>
                   </div>
-                  <div class="before-lg:absolute before-lg:bottom-24 before-lg:right-4 z-[50]">
-                    <div class=" w-[180px] h-[180px] flex items-center justify-center">
-                      <!-- SVG Circle with Rotating Text -->
-                      <svg viewBox="0 0 300 300" id="spinText" class="w-[180px] mr-6 h-[180px] absolute" fill="none">
-                        <defs>
-                          <path id="circlePath" d="M150 150 m-85,0 a85,85 0 1,1 170,0 a85,85 0 1,1 -170,0" />
-                        </defs>
-                        <text class="dark:fill-white fill-black font-bold text-[18px] -tracking-[4px] uppercase">
-                          <textPath href="#circlePath" startOffset="0" textLength="628">
-                            scroll for more * scroll for more * scroll for
-                          </textPath>
-                        </text>
-                      </svg>
-
-                      <!-- Center "A" Button -->
-                      <button class="z-0 mr-6 flex items-center text-black dark:text-text-dark justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36"
-                          fill="currentColor">
-                          <path fill="none" d="M0 0h24v24H0z"></path>
-                          <path
-                            d="M13.0001 1.99974L11.0002 1.9996L11.0002 18.1715L7.05044 14.2218L5.63623 15.636L12.0002 22L18.3642 15.636L16.9499 14.2218L13.0002 18.1716L13.0001 1.99974Z">
-                          </path>
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
             </section>
@@ -379,13 +382,13 @@
             <section id="portfolio" data-section class="pt-18 pb-10 z-0">
               <div class="  border border-section-badge dark:border-border-dark w-fit px-3 py-2  rounded-2xl ">
                 <p>
-                  <span class="dark:text-secondary-dark text-text-light"> <svg xmlns="http://www.w3.org/2000/svg"
+                  <span class="dark:text-text-dark text-text-light"> <svg xmlns="http://www.w3.org/2000/svg"
                       class="inline" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13" fill="currentColor">
                       <path fill="text-[#cec4cf]" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
                   C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
                   C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"></path>
                     </svg></span>
-                  <span class="dark:text-secondary-dark font-bold text-sm text-text-light ">Portfolio</span>
+                  <span class="dark:text-text-dark font-bold text-sm text-text-light ">Portfolio</span>
                 </p>
               </div>
               <div>
@@ -507,13 +510,13 @@
             <section id="about" data-section class="pt-28 pb-10 z-0">
               <div class="  border border-section-badge dark:border-border-dark w-fit px-3 py-2  rounded-2xl ">
                 <p>
-                  <span class="dark:text-secondary-dark text-text-light"> <svg xmlns="http://www.w3.org/2000/svg"
+                  <span class="dark:text-text-dark text-text-light"> <svg xmlns="http://www.w3.org/2000/svg"
                       class="inline" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13" fill="currentColor">
                       <path fill="text-[#cec4cf]" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
                   C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
                   C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"></path>
                     </svg></span>
-                  <span class="dark:text-secondary-dark font-bold text-sm text-text-light">About Me</span>
+                  <span class="dark:text-text-dark font-bold text-sm text-text-light">About Me</span>
                 </p>
               </div>
               <div>
@@ -777,7 +780,7 @@
                   C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
                   C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"></path>
                       </svg></span>
-                    <span class="dark:text-secondary-dark font-bold text-text-light text-sm">Resume</span>
+                    <span class="dark:text-text-dark font-bold text-text-light text-sm">Resume</span>
                   </p>
 
 
@@ -1084,13 +1087,13 @@
             <section>
               <div class="  border border-section-badge dark:border-border-dark w-fit px-3 py-2  rounded-2xl mb-2 ">
                 <p>
-                  <span class="dark:text-secondary-dark text-text-light"> <svg xmlns="http://www.w3.org/2000/svg"
+                  <span class="dark:text-text-dark text-text-light"> <svg xmlns="http://www.w3.org/2000/svg"
                       class="inline" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13" fill="currentColor">
                       <path fill="text-[#cec4cf]" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
                   C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
                   C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"></path>
                     </svg></span>
-                  <span class="dark:text-paragraph-content font-bold text-text-light">Testimonials</span>
+                  <span class="dark:text-text-dark font-bold text-text-light">Testimonials</span>
                 </p>
 
 
@@ -1128,14 +1131,14 @@
               <div class="">
                 <div class="  mb-8 border border-section-badge dark:border-border-dark w-fit px-3 py-2  rounded-2xl ">
                   <p>
-                    <span class="dark:text-paragraph-content text-text-light"> <svg xmlns="http://www.w3.org/2000/svg"
+                    <span class="dark:text-text-dark text-text-light"> <svg xmlns="http://www.w3.org/2000/svg"
                         class="inline" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13"
                         fill="currentColor">
                         <path fill="text-[#cec4cf]" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
                   C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
                   C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"></path>
                       </svg></span>
-                    <span class="dark:text-paragraph-content font-bold text-text-light">Contact</span>
+                    <span class="dark:text-text-dark font-bold text-text-light">Contact</span>
                   </p>
                 </div>
                 <div class="mb-12">

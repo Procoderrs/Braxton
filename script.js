@@ -209,26 +209,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 const spinText = document.getElementById("spinText");
-  let rotation = 0;
-  let isScrolling;
-  let spinning = false;
+let rotation = 0;
+let lastScrollY = window.scrollY;
+let isScrolling;
+let spinning = false;
+let direction = 1; // 1 for down, -1 for up
 
-  function startSpinning() {
-    if (spinning) return;
-    spinning = true;
-    function rotate() {
-      if (!spinning) return;
-      rotation += 4; // slow rotation
-      spinText.style.transform = `rotate(${rotation}deg)`;
-      requestAnimationFrame(rotate);
-    }
-    rotate();
+function startSpinning() {
+  if (spinning) return;
+  spinning = true;
+
+  function rotate() {
+    if (!spinning) return;
+
+    // Rotate based on direction
+    rotation += 4 * direction;
+    spinText.style.transform = `rotate(${rotation}deg)`;
+
+    requestAnimationFrame(rotate);
   }
 
-  window.addEventListener("scroll", () => {
-    startSpinning();
-    clearTimeout(isScrolling);
-    isScrolling = setTimeout(() => {
-      spinning = false;
-    }, 150); // Stop after 150ms of no scroll
-  });
+  rotate();
+}
+
+window.addEventListener("scroll", () => {
+  const currentScrollY = window.scrollY;
+
+  // Determine direction
+  direction = currentScrollY > lastScrollY ? 1 : -1;
+  lastScrollY = currentScrollY;
+
+  startSpinning();
+
+  clearTimeout(isScrolling);
+  isScrolling = setTimeout(() => {
+    spinning = false;
+  }, 150);
+});
