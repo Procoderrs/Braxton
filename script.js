@@ -101,15 +101,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
         navItems.forEach((item) => {
           if (item.dataset.link === id) {
-            if (window.innerWidth < 992) {
+            // First, remove all previously added classes
+            item.classList.remove('active', 'active-1', 'active-2');
+
+            const width = window.innerWidth;
+
+            if (width < 992) {
               item.classList.add('bg-black', 'p-1');
-              item.classList.remove('active');
+            } else if (width >= 992 && width < 1200) {
+              item.classList.add('active-1');
             } else {
               item.classList.add('active');
-              item.classList.remove('bg-black', 'p-1');
             }
+
           } else {
-            item.classList.remove('active', 'bg-black', 'p-1');
+            item.classList.remove('active', 'active-1', 'bg-black', 'p-1', 'border', 'border-white', 'rounded-2xl');
           }
         });
       }
@@ -120,6 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   sections.forEach(section => observer.observe(section));
 });
+
 
 
 
