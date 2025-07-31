@@ -15,12 +15,12 @@
   <title>Document</title>
 </head>
 
-<body class="font-display bg-[#e6ebf5] dark:bg-[#121212] ">
+<body class="font-display bg-body-bg-light dark:bg-body-bg-dark ">
 
   <!-- pre-animation -->
 
-  <div id="pre" class=" flex items-center flex-col justify-center h-screen bg-[#121212]">
-    <div class=" animate w-10 h-10 bg-gradient-to-br from-[#e4b8bf] rounded-lg to-[#cec4ef]"></div>
+  <div id="pre" class=" flex items-center flex-col justify-center h-screen bg-body-bg-dark">
+    <div class=" animate w-10 h-10 bg-gradient-to-br from-primary-dark rounded-lg to-secondary-dark"></div>
     <div class=" w-8 h-[4px] mt-2 bg-black"></div>
   </div>
 
@@ -79,13 +79,13 @@
   <div id="main-content" class=" hidden    w-full   ">
     <!-- Home-component -->
     <div class="relative  ">
-      <div class=" before-lg:pl-[60px] md:px-12  before-lg:pr-[10px] px-4">
+      <div class=" before-lg:pl-[60px] md:px-12  before-lg:pr-[30px] px-4">
 
         <!-- splitting banner in two contaniners -->
         <div class="flex flex-col before-lg:flex-row justify-between items-start  ">
           <!-- flex-left-div-start -->
           <div
-            class="px-[30px] py-4 flex justify-between flex-col before-lg:h-[90vh] w-full  before-lg:w-[320px] overflow-y-auto     before-lg:sticky top-8    border dark:border-[#303033] border-[#d1d5e0]  rounded-4xl z-0 bg-[#e6ebf4]  dark:bg-[#22232c]    ">
+            class="px-[30px] py-4 flex justify-between flex-col before-lg:h-[90vh] w-full  before-lg:w-[320px] overflow-y-auto     before-lg:sticky top-8    border dark:border-dark border-section-badge  rounded-4xl z-0 bg-left-div-bg  dark:bg-text-portfolio-section    ">
             <div class=" w-full pb-1 ">
               <div class="flex items-center gap-4 pb-1">
 
@@ -126,8 +126,8 @@
 
             </div>
             <div>
-              <p class="text-[13px] font-extralight  text-[#424550] dark:text-[#c7c7de] ">Specialization:</p>
-              <p class="dark:text-[#c7c7de] leading-5 text-[#22232c] font-bold lining-nums text-base">
+              <p class="text-[13px] font-extralight  text-text-light] dark:profile-texte ">Specialization:</p>
+              <p class="dark:text-profile-text leading-5 text-text-portfolio-section font-bold lining-nums text-base">
                 <span>
                   UI/UX designer
                 </span>
@@ -142,10 +142,10 @@
 
 
 
-              <p class="text-[13px] font-extralight  text-[#424550]  dark:text-[#c7c7de]">
+              <p class="text-[13px] font-extralight  text-text-light  dark:text-profile-text">
                 Based in:
               </p>
-              <p class="text-black dark:text-[#c7c7de] font-bold lining-nums">
+              <p class="text-black dark:text-profile-text font-bold lining-nums">
                 Odesa, Ukrain
               </p>
 
@@ -153,7 +153,7 @@
 
             </div>
 
-            <div>
+            <div class="flex flex-col items-center justify-center ">
               <!-- flex logos -->
               <ul class="flex gap-1 px-2 item-center justify-between ">
 
@@ -198,8 +198,7 @@
 
 
               </ul>
-              <button class="text-white dark:text-black bg-gradient-to-br   dark:from-[#e4b8bf] 
-              dark:to-[#cec4ef]    from-[#aa70e0] to-[#7059e2] mt-2 rounded-2xl font-bold p-3">
+              <button class="text-white  dark:text-black bg-gradient-to-br   dark:from-primary-dark dark:to-secondary-dark    from-primary-light to-secondary-light mt-2 rounded-2xl font-bold p-3">
                 Let's Work Together!
               </button>
             </div>
@@ -209,9 +208,9 @@
           <!-- flex-right-div-start-->
           <div class=" before-2xl:px before-lg:w-[calc(100%-348px)] w-full      ">
            
-            <div class="fixed bottom-5   flex justify-center      mx-auto before-lg:sticky before-lg:top-5 w-full z-50">
+            <div class="fixed bottom-5 items-center   flex justify-center      mx-auto before-lg:sticky before-lg:top-5 w-full z-50">
               <header
-                class="flex  items-center justify-center  before-lg:mx-0 before-lg:justify-between    rounded-[25px] backdrop-blur-sm w-full">
+                class="flex  items-center justify-center  before-lg:mx-0 before-lg:justify-between    rounded-[25px] backdrop-blur-sm w-auto before-lg:w-full px-4 before-lg:px-0">
                 <ul id="navbar" class="before-xl:flex hidden gap-4 backdrop-blur-sm">
                   <li data-link="home" class="nav-item active border px-6 py-3 rounded-2xl font-bold  ">
                     <a href="#home">Home</a>
@@ -230,7 +229,7 @@
                   </li>
                 </ul>
                 <!-- flex-text-list-items-navigation-before-1200 -->
-                <ul class="gap-2 items-center  justify-between flex before-xl:hidden w-full">
+                <ul class="gap-3 items-center  before-lg:justify-start  flex before-xl:hidden w-auto before-lg:w-full flex-[1]">
                   <li class="w-7 h-7 rounded-full bg-black dark:bg-white flex items-center justify-center p-1"><a
                       href="/">
                       <i class="ri-home-line dark:text-black text-white"></i> </a>
@@ -254,7 +253,7 @@
                 </ul>
 
                 <!-- Theme Toggle -->
-                <div class="  flex items-center justify-center before-lg:gap-3  ">
+                <div class="  flex items-center justify-between before-lg:gap-3">
                   <!-- Theme Toggle -->
                   <button id="theme-toggle" type="button"
                     class="text-gray-500   focus:outline-none   rounded-lg text-sm p-1.5">
@@ -269,8 +268,8 @@
                         fill-rule="evenodd" clip-rule="evenodd"></path>
                     </svg>
                   </button>
-                  <button class="text-white dark:text-black bg-gradient-to-br   dark:from-[#e4b8bf] 
-              dark:to-[#cec4ef]    from-[#aa70e0] to-[#7059e2] rounded-full px-3 py-3   gap-2 flex font-bold ">
+                  <button class="text-white dark:text-black bg-gradient-to-br   dark:from-primary-dark
+              dark:to-secondary-dark    from-primary-light to-secondary-light rounded-full px-3 py-3   gap-2 flex font-bold w-full ">
                     <span class="hidden before-lg:inline">Let's Talk</span>
                     <span><i class="ri-message-2-line "></i></span>
                   </button>
@@ -281,21 +280,21 @@
             <section id="home" data-section class="before-2xl:h-[calc(100vh-76px)] h-screen before-lg:flex before-2xl:items-end relative">
               <div class=" before-2xl:bottom-0 ">
                 <div
-                  class=" mt-12 before-lg:mt-32 border border-[#d1d5e0] dark:border-[#303033] w-fit px-3 py-2  rounded-2xl ">
+                  class=" mt-12 before-lg:mt-32 border border-[#d1d5e0] dark:border-border-dark w-fit px-3 py-2  rounded-2xl ">
                   <p>
-                    <span class="dark:text-[#cec4cf] text-[#424550]"> <svg xmlns="http://www.w3.org/2000/svg"
+                    <span class="dark:text-secondary-dark text-text-light"> <svg xmlns="http://www.w3.org/2000/svg"
                         class="inline" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13"
                         fill="currentColor">
                         <path fill="text-[#cec4cf]" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
                   C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
                   C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"></path>
                       </svg></span>
-                    <span class="dark:text-[#cec4cf] text-sm text-[#424550] font-bold">Let's meet!</span>
+                    <span class="dark:text-secondary-dark text-sm text-text-light font-bold">Let's meet!</span>
                   </p>
                 </div>
-                <p class=" before-lg:text-[50px]   text-[35px] before-xl:text-[60px] leading-[72px] before-xl:w-[700px] pb-8    font-bold  before-lg:w-[560px] w-[320px] md:w-full text-transparent bg-clip-text bg-gradient-to-br 
-            from-[#aa70e0] to-[#7059e2] 
-            dark:from-[#e4b8bf] dark:to-[#cec4ef] ">
+                <p class=" before-lg:text-[50px] text-wrap   text-[35px] before-xl:text-[60px] leading-[72px] before-xl:w-[700px] pb-8    font-bold  before-lg:w-[560px] w-[320px] md:w-full text-transparent bg-clip-text bg-gradient-to-br 
+            from-primary-light to-secondary-light
+            dark:from-primary-dark dark:to-secondary-dark ">
                   I'm Alex Walker Digital designers and illustrator.</p>
 
                 <div
@@ -306,13 +305,13 @@
                     class="flex flex-col before-sm:flex-row before-sm:items-center items-start before-sm:justify-start w-full gap-5 pt-5">
                     <!-- My Works Button -->
                     <button class="flex items-center  justify-center gap-2 px-6 py-2 rounded-4xl font-bold 
-         border border-[#0000004D] dark:border-[#303033]
+         border border-border-light dark:border-border-dark
 
-         before-lg:text-[#424550] before-lg:dark:text-[#e9e9f1] 
+         before-lg:text-text-light before-lg:dark:text-text-dark
          
 
-        bg-gradient-to-br from-[#aa70e0] to-[#7059e2] before-lg:bg-gradient-to-br before-lg:from-transparent 
-        dark:from-[#e4b8bf] dark:to-[#cec4ef] 
+        bg-gradient-to-br from-primary-light to-secondary-light before-lg:bg-gradient-to-br before-lg:from-transparent 
+        dark:from-primary-dark dark:to-secondary-dark 
         before-lg:to-transparent
          text-[#e9e9f1] before-lg:w-fit w-full  ">
 
@@ -330,9 +329,9 @@
                     <!-- Download CV Button -->
                     <button
                       class="flex items-center  justify-center gap-2 px-6 py-2 rounded-4xl font-bold 
-         border border-[#0000004D] dark:border-[#303033]
+         border border-border-light dark:border-border-dark
 
-         before-lg:text-[#424550] before-lg:dark:text-[#e9e9f1] 
+         before-lg:text-text-light before-lg:dark:text-text-dark 
          
 
        
@@ -344,7 +343,7 @@
                   <div class="before-lg:absolute before-lg:bottom-24 before-lg:right-4 z-[50]">
                   <div class=" w-[180px] h-[180px] flex items-center justify-center">
                     <!-- SVG Circle with Rotating Text -->
-                    <svg viewBox="0 0 300 300" id="spinText" class="w-[180px] mr-16 h-[180px] absolute" fill="none">
+                    <svg viewBox="0 0 300 300" id="spinText" class="w-[180px] mr-6 h-[180px] absolute" fill="none">
                       <defs>
                         <path id="circlePath" d="M150 150 m-85,0 a85,85 0 1,1 170,0 a85,85 0 1,1 -170,0" />
                       </defs>
@@ -356,7 +355,7 @@
                     </svg>
 
                     <!-- Center "A" Button -->
-                    <button class="z-0 mr-16 flex items-center text-black dark:text-[#e9e9f1] justify-center">
+                    <button class="z-0 mr-6 flex items-center text-black dark:text-text-dark justify-center">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36"
                         fill="currentColor">
                         <path fill="none" d="M0 0h24v24H0z"></path>
@@ -373,22 +372,20 @@
             <!-- hero section-end -->
 
             <!-- portfolio-section-start -->
-            <section id="portfolio" data-section class="pt-28 pb-10 z-0">
-              <div class="  border border-[#d1d5e0] dark:border-[#303033] w-fit px-3 py-2  rounded-2xl ">
+            <section id="portfolio" data-section class="pt-18 pb-10 z-0">
+              <div class="  border border-section-badge dark:border-border-dark w-fit px-3 py-2  rounded-2xl ">
                 <p>
-                  <span class="dark:text-[#cec4cf] text-[#424550]"> <svg xmlns="http://www.w3.org/2000/svg"
+                  <span class="dark:text-secondary-dark text-text-light"> <svg xmlns="http://www.w3.org/2000/svg"
                       class="inline" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13" fill="currentColor">
                       <path fill="text-[#cec4cf]" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
                   C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
                   C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"></path>
                     </svg></span>
-                  <span class="dark:text-[#cec4cf] font-bold text-sm text-[#424550]">Portfolio</span>
+                  <span class="dark:text-secondary-dark font-bold text-sm text-text-light ">Portfolio</span>
                 </p>
               </div>
               <div>
-                <p class="  text-[35px] before-xl:text-[46px] before-xl:w-[660px]    font-bold  before-lg:w-[560px] md:w-[550px]  text-transparent bg-clip-text bg-gradient-to-br 
-            from-[#aa70e0] to-[#7059e2] 
-            dark:from-[#e4b8bf] dark:to-[#cec4ef]">
+                <p class="  text-[35px] before-xl:text-[46px] before-xl:w-[660px]    font-bold  before-lg:w-[560px] md:w-[550px]  text-transparent bg-clip-text bg-gradient-to-br  from-primary-light to-secondary-light   dark:from-primary-dark dark:to-secondary-dark flex-wrap">
                   Checkout my Featured Projects</p>
 
               </div>
@@ -397,10 +394,9 @@
                 <!-- inner-gallery -->
                 <div class="grid grid-rows-2 z-0  ">
                   <!-- row-1 -->
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6  ">
-
-                    <!-- img-1 -->
-                    <div class="relative group transition-all duration-500 hover:scale-[1.08]  mt-7 z-0">
+                  <div class="grid grid-cols-1 md:grid-cols-2 z-0  gap-6 ">
+                    <!-- You can add two more images similarly -->
+                    <div class="relative group transition-all duration-500 hover:scale-[1.08] mt-7  z-0">
 
                       <!-- Image -->
                       <figure>
@@ -413,42 +409,37 @@
                       <!-- Overlay Tags -->
                       <div class="absolute bottom-8 left-12 flex items-center gap-5">
                         <span
-                          class="px-3.5 py-2 dark:bg-white dark:text-black bg-black text-white rounded-full text-sm shadow-md">
+                          class="px-3.5 py-2 dark:bg-black  dark:text-white bg-white text-black rounded-full text-sm shadow-md">
                           Illustration
                         </span>
                         <span
-                          class="px-3.5 py-2 dark:bg-white lining-nums dark:text-black bg-black text-white rounded-full text-sm shadow-md">
+                          class="px-3.5 py-2 dark:bg-black dark:text-white bg-white text-black rounded-full text-sm shadow-md lining-nums ">
                           3D render
                         </span>
                       </div>
                     </div>
-
-
-
-                    <!-- img-2 -->
-                    <div class="relative group transition-all duration-500 hover:scale-[1.08]  mt-7 z-0">
+                    <div class="relative group transition-all duration-500 hover:scale-[1.08] mt-7  z-0">
 
                       <!-- Image -->
                       <figure>
                         <a href="/">
                           <img src="./src/images/800_w02-thumb.webp" alt=""
-                            class="rounded-2xl w-full transition-transform duration-500 group-hover:scale-[0.95]">
+                            class="rounded-2xl w-full transition-transform duration-500 group-hover:scale-[0.95] lining-nums">
                         </a>
                       </figure>
 
                       <!-- Overlay Tags -->
                       <div class="absolute bottom-8 left-12 flex items-center gap-5">
                         <span
-                          class="px-3.5 py-2 dark:bg-black dark:text-white bg-white text-black rounded-full text-sm shadow-md">
-                          UI Design
+                          class="px-3.5 py-2 dark:bg-white dark:text-black bg-black text-white rounded-full text-sm shadow-md">
+                          Illustration
                         </span>
                         <span
-                          class="px-3.5 py-2 dark:bg-black dark:text-white bg-white text-black rounded-full text-sm shadow-md">
-                          Figma
+                          class="px-3.5 py-2 dark:bg-white dark:text-black bg-black or text-white rounded-full text-sm shadow-md">
+                          AI Experiment
                         </span>
                       </div>
                     </div>
-
                   </div>
 
                   <!-- row-2 -->
@@ -509,20 +500,20 @@
 
             <!-- About Me section-start -->
             <section id="about" data-section class="pt-28 pb-10 z-0">
-              <div class="  border border-[#d1d5e0] dark:border-[#303033] w-fit px-3 py-2  rounded-2xl ">
+              <div class="  border border-section-badge dark:border-border-dark w-fit px-3 py-2  rounded-2xl ">
                 <p>
-                  <span class="dark:text-[#cec4cf] text-[#424550]"> <svg xmlns="http://www.w3.org/2000/svg"
+                  <span class="dark:text-secondary-dark text-text-light"> <svg xmlns="http://www.w3.org/2000/svg"
                       class="inline" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13" fill="currentColor">
                       <path fill="text-[#cec4cf]" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
                   C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
                   C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"></path>
                     </svg></span>
-                  <span class="dark:text-[#cec4cf] font-bold text-sm text-[#424550]">About Me</span>
+                  <span class="dark:text-secondary-dark font-bold text-sm text-text-light">About Me</span>
                 </p>
               </div>
               <div>
-                <p class="  text-[35px] before-xl:text-[46px] before-xl:w-[700px]    font-bold  before-lg:w-[560px]  md:w-[550px]  text-transparent bg-clip-text bg-gradient-to-br 
-            from-[#aa70e0] to-[#7059e2] dark:from-[#e4b8bf] dark:to-[#cec4ef]">
+                <p class="  text-[35px] before-xl:text-[46px] before-xl:w-[700px]  text-wrap   font-bold  before-lg:w-[560px]  md:w-[550px]  text-transparent bg-clip-text bg-gradient-to-br 
+            from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark">
                   Turning complex problems into simple design</p>
 
               </div>
@@ -532,15 +523,15 @@
                 <!-- single-item-outer-div -->
                 <div class="md:w-1/3 w-full md:px-3.5 ">
                   <!-- single-item-inner-div -->
-                  <div class="p-[30px] border border-[#d1d5e0] rounded-2xl flex items-center justify-center flex-col">
+                  <div class="p-[30px] border border-section-badge rounded-2xl flex items-center justify-center flex-col">
                     <p class="text-[60px]   lining-nums font-bold ">
                       <span
-                        class="text-transparent bg-clip-text bg-gradient-to-br from-[#aa70e0] to-[#7059e2] dark:from-[#e4b8bf] dark:to-[#cec4ef]">40</span>
+                        class="text-transparent bg-clip-text bg-gradient-to-br from-primary-light  to-secondary-light dark:from-primary-dark dark:to-secondary-dark">40</span>
                       <span
-                        class="text-transparent bg-clip-text  bg-gradient-to-br from-[#aa70e0] to-[#7059e2] dark:from-[#e4b8bf] dark:to-[#cec4ef] -ml-4">+</span>
+                        class="text-transparent bg-clip-text  bg-gradient-to-br from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark -ml-4">+</span>
                     </p>
                     <p
-                      class="font-bold  text-black dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-[#e4b8bf] dark:to-[#cec4ef]  ">
+                      class="font-bold  text-black dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-primary-dark dark:to-secondary-dark  ">
                       Happy clients</p>
                   </div>
                 </div>
@@ -549,14 +540,14 @@
                 <div class="md:w-1/3 w-full md:px-3.5 ">
                   <!-- single-item-inner-div -->
                   <div
-                    class="p-[30px] border border-[#d1d5e0] rounded-2xl flex items-center text-center justify-center flex-col">
+                    class="p-[30px] border border-section-badge rounded-2xl flex items-center text-center justify-center flex-col">
                     <p
-                      class="text-[60px]   lining-nums font-bold text-transparent bg-clip-text bg-gradient-to-br from-[#aa70e0] to-[#7059e2] dark:from-[#e4b8bf] dark:to-[#cec4ef]">
+                      class="text-[60px]   lining-nums font-bold text-transparent bg-clip-text bg-gradient-to-br from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark">
                       <span class="">2</span> <span
-                        class=" text-transparent bg-clip-text bg-gradient-to-br from-[#aa70e0] to-[#7059e2] dark:from-[#e4b8bf] dark:to-[#cec4ef] -ml-4">+</span>
+                        class=" text-transparent bg-clip-text bg-gradient-to-br from-primary-light  to-secondary-light dark:from-primary-dark dark:to-secondary-dark -ml-4">+</span>
                     </p>
                     <p
-                      class="font-bold md:text-sm  xl:text-base  text-black dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-[#e4b8bf] dark:to-[#cec4ef] ">
+                      class="font-bold md:text-sm  xl:text-base  text-black dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-primary-dark  dark:to-secondary-dark ">
                       Years of experience</p>
                   </div>
                 </div>
@@ -565,13 +556,13 @@
                 <div class="md:w-1/3 w-full md:px-3.5 ">
                   <!-- single-item-inner-div -->
                   <div
-                    class="p-[30px] border border-[#d1d5e0] rounded-2xl flex items-center text-center justify-center flex-col">
+                    class="p-[30px] border border-section-badge rounded-2xl flex items-center text-center justify-center flex-col">
                     <p class="text-[60px]   lining-nums font-bold text-transparent bg-clip-text bg-gradient-to-br 
-            from-[#aa70e0] to-[#7059e2] dark:from-[#e4b8bf] dark:to-[#cec4ef]"><span class="">50</span> <span
-                        class=" text-transparent bg-clip-text bg-gradient-to-br from-[#aa70e0] to-[#7059e2] dark:from-[#e4b8bf] dark:to-[#cec4ef] -ml-4">+</span>
+            from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark"><span class="">50</span> <span
+                        class=" text-transparent bg-clip-text bg-gradient-to-br from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark -ml-4">+</span>
                     </p>
                     <p
-                      class="font-bold   text-black dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-[#e4b8bf] dark:to-[#cec4ef] ">
+                      class="font-bold   text-black dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-primary-dark dark:to-secondary-dark">
                       Projects done</p>
                   </div>
                 </div>
@@ -580,21 +571,21 @@
                 <!-- grid-1-paragraphs -->
                 <div>
                   <p
-                    class="lining-nums text-xl text-[#424550]  dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-[#e4b8bf] dark:to-[#cec4ef]  font-thin mb-7 ">
+                    class="lining-nums text-xl text-text-light  dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-primary-dark dark:to-secondary-dark font-thin mb-7 ">
                     <span>I wonder if I've been changed in the night? Let me think. Was I the same when I got up this
                       morning? I almost think I can remember feeling a little different. But if I'm not the same,
                       the</span> <span> <a href="/" class="underline">next question</a></span> <span>'Who in the world
                       am I?' Ah, that's the great puzzle!</span>
                   </p>
                   <p
-                    class="lining-nums text-xl text-[#424550]  dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-[#e4b8bf] dark:to-[#cec4ef]  mb-7 ">
+                    class="lining-nums text-xl text-text-light  dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-primary-dark dark:to-secondary-dark  mb-7 ">
                     <span>Be what you would seem to be - or, if you'd like it put more simply - never imagine yourself
                       not to be otherwise than what it might appear to others that what you were or might have</span>
                     <span><a href="/" class="underline">been</a></span>
                     <span>was not otherwise than what you had been would have appeared to them to be otherwise.</span>
                   </p>
                   <button
-                    class="flex items-center cursor-pointer w-full before-sm:w-fit justify-center gap-2 px-6 py-2 rounded-4xl font-bold border border-[#303033]  dark:text-black   transition-colors duration-500 bg-transparent bg-gradient-to-br dark:from-[#e4b8bf] dark:to-[#cec4ef] text-[#e9e9f1] from-[#aa70e0] to-[#7059e2]">
+                    class="flex items-center cursor-pointer w-full before-sm:w-fit justify-center gap-2 px-6 py-2 rounded-4xl font-bold border border-border-dark dark:text-black   transition-colors duration-500 bg-transparent bg-gradient-to-br dark:from-primary-dark dark:to-secondary-dark text-text-dark from-primary-light to-secondary-light">
                     <span>Download CV</span>
                     <i class="ri-download-2-fill w-4 h-4 -mt-1"></i>
                   </button>
@@ -607,10 +598,10 @@
                   <div class="mb-[26px]">
                     <h6>
                       <small
-                        class="mb-1 text-[13px] font-normal text-black dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-[#e4b8bf] dark:to-[#cec4ef] ">Name</small>
+                        class="mb-1 text-[13px] font-normal text-black dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-primary-dark dark:to-secondary-dark ">Name</small>
                       <br>
                       <span
-                        class="font-bold text-black dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-[#e4b8bf] dark:to-[#cec4ef]  ">
+                        class="font-bold text-black dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-primary-dark dark:to-secondary-dark  ">
                         Alex Walker</span>
                     </h6>
                   </div>
@@ -618,10 +609,10 @@
                   <div class="mb-[26px]">
                     <h6>
                       <small
-                        class="mb-1 text-[13px] font-normal text-black dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-[#e4b8bf] dark:to-[#cec4ef] ">Phone</small>
+                        class="mb-1 text-[13px] font-normal text-black dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-primary-dark dark:to-secondary-dark ">Phone</small>
                       <br>
                       <span
-                        class="font-bold lining-nums text-black dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-[#e4b8bf] dark:to-[#cec4ef] ">+1
+                        class="font-bold lining-nums text-black dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-primary-dark dark:to-secondary-dark  ">+1
                         212 -708-9400</span>
                     </h6>
                   </div>
@@ -630,20 +621,20 @@
                   <div class="mb-[26px]">
                     <h6>
                       <small
-                        class="mb-1 text-[13px] font-normal text-black dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-[#e4b8bf] dark:to-[#cec4ef] ">Email</small>
+                        class="mb-1 text-[13px] font-normal text-black dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-primary-dark dark:to-secondary-dark  ">Email</small>
                       <br>
                       <span
-                        class="font-bold text-black dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-[#e4b8bf] dark:to-[#cec4ef]  ">
+                        class="font-bold text-black dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-primary-dark dark:to-secondary-dark   ">
                         hello@yourdomain.com</span>
                     </h6>
                   </div>
                   <div class="mb-[26px]">
                     <h6>
                       <small
-                        class="mb-1 text-[13px] font-normal text-black dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-[#e4b8bf] dark:to-[#cec4ef] ">Location</small>
+                        class="mb-1 text-[13px] font-normal text-black dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-primary-dark dark:to-secondary-dark  ">Location</small>
                       <br>
                       <span
-                        class="font-bold text-black dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-[#e4b8bf] dark:to-[#cec4ef] ">Odesa,
+                        class="font-bold text-black dark:text-transparent dark:bg-clip-text     dark:bg-gradient-to-br dark:from-primary-dark dark:to-secondary-dark ">Odesa,
                         Ukrain</span>
                     </h6>
                   </div>
@@ -654,24 +645,24 @@
               <!-- 2nd-grid-block-frontend-project-grid-section -->
               <div class="grid md:grid-cols-2 md:grid-rows-2  grid-cols-1  grid-rows-1  gap-8">
                 <!-- grid-1-block -->
-                <div class=" border border-[#d1d5e0] rounded-2xl">
+                <div class=" border border-section-badge rounded-2xl">
                   <!-- upper-text-div -->
                   <div class="p-[30px]">
-                    <h6 class="text-[26px] font-bold   dark:text-[#e9e9f1] ">Frontend <br> development</h6>
+                    <h6 class="text-[26px] font-bold   dark:text-text-dark ">Frontend <br> development</h6>
                     <!-- small-boxes-design -->
                     <div class="mt-[7px] flex items-start flex-wrap  ">
                       <span
-                        class="bg-transparent border border-[#d1d5e0] rounded-2xl  text-[#424550] flex items-center justify-center  h-[34px]  px-[14px] my-0.5 mr-[10px] dark:text-[#c7c6d3] ">
+                        class="bg-transparent border border-section-badge rounded-2xl  text-text-light flex items-center justify-center  h-[34px]  px-[14px] my-0.5 mr-[10px] dark:text-text-inside-imgs ">
                         UI/UX Design
                       </span>
                       <span
-                        class="bg-transparent border border-[#d1d5e0] rounded-2xl  text-[#424550] flex items-center justify-center  h-[34px]  px-[14px] my-0.5 mr-[10px] dark:text-[#c7c6d3] ">
+                        class="bg-transparent border border-section-badge rounded-2xl  text-text-light flex items-center justify-center  h-[34px]  px-[14px] my-0.5 mr-[10px] dark:text-text-inside-imgs ">
                         Design to Code
                       </span>
 
                     </div>
 
-                    <p class="text-lg mt-[23px] lining-nums text-[#424550] dark:text-[#c7c6d3]">I work with
+                    <p class="text-lg mt-[23px] lining-nums text-text-light dark:text-text-inside-imgs">I work with
                       HTML/CSS,Framer. and WordPress.</p>
                   </div>
                   <div>
@@ -681,24 +672,24 @@
                 <!-- gid-block-1-end -->
 
                 <!-- grid-block2 -->
-                <div class=" border border-[#d1d5e0] rounded-2xl">
+                <div class=" border border-section-badge rounded-2xl">
                   <!-- upper-text-div -->
                   <div class="p-[30px]">
-                    <h6 class="text-[26px] font-bold dark:text-[#e9e9f1] ">Digital art and <br> graphic design</h6>
+                    <h6 class="text-[26px] font-bold dark:text-text-dark ">Digital art and <br> graphic design</h6>
                     <!-- small-boxes-design -->
                     <div class="mt-[7px] flex items-start flex-wrap ">
                       <span
-                        class="bg-transparent border border-[#d1d5e0] rounded-2xl  text-[#424550] flex items-center justify-center   h-[34px]  px-[14px] my-0.5 mr-[10px] dark:text-[#c7c6d3] ">
+                        class="bg-transparent border border-section-badge rounded-2xl  text-text-light flex items-center justify-center   h-[34px]  px-[14px] my-0.5 mr-[10px] dark:text-text-inside-imgs ">
                         Illustrations
                       </span>
                       <span
-                        class="bg-transparent border border-[#d1d5e0] rounded-2xl  text-[#424550] flex items-center justify-center  h-[34px]  px-[14px] my-0.5 mr-[10px] dark:text-[#c7c6d3] ">
+                        class="bg-transparent border border-section-badge rounded-2xl  text-text-light flex items-center justify-center  h-[34px]  px-[14px] my-0.5 mr-[10px] dark:text-text-inside-imgs ">
                         AI Experiments
                       </span>
 
                     </div>
 
-                    <p class="text-lg mt-[23px] lining-nums text-[#424550] dark:text-[#c7c6d3]">I use Adobe Photoshop,
+                    <p class="text-lg mt-[23px] lining-nums text-text-light dark:text-text-inside-imgs">I use Adobe Photoshop,
                       Fresco and Blender to create illustrations and 3D renders for my clients and stocks.</p>
                   </div>
                   <div>
@@ -708,24 +699,24 @@
                 <!-- grid-block2 -->
 
                 <!-- grid-3-block -->
-                <div class=" border border-[#d1d5e0] rounded-2xl">
+                <div class=" border border-section-badge rounded-2xl">
                   <!-- upper-text-div -->
                   <div class="p-[30px]">
-                    <h6 class="text-[26px] font-bold  dark:text-[#e9e9f1]">SEO/Digital <br> marketing solutions</h6>
+                    <h6 class="text-[26px] font-bold  dark:text-text-dark">SEO/Digital <br> marketing solutions</h6>
                     <!-- small-boxes-design -->
                     <div class="mt-[7px] flex items-start flex-wrap  ">
                       <span
-                        class="bg-transparent border border-[#d1d5e0] rounded-2xl  text-[#424550] flex items-center justify-center   h-[34px]  px-[14px] my-0.5 mr-[10px] dark:text-[#c7c6d3] ">
+                        class="bg-transparent border border-section-badge rounded-2xl  text-text-light flex items-center justify-center   h-[34px]  px-[14px] my-0.5 mr-[10px] dark:text-text-inside-imgs">
                         Social Media
                       </span>
                       <span
-                        class="bg-transparent border border-[#d1d5e0] rounded-2xl  text-[#424550] flex items-center justify-center   h-[34px]  px-[14px] my-0.5 mr-[10px] dark:text-[#c7c6d3] ">
+                        class="bg-transparent border border-section-badge rounded-2xl  text-light flex items-center justify-center   h-[34px]  px-[14px] my-0.5 mr-[10px] dark:text-text-inside-imgs ">
                         Analytics
                       </span>
 
                     </div>
 
-                    <p class="text-lg mt-[23px] lining-nums text-[#424550] dark:text-[#c7c6d3]">Social media content
+                    <p class="text-lg mt-[23px] lining-nums text-text-light dark:text-text-inside-imgs">Social media content
                       plans, media monitoring, email and text messaging and search engine optimization.</p>
                   </div>
                   <div>
@@ -735,24 +726,24 @@
                 <!-- gid-block-3-end -->
 
                 <!-- grid-4-block -->
-                <div class=" border border-[#d1d5e0] rounded-2xl">
+                <div class=" border border-section-badge rounded-2xl">
                   <!-- upper-text-div -->
                   <div class="p-[30px]">
-                    <h6 class="text-[26px] font-bold dark:text-[#e9e9f1] ">Brans<br> Identity</h6>
+                    <h6 class="text-[26px] font-bold dark:text-text-dark ">Brans<br> Identity</h6>
                     <!-- small-boxes-design -->
                     <div class="mt-[7px] flex items-start flex-wrap ">
                       <span
-                        class="bg-transparent border border-[#d1d5e0] rounded-2xl  text-[#424550] flex items-center justify-center   h-[34px]  px-[14px] my-0.5 mr-[10px] dark:text-[#c7c6d3] ">
+                        class="bg-transparent border border-section-badge rounded-2xl  text-text-light flex items-center justify-center   h-[34px]  px-[14px] my-0.5 mr-[10px] dark:text-text-inside-imgs ">
                         Logo Design
                       </span>
                       <span
-                        class="bg-transparent border border-[#d1d5e0] rounded-2xl  text-[#424550] flex items-center justify-center   h-[34px]  px-[14px] my-0.5 mr-[10px] dark:text-[#c7c6d3] ">
+                        class="bg-transparent border border-section-badge rounded-2xl  text-light flex items-center justify-center   h-[34px]  px-[14px] my-0.5 mr-[10px] dark:text-text-inside-imgs ">
                         Style Guides
                       </span>
 
                     </div>
 
-                    <p class="text-lg mt-[23px] lining-nums text-[#424550] dark:text-[#c7c6d3]">I help my clients to
+                    <p class="text-lg mt-[23px] lining-nums text-text-light dark:text-text-inside-imgs">I help my clients to
                       develop a personality and brand voice, design the brand look and logo.</p>
                   </div>
                   <div>
@@ -767,25 +758,25 @@
 
             <section id="resume" data-section class="pt-28 pb-10 z-0">
               <div class="">
-                <div class="  border border-[#d1d5e0] dark:border-[#303033] w-fit px-3 py-2  rounded-2xl ">
+                <div class="  border border-section-badge dark:border-border-dark w-fit px-3 py-2  rounded-2xl ">
                   <p>
-                    <span class="dark:text-[#cec4cf] text-[#424550]"> <svg xmlns="http://www.w3.org/2000/svg"
+                    <span class="dark:text-paragraph-content text-text-light"> <svg xmlns="http://www.w3.org/2000/svg"
                         class="inline" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13"
                         fill="currentColor">
                         <path fill="text-[#cec4cf]" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
                   C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
                   C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"></path>
                       </svg></span>
-                    <span class="dark:text-[#cec4cf] font-bold text-[#424550] text-sm">Resume</span>
+                    <span class="dark:text-secondary-dark font-bold text-text-light text-sm">Resume</span>
                   </p>
 
 
                 </div>
                 <div class=" mb-[130px] ">
                   <h3
-                    class="max-w-[700px] text-[46px] font-bold text-transparent bg-clip-text bg-gradient-to-br from-[#aa70e0] to-[#7059e2] dark:from-[#e4b8bf] dark:to-[#cec4ef] ">
+                    class="max-w-[700px] text-[46px] font-bold text-transparent bg-clip-text bg-gradient-to-br from-primary-light to-secondary-light dark:from-primary-dark  dark:to-secondary-dark ">
                     Educational and practical experience </h3>
-                  <p class="text-[#424550] dark:text-[#c7c6d3] mt-[36px] lining-nums  text-xl">Be what you would seem to
+                  <p class="text-text-light dark:text-text-inside-imgs mt-[36px] lining-nums  text-xl">Be what you would seem to
                     be - or, if you'd like it put more simply - never imagine yourself not to be otherwise than what it
                     might appear to others that what you were or might have been was not otherwise than what you had
                     been would have appeared to them to be otherwise. </p>
@@ -797,31 +788,31 @@
                 <div class="mb-[130px]">
 
 
-                  <div class="mb-[41px] border-b border-[#d1d5e0] pb-[41px]">
-                    <h4 class="text-[30px] font-bold text-[#22232c] dark:text-[#c7c6d3]">My education</h4>
+                  <div class="mb-[41px] border-b border-section-badge pb-[41px]">
+                    <h4 class="text-[30px] font-bold text-text-portfolio-section dark:text-text-inside-imgs">My education</h4>
                   </div>
                   <!-- education-details-block -->
                   <!-- main-block -->
                   <div class="">
                     <!-- 1st block -->
-                    <div class="border-b border-[#d1d5e0] md:flex-row flex-col py-[44px] flex">
+                    <div class="border-b border-section-badge md:flex-row flex-col py-[44px] flex">
 
                       <!-- 1st list -->
                       <!-- date-block -->
                       <div class="flex md:w-2/12 items-start flex-wrap">
-                        <span class="lining-nums text-[#424550] dark:text-[#c7c6d3]">2015 - 2016 </span>
+                        <span class="lining-nums text-text-light dark:text-text-inside-imgs">2015 - 2016 </span>
                       </div>
                       <!-- details-block -->
                       <div class="md:w-5/12">
-                        <h5 class="pr-3 text-[22px] font-bold text-[#22232c] dark:text-[#c7c6d3]">Drawing Concentration
+                        <h5 class="pr-3 text-[22px] font-bold text-text-light dark:text-text-inside-imgs">Drawing Concentration
                         </h5>
-                        <p class="text-[15px]  text-[#424550] dark:text-[#c7c6d3] mt-[3px]"> <span>Course by</span><span
+                        <p class="text-[15px]  text-text-light dark:text-text-inside-imgs mt-[3px]"> <span>Course by</span><span
                             class="font-bold"><a href="/">New York Academy of Art</a></span></p>
                       </div>
 
                       <!-- description-block -->
                       <div class="md:w-5/12">
-                        <p class="text-lg text-[#424550] dark:text-[#c7c6d3]">
+                        <p class="text-lg text-text-light dark:text-text-inside-imgs">
                           Intensive drawing courses that present the fundamental principles of drawing.
 
 
@@ -833,24 +824,24 @@
                     </div>
 
                     <!-- 2nd block -->
-                    <div class="border-b border-[#d1d5e0] py-[44px] md:flex-row flex-col flex">
+                    <div class="border-b border-section-badge py-[44px] md:flex-row flex-col flex">
 
                       <!-- 2nd list -->
                       <!-- date-block -->
                       <div class="flex md:w-2/12 items-start">
-                        <span class="lining-nums text-[#424550] dark:text-[#c7c6d3]">2019 - 2021 </span>
+                        <span class="lining-nums text-text-light dark:text-text-inside-imgs">2019 - 2021 </span>
                       </div>
                       <!-- details-block -->
                       <div class="md:w-5/12">
-                        <h5 class="pr-3 text-[22px] font-bold text-[#22232c] dark:text-[#c7c6d3]">UI/UX Design
+                        <h5 class="pr-3 text-[22px] font-bold text-text-portfolio-section dark:text-text-inside-imgs">UI/UX Design
                           Specialization</h5>
-                        <p class="text-[15px] text-[#424550] dark:text-[#c7c6d3] mt-[3px]"> <span>Course by</span><span
+                        <p class="text-[15px] text-text-light dark:text-text-inside-imgs mt-[3px]"> <span>Course by</span><span
                             class="font-bold"><a href="/">California Institute of Arts</a></span></p>
                       </div>
 
                       <!-- description-block -->
                       <div class="md:w-5/12">
-                        <p class="text-lg text-[#424550] dark:text-[#c7c6d3]">
+                        <p class="text-lg text-text-light dark:text-text-inside-imgs">
                           Research, design, and prototype effective, visually-driven websites and apps.
 
 
@@ -861,23 +852,23 @@
 
                     </div>
                     <!-- 3rd block -->
-                    <div class="border-b border-[#d1d5e0] py-[44px] md:flex-row flex-col flex">
+                    <div class="border-b border-section-badge py-[44px] md:flex-row flex-col flex">
 
                       <!-- 3rd list -->
                       <!-- date-block -->
                       <div class="flex md:w-2/12 items-start">
-                        <span class="lining-nums text-[#424550] dark:text-[#c7c6d3]">2022 </span>
+                        <span class="lining-nums text-text-light dark:text-text-inside-imgs">2022 </span>
                       </div>
                       <!-- details-block -->
                       <div class="md:w-5/12">
-                        <h5 class="pr-3 text-[22px] font-bold text-[#22232c] dark:text-[#c7c6d3]">UI/UX Designer</h5>
-                        <p class="text-[15px] text-[#424550] dark:text-[#c7c6d3] mt-[3px]"> <span>Course by</span><span
+                        <h5 class="pr-3 text-[22px] font-bold text-text-portfolio-section dark:text-text-inside-imgs">UI/UX Designer</h5>
+                        <p class="text-[15px] text-text-light dark:text-text-inside-imgs mt-[3px]"> <span>Course by</span><span
                             class="font-bold"><a href="/">Coursera</a></span></p>
                       </div>
 
                       <!-- description-block -->
                       <div class="md:w-5/12">
-                        <p class="text-lg text-[#424550] dark:text-[#c7c6d3]">
+                        <p class="text-lg text-text-light dark:text-text-inside-imgs">
                           This cource is about how to complete the design process from beginning to end.
 
                         </p>
@@ -893,30 +884,30 @@
                 <div class="mb-[130px]">
 
 
-                  <div class="mb-[41px] border-b border-[#d1d5e0] pb-[41px]">
-                    <h4 class="text-[30px] font-bold text-[#22232c] dark:text-[#c7c6d3]">Work experience</h4>
+                  <div class="mb-[41px] border-b border-section-badge pb-[41px]">
+                    <h4 class="text-[30px] font-bold text-text-portfolio-section dark:text-text-inside-imgs">Work experience</h4>
                   </div>
                   <!-- education-details-block -->
                   <!-- main-block -->
                   <div class="">
                     <!-- 1st block -->
-                    <div class="border-b border-[#d1d5e0] py-[44px] md:flex-row flex-col flex">
+                    <div class="border-b border-section-badge py-[44px] md:flex-row flex-col flex">
 
                       <!-- 1st list -->
                       <!-- date-block -->
                       <div class="flex md:w-2/12 items-start">
-                        <span class="lining-nums text-[#424550] dark:text-[#c7c6d3]">2018 - 2019 </span>
+                        <span class="lining-nums text-text-light dark:text-text-inside-imgs">2018 - 2019 </span>
                       </div>
                       <!-- details-block -->
                       <div class="md:w-5/12">
-                        <h5 class="pr-3 text-[22px] font-bold text-[#22232c] dark:text-[#c7c6d3]">Illustrator</h5>
-                        <p class="text-[15px] text-[#424550] dark:text-[#c7c6d3] mt-[3px]"> <span> in the </span><span
+                        <h5 class="pr-3 text-[22px] font-bold text-text-portfolio-section dark:text-text-inside-imgs">Illustrator</h5>
+                        <p class="text-[15px] text-text-light dark:text-text-inside-imgs mt-[3px]"> <span> in the </span><span
                             class="font-bold"><a href="/">Creative Mind</a></span> <span>agency</span></p>
                       </div>
 
                       <!-- description-block -->
                       <div class="md:w-5/12">
-                        <p class="text-lg text-[#424550] dark:text-[#c7c6d3]">
+                        <p class="text-lg text-[#424550] dark:text-text-inside-imgs">
                           I created original images for a range of digital and printed products.
 
                         </p>
@@ -927,23 +918,23 @@
                     </div>
 
                     <!-- 2nd block -->
-                    <div class="border-b border-[#d1d5e0] py-[44px] md:flex-row flex-col flex">
+                    <div class="border-b border-section-badge py-[44px] md:flex-row flex-col flex">
 
                       <!-- 2nd list -->
                       <!-- date-block -->
                       <div class="flex md:w-2/12 items-start">
-                        <span class="lining-nums text-[#424550] dark:text-[#c7c6d3]">2019 - 2021 </span>
+                        <span class="lining-nums text-text-light dark:text-text-inside-imgs">2019 - 2021 </span>
                       </div>
                       <!-- details-block -->
                       <div class="md:w-5/12">
-                        <h5 class="pr-3 text-[22px] font-bold text-[#22232c] dark:text-[#c7c6d3]">Graphic Designer</h5>
-                        <p class="text-[15px] text-[#424550] dark:text-[#c7c6d3] mt-[3px]"> <span>in the </span><span
+                        <h5 class="pr-3 text-[22px] font-bold text-text-portfolio-section dark:text-text-inside-imgs">Graphic Designer</h5>
+                        <p class="text-[15px] text-text-light dark:text-text-inside-imgs mt-[3px]"> <span>in the </span><span
                             class="font-bold"><a href="/">Moon light</a></span> <span>agency</span></p>
                       </div>
 
                       <!-- description-block -->
                       <div class="md:w-5/12">
-                        <p class="text-lg text-[#424550] dark:text-[#c7c6d3]">
+                        <p class="text-lg text-text-light dark:text-text-inside-imgs">
                           My job was to create adverts, branding, signage and other media products.
 
                         </p>
@@ -953,23 +944,23 @@
 
                     </div>
                     <!-- 3rd block -->
-                    <div class="border-b border-[#d1d5e0] py-[44px] md:flex-row flex-col flex">
+                    <div class="border-b border-section-badge py-[44px] md:flex-row flex-col flex">
 
                       <!-- 3rd list -->
                       <!-- date-block -->
                       <div class="flex md:w-2/12 items-start">
-                        <span class="lining-nums text-[#424550] dark:text-[#c7c6d3]">2021 - now </span>
+                        <span class="lining-nums text-text-light dark:text-text-inside-imgs">2021 - now </span>
                       </div>
                       <!-- details-block -->
                       <div class="md:w-5/12">
-                        <h5 class="pr-3 text-[22px] font-bold text-[#22232c] dark:text-[#c7c6d3]">UI/UX Designer</h5>
-                        <p class="text-[15px] text-[#424550] dark:text-[#c7c6d3] mt-[3px]"> <span>in the</span><span
+                        <h5 class="pr-3 text-[22px] font-bold text-text-portfolio-section dark:text-text-insid-imgs">UI/UX Designer</h5>
+                        <p class="text-[15px] text-text-light dark:text-text-inside-imgs mt-[3px]"> <span>in the</span><span
                             class="font-bold"><a href="/">Moon Light</a></span><span>agency</span></p>
                       </div>
 
                       <!-- description-block -->
                       <div class="md:w-5/12">
-                        <p class="text-lg text-[#424550] dark:text-[#c7c6d3]">
+                        <p class="text-lg text-[#424550] dark:text-text-inside-imgs">
                           I am actively involved in creating user interfaces for mobile apps and websites.
                         </p>
 
@@ -983,71 +974,71 @@
 
                 <!-- favorite tools-block -->
                 <div class="mb-[130px]">
-                  <div class="mb-[41px] border-b border-[#d1d5e0] pb-[41px]">
-                    <h4 class="text-[30px] font-bold text-[#22232c] dark:text-[#c7c6d3]">My favourite tools</h4>
+                  <div class="mb-[41px] border-b border-section-badge pb-[41px]">
+                    <h4 class="text-[30px] font-bold text-text-portfolio-section dark:text-text-inside-imgs">My favourite tools</h4>
                   </div>
                   <!-- tools-block-upper-div -->
                   <div class="   grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 ">
                     <!-- single-item -->
                     <div class=" px-1  mt-8 flex ">
-                      <div class="w-full p-6 border border-[#d1d5e0] text-center rounded-2xl">
+                      <div class="w-full p-6 border border-section-badge text-center rounded-2xl">
                         <img src="./src/images/icon-photoshop.svg" class="w-24 h-auto" alt="">
-                        <p class="mt-2 text-base text-center  font-bold lining-nums text-[#22232c] dark:text-[#c7c6d3]">
+                        <p class="mt-2 text-base text-center  font-bold lining-nums text-text-portfolio-section dark:text-text-inside-imgs">
                           Photoshop</p>
                       </div>
                     </div>
                     <div class="px-1  mt-8 flex ">
                       <div
-                        class="w-full p-6 border flex items-center flex-col justify-center border-[#d1d5e0] text-center rounded-2xl">
+                        class="w-full p-6 border flex items-center flex-col justify-center border-section-badge text-center rounded-2xl">
                         <img src="./src/images/icon-figma.svg" class="w-24 h-auto" alt="">
-                        <p class="mt-2 text-base text-center  font-bold lining-nums text-[#22232c]">figma</p>
+                        <p class="mt-2 text-base text-center  font-bold lining-nums text-text-portfolio-section">figma</p>
                       </div>
                     </div>
                     <div class="px-1  mt-8 flex ">
                       <div
-                        class="w-full p-6 border flex items-center flex-col justify-center border-[#d1d5e0] text-center rounded-2xl">
+                        class="w-full p-6 border flex items-center flex-col justify-center border-section-badge text-center rounded-2xl">
                         <img src="./src/images/icon-illustrator.svg" class="w-24 h-auto" alt="">
-                        <p class="mt-2 text-base text-center  font-bold lining-nums text-[#22232c] dark:text-[#c7c6d3]">
+                        <p class="mt-2 text-base text-center  font-bold lining-nums text-text-portfolio-section dark:text-text-inside-imgs">
                           Illustrator</p>
                       </div>
                     </div>
                     <div class="px-1  mt-8 flex ">
                       <div
-                        class="w-full p-6 border flex items-center flex-col justify-center border-[#d1d5e0] text-center rounded-2xl">
+                        class="w-full p-6 border flex items-center flex-col justify-center border-section-badge text-center rounded-2xl">
                         <img src="./src/images/icon-scketch.svg" class="w-24 h-auto" alt="">
-                        <p class="mt-2 text-base text-center  font-bold lining-nums text-[#22232c] dark:text-[#c7c6d3]">
+                        <p class="mt-2 text-base text-center  font-bold lining-nums text-text-portfolio-section dark:text-text-inside-imgs">
                           Sketch</p>
                       </div>
                     </div>
                     <div class="px-1  mt-8 flex ">
                       <div
-                        class="w-full p-6 border flex items-center flex-col justify-center border-[#d1d5e0] text-center rounded-2xl">
+                        class="w-full p-6 border flex items-center flex-col justify-center border-section-badge text-center rounded-2xl">
                         <img src="./src/images/icon-blender.svg" class="w-24 h-auto" alt="">
-                        <p class="mt-2 text-base text-center  font-bold lining-nums text-[#22232c] dark:text-[#c7c6d3]">
+                        <p class="mt-2 text-base text-center  font-bold lining-nums text-text-portfolio-section dark:text-text-inside-imgs">
                           Blender</p>
                       </div>
                     </div>
                     <div class="px-1  mt-8 flex ">
                       <div
-                        class="w-full p-6 border flex items-center flex-col justify-center border-[#d1d5e0] text-center rounded-2xl">
+                        class="w-full p-6 border flex items-center flex-col justify-center border-section-badge text-center rounded-2xl">
                         <img src="./src/images/icon-html.svg" class="w-24 h-auto" alt="">
-                        <p class="mt-2 text-base text-center  font-bold lining-nums text-[#22232c] dark:text-[#c7c6d3]">
+                        <p class="mt-2 text-base text-center  font-bold lining-nums text-text-portfolio-section dark:text-text-inside-imgs">
                           HTML5</p>
                       </div>
                     </div>
                     <div class="px-1  mt-8 flex ">
                       <div
-                        class="w-full p-6 border flex items-center flex-col justify-center border-[#d1d5e0] text-center rounded-2xl">
+                        class="w-full p-6 border flex items-center flex-col justify-center border-section-badge text-center rounded-2xl">
                         <img src="./src/images/icon-css.svg" class="w-24 h-auto" alt="">
-                        <p class="mt-2 text-base text-center  font-bold lining-nums text-[#22232c] dark:text-[#c7c6d3]">
+                        <p class="mt-2 text-base text-center  font-bold lining-nums text-text-portfolio-section dark:text-text-inside-imgs">
                           CSS3</p>
                       </div>
                     </div>
                     <div class="px-1  mt-8 flex ">
                       <div
-                        class="w-full p-6 border flex items-center flex-col justify-center border-[#d1d5e0] text-center rounded-2xl">
+                        class="w-full p-6 border flex items-center flex-col justify-center border-section-badge text-center rounded-2xl">
                         <img src="./src/images/icon-notion.svg" class="w-24 h-auto" alt="">
-                        <p class="mt-2 text-base text-center  font-bold lining-nums text-[#22232c] dark:text-[#c7c6d3]">
+                        <p class="mt-2 text-base text-center  font-bold lining-nums text-[#22232c] dark:text-text-inside-imgs">
                           Notion</p>
                       </div>
                     </div>
@@ -1072,15 +1063,15 @@
 
             <!-- Testimonials -->
             <section>
-              <div class="  border border-[#d1d5e0] dark:border-[#303033] w-fit px-3 py-2  rounded-2xl mb-2 ">
+              <div class="  border border-section-badge dark:border-border-dark w-fit px-3 py-2  rounded-2xl mb-2 ">
                 <p>
-                  <span class="dark:text-[#cec4cf] text-[#424550]"> <svg xmlns="http://www.w3.org/2000/svg"
+                  <span class="dark:text-secondary-dark text-text-light"> <svg xmlns="http://www.w3.org/2000/svg"
                       class="inline" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13" fill="currentColor">
                       <path fill="text-[#cec4cf]" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
                   C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
                   C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"></path>
                     </svg></span>
-                  <span class="dark:text-[#cec4cf] font-bold text-[#424550]">Testimonials</span>
+                  <span class="dark:text-paragraph-content font-bold text-text-light">Testimonials</span>
                 </p>
 
 
@@ -1088,7 +1079,7 @@
               <!-- client-say-about-me -->
               <div class="mb-8">
                 <h6
-                  class="max-w-[700px] text-[46px] font-bold text-transparent bg-clip-text bg-gradient-to-br from-[#aa70e0] to-[#7059e2] dark:from-[#e4b8bf] dark:to-[#cec4ef] ">
+                  class="max-w-[700px] text-[46px] font-bold text-transparent bg-clip-text bg-gradient-to-br from-primary-light to-secondary-light dark:from-primary-dark  dark:to-secondary-dark ">
                   Clients say about me</h6>
               </div>
               <!-- Feedback Container -->
@@ -1098,12 +1089,12 @@
 
               <div class="flex justify-start gap-5 mt-8 px-5 pb-5">
                 <button id="prevBtn"
-                  class="w-12 h-12 rounded-2xl  cursor-pointer border border-[#d1d5e0]  transform transition-all flex items-center justify-center">
-                  <i class="ri-arrow-left-s-line dark:text-[#c7c6d3] text-[#424550] text-2xl transition-colors"></i>
+                  class="w-12 h-12 rounded-2xl  cursor-pointer border border-section-badge transform transition-all flex items-center justify-center">
+                  <i class="ri-arrow-left-s-line dark:text-text-inside-imgs text-text-light text-2xl transition-colors"></i>
                 </button>
                 <button id="nextBtn"
-                  class="w-12 h-12 rounded-2xl cursor-pointer  border border-[#d1d5e0] transition-all flex items-center justify-center">
-                  <i class="ri-arrow-right-s-line dark:text-[#c7c6d3] text-[#424550] text-2xl transition-colors"></i>
+                  class="w-12 h-12 rounded-2xl cursor-pointer  border border-section-badge transition-all flex items-center justify-center">
+                  <i class="ri-arrow-right-s-line dark:text-text-inside-imgs text-text-light text-2xl transition-colors"></i>
                 </button>
               </div>
 
@@ -1114,21 +1105,21 @@
             <!-- Contact-us-section start -->
             <section class="pt-28 pb-10 z-0">
               <div class="">
-                <div class="  mb-8 border border-[#d1d5e0] dark:border-[#303033] w-fit px-3 py-2  rounded-2xl ">
+                <div class="  mb-8 border border-section-badge dark:border-border-dark w-fit px-3 py-2  rounded-2xl ">
                   <p>
-                    <span class="dark:text-[#cec4cf] text-[#424550]"> <svg xmlns="http://www.w3.org/2000/svg"
+                    <span class="dark:text-paragraph-content text-text-light"> <svg xmlns="http://www.w3.org/2000/svg"
                         class="inline" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13"
                         fill="currentColor">
                         <path fill="text-[#cec4cf]" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
                   C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
                   C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"></path>
                       </svg></span>
-                    <span class="dark:text-[#cec4cf] font-bold text-[#424550]">Contact</span>
+                    <span class="dark:text-paragraph-content font-bold text-text-light">Contact</span>
                   </p>
                 </div>
                 <div class="mb-12">
                   <h6
-                    class="max-w-[700px] text-[46px] leading-[56px] font-bold text-transparent bg-clip-text bg-gradient-to-br from-[#aa70e0] to-[#7059e2] dark:from-[#e4b8bf] dark:to-[#cec4ef] ">
+                    class="max-w-[700px] text-[46px] leading-[56px] font-bold text-transparent bg-clip-text bg-gradient-to-br from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark ">
                     Let's make something awesome together!</h6>
                 </div>
                 <!-- form-container -->
@@ -1141,11 +1132,11 @@
                       <div class="flex  flex-col md:flex-row w-full">
                         <div class="px-[15px] mb-12 md:w-1/2">
                           <input type="text" name="Name" placeholder="Name*"
-                            class="relative  text-xl  w-full  outline-none px-4 py-[14px] font-bold focus:border-[#7059e2] dark:focus:border-[#e4b8bf] dark:border-[#22232c] border-b-2 border-[#d1d5e0] text-[#22232c] dark:text-[#e9e9f1]">
+                            class="relative  text-xl  w-full  outline-none px-4 py-[14px] font-bold focus:border-secondary-light dark:focus:border-primary-dark dark:border-text-portfolio-section border-b-2 border-section-badge text-text-portfolio-section dark:text-text-dark">
                         </div>
                         <div class="px-[15px] mb-12 md:w-1/2">
                           <input type="text" name="Company" placeholder="Company Name*"
-                            class="relative text-xl  w-full  outline-none px-4 py-[14px] focus:border-[#7059e2] dark:focus:border-[#e4b8bf] dark:border-[#22232c] border-b-2 border-[#d1d5e0] font-bold  dark:text-[#e9e9f1] text-[#22232c]">
+                            class="relative text-xl  w-full  outline-none px-4 py-[14px] focus:border-secondary-light dark:focus:border-primary-dark dark:border-text-portfolio-section border-b-2 border-section-badge font-bold  dark:text-text-dark text-text-portfolio-section">
                         </div>
                       </div>
 
@@ -1153,19 +1144,19 @@
                       <div class="flex   flex-col md:flex-row w-full">
                         <div class="px-[15px] mb-12 md:w-1/2">
                           <input type="email" name="Email" placeholder="Email Address*"
-                            class="relative focus:border-[#7059e2] dark:focus:border-[#e4b8bf] dark:border-[#22232c]    dark:text-[#e9e9f1]  text-xl  w-full  outline-none px-4 py-[14px] font-bold border-b-2 border-[#d1d5e0] text-[#22232c]">
+                            class="relative focus:border-secondary-light dark:focus:border-primary-dark dark:border-text-portfolio-section   dark:text-text-dark  text-xl  w-full  outline-none px-4 py-[14px] font-bold border-b-2 border-section-badge text-text-portfolio-section">
                         </div>
                         <div class="px-[15px] mb-12 md:w-1/2">
                           <input type="number" name="Phone" placeholder="Phone Number*"
-                            class="relative text-xl  w-full  outline-none px-4 py-[14px] font-bold border-b-2 border-[#d1d5e0] text-[#22232c]">
+                            class="relative text-xl  w-full  outline-none px-4 py-[14px] font-bold border-b-2 border-section-badge text-text-portfolio-section">
                         </div>
                       </div>
                       <div class="px-[15px] mb-12 w-full">
                         <textarea name="Message" placeholder="A Few Words*"
-                          class="relative text-xl  w-full  outline-none focus:border-[#7059e2] dark:focus:border-[#e4b8bf] dark:border-[#22232c] border-b-2 font-bold  dark:text-[#e9e9f1]  px-4 py-[14px]  border-[#d1d5e0] text-[#22232c]"></textarea>
+                          class="relative text-xl  w-full  outline-none focus:border-secondary-light dark:focus:border-primary-dark dark:border-text-portfolio-section border-b-2 font-bold  dark:text-text-dark  px-4 py-[14px]  border-section-badge text-[#22232c]"></textarea>
                       </div>
                       <button
-                        class="text-white w-fit dark:text-black bg-gradient-to-br   dark:from-[#e4b8bf] dark:to-[#cec4ef]    from-[#aa70e0] to-[#7059e2] rounded-2xl  mt-2 gap-1 flex font-bold p-3">
+                        class="text-white w-fit dark:text-black bg-gradient-to-br   dark:from-primary-dark dark:to-secondary-dark    from-primary-light to-secondary-light rounded-2xl  mt-2 gap-1 flex font-bold p-3">
                         <span class="">send Message</span>
                         <span><i class="ri-send-plane-fill"></i></span>
                       </button>
@@ -1181,70 +1172,70 @@
 
                   <div class="md:w-[20%] w-[50%] flex px-2 py-2  ">
                     <div
-                      class="relative w-full p-12 border flex items-center justify-center border-[#d1d5e0] rounded-2xl">
+                      class="relative w-full p-12 border flex items-center justify-center border-section-badge rounded-2xl">
                       <i
-                        class="ri-dribbble-line text-[60px] text-[#d1d5e0] dark:text-black dark:hover:text-white hover:text-black  transition-all duration-600 ease-in-out"></i>
+                        class="ri-dribbble-line text-[60px] text-section-badge dark:text-black dark:hover:text-white hover:text-black  transition-all duration-600 ease-in-out"></i>
                     </div>
 
                   </div>
                   <div class="md:w-[20%]  w-[50%]  flex  px-2 py-2   ">
                     <div
-                      class="relative w-full flex items-center justify-center p-12 border border-[#d1d5e0] rounded-2xl">
+                      class="relative w-full flex items-center justify-center p-12 border border-section-badge rounded-2xl">
                       <i
-                        class="ri-behance-fill text-[60px] text-[#d1d5e0] hover:text-black dark:text-black dark:hover:text-white transition-all duration-600 ease-in-out"></i>
+                        class="ri-behance-fill text-[60px] text-section-badge hover:text-black dark:text-black dark:hover:text-white transition-all duration-600 ease-in-out"></i>
 
                     </div>
 
                   </div>
                   <div class="md:w-[20%]  w-[50%] flex px-2 py-2 ">
                     <div
-                      class="relative w-full p-12 border flex items-center justify-center border-[#d1d5e0] rounded-2xl">
+                      class="relative w-full p-12 border flex items-center justify-center border-section-badge rounded-2xl">
                       <i
-                        class="ri-instagram-line text-[60px] text-[#d1d5e0] hover:text-black  dark:text-black dark:hover:text-white transition-all duration-600 ease-in-out"></i>
+                        class="ri-instagram-line text-[60px] text-section-badge hover:text-black  dark:text-black dark:hover:text-white transition-all duration-600 ease-in-out"></i>
 
                     </div>
 
                   </div>
                   <div class="md:w-[20%]  w-[50%]  flex  px-2 py-2 ">
                     <div
-                      class="relative w-full p-12 border flex items-center justify-center border-[#d1d5e0] rounded-2xl">
+                      class="relative w-full p-12 border flex items-center justify-center border-section-badge rounded-2xl">
                       <i
-                        class="ri-twitch-line text-[60px] text-[#d1d5e0] hover:text-black dark:text-black dark:hover:text-white transition-all duration-600 ease-in-out"></i>
+                        class="ri-twitch-line text-[60px] text-section-badge hover:text-black dark:text-black dark:hover:text-white transition-all duration-600 ease-in-out"></i>
                     </div>
                   </div>
                   <div class="md:w-[20%]  w-[50%]  flex  px-2 py-2  ">
                     <div
-                      class="relative w-full p-12 border flex items-center justify-center border-[#d1d5e0] rounded-2xl">
+                      class="relative w-full p-12 border flex items-center justify-center border-section-badge rounded-2xl">
                       <i
-                        class="ri-pinterest-line text-[60px] text-[#d1d5e0] hover:text-black dark:text-black dark:hover:text-white transition-all duration-600 ease-in-out"></i>
+                        class="ri-pinterest-line text-[60px] text-section-badge hover:text-black dark:text-black dark:hover:text-white transition-all duration-600 ease-in-out"></i>
                     </div>
                   </div>
                 </div>
                 <div class=" mb-12">
                   <p
-                    class="max-w-[700px] text-[32px] font-bold text-transparent leading-[46px] bg-clip-text bg-gradient-to-br from-[#aa70e0] to-[#7059e2] dark:from-[#e4b8bf] dark:to-[#cec4ef]">
+                    class="max-w-[700px] text-[32px] font-bold text-transparent leading-[46px] bg-clip-text bg-gradient-to-br from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark">
                     Want to know more about me, tell me about your project or just to say hello? Drop me a line and I'll
                     get back as soon as possible.
                   </p>
                 </div>
-                <div class="flex pb-[10.3rem] pt-[3.3rem] border-t border-[#d1d5e0] flex-col before-lg:flex-row">
+                <div class="flex pb-[10.3rem] pt-[3.3rem] border-t border-section-badge flex-col before-lg:flex-row">
                   <div class="flex  flex-col w-1/3">
-                    <p class="font-bold text-base lining-nums dark:text-[#e9e9f1] text-[#22232c]">Location</p>
-                    <p class="font-normal text-base lining-nums text-[#666a97]">
+                    <p class="font-bold text-base lining-nums dark:text-text-dark text-text-portfolio-section">Location</p>
+                    <p class="font-normal text-base lining-nums text-text-color">
                       <a href="/">Odesa, Ukrain</a>
                     </p>
 
                   </div>
                   <div class="flex  flex-col w-1/3">
-                    <p class="font-bold text-base lining-nums dark:text-[#e9e9f1] text-[#22232c]">Phone</p>
-                    <p class="font-normal text-base lining-nums text-[#666a97]">
+                    <p class="font-bold text-base lining-nums dark:text-text-dark text-text-portfolio-section">Phone</p>
+                    <p class="font-normal text-base lining-nums text-text-color">
                       <a href="/">+1 212-708-9400</a>
                     </p>
 
                   </div>
                   <div class="flex  flex-col w-1/3">
-                    <p class="font-bold text-base lining-nums dark:text-[#e9e9f1] text-[#22232c]">Email</p>
-                    <p class="font-normal text-base lining-nums text-[#666a97]">
+                    <p class="font-bold text-base lining-nums dark:text-text-dark text-text-portfolio-section">Email</p>
+                    <p class="font-normal text-base lining-nums text-text-color">
                       <a href="/">hello@alexwalker.com</a>
                     </p>
 
@@ -1255,8 +1246,7 @@
 
                 </div>
 
-              </div>
-          </div>
+              </div> 
           </section>
           <!--Contact-us-section end  -->
 
