@@ -1532,6 +1532,13 @@
 .dark ::-webkit-scrollbar-thumb:hover {
   background-image: linear-gradient(to bottom right, var(--color-secondary-dark), var(--color-primary-dark));
 }
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 .flex-1 {
   flex: 1;
 }
