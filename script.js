@@ -66,6 +66,28 @@ themeToggleBtn.addEventListener('click', function() {
     }
     
 });
+
+const svgs = document.querySelectorAll("[data-speed]");
+
+  let ticking = false;
+
+  function updateParallax() {
+    const scrollY = window.scrollY;
+
+    svgs.forEach((el) => {
+      const speed = parseFloat(el.dataset.speed) || 0.5;
+      el.style.transform = `translateY(${scrollY * speed}px)`;
+    });
+
+    ticking = false;
+  }
+
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateParallax);
+      ticking = true;
+    }
+  });
  
 
 /* interaction observer to observer  every section comes into view and  */

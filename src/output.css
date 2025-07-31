@@ -54,6 +54,7 @@
     --color-text-inside-imgs: #c7c6d3;
     --color-text-portfolio-section: #22232c;
     --color-text-color: #666a97;
+    --scrollbar-track-color: #6b7280;
   }
 }
 @layer base {
@@ -608,9 +609,6 @@
   .bg-left-div-bg {
     background-color: var(--color-left-div-bg);
   }
-  .bg-primary-dark {
-    background-color: var(--color-primary-dark);
-  }
   .bg-transparent {
     background-color: transparent;
   }
@@ -874,9 +872,6 @@
   }
   .text-wrap {
     text-wrap: wrap;
-  }
-  .text-\[\#666a97\] {
-    color: #666a97;
   }
   .text-\[\#22232c\] {
     color: #22232c;
@@ -1514,6 +1509,28 @@
       }
     }
   }
+}
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color);
+}
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to bottom right, var(--color-primary-light), var(--color-secondary-light));
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(to bottom right, var(--color-secondary-light), var(--color-primary-light));
+}
+.dark ::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color);
+}
+.dark ::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to bottom right, var(--color-primary-dark), var(--color-secondary-dark));
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(to bottom right, var(--color-secondary-dark), var(--color-primary-dark));
 }
 .flex-1 {
   flex: 1;
