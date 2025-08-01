@@ -200,7 +200,7 @@ html {
 }
 
 .active-1{
-  @apply border border-[#0000004d] dark:border-[#303033] dark:text-white text-black !rounded-[20px];
+  @apply border border-[#0000004d] dark:border-[#303033] dark:text-white text-black rounded-[20px];
 }
 .active-2{
  @apply  bg-black p-1 ;

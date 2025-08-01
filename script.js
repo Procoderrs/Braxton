@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const width = window.innerWidth;
 
             if (width < 992) {
-              item.classList.add('bg-black', 'p-1');
+              item.classList.add('bg-black', 'p-1', );
             } else if (width >= 992 && width < 1200) {
               item.classList.add('active-1');
             } else {
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const slide = document.createElement('div');
             slide.className = 'flex-shrink-0 w-full  flex flex-col justify-center';
             slide.innerHTML = `
-              <div class=" rounded-2xl md:p-8 p-4 border-1 border-[#d1d5e0] ">
+              <div class=" rounded-2xl md:p-8 p-4 border-1 border-border-dark ">
                 <div class="flex flex-row md:flex-row items-start gap-5 mb-6 ">
                   <img src="${t.img}" alt="${t.name}" class="md:w-[100px] md:h-[100px] w-[50px] h-auto object-cover rounded-2xl " />
                   <div class="flex-1 text-left">
