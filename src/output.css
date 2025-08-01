@@ -643,6 +643,9 @@
   .border-section-badge {
     border-color: var(--color-section-badge);
   }
+  .border-text-light {
+    border-color: var(--color-text-light);
+  }
   .border-transparent {
     border-color: transparent;
   }
@@ -1488,6 +1491,11 @@
       border-color: #303033;
     }
   }
+  .dark\:border-\[\#424550\] {
+    &:where(.dark, .dark *) {
+      border-color: #424550;
+    }
+  }
   .dark\:border-border-dark {
     &:where(.dark, .dark *) {
       border-color: var(--color-border-dark);
@@ -1496,6 +1504,11 @@
   .dark\:border-text-portfolio-section {
     &:where(.dark, .dark *) {
       border-color: var(--color-text-portfolio-section);
+    }
+  }
+  .dark\:bg-\[\#171717\] {
+    &:where(.dark, .dark *) {
+      background-color: #171717;
     }
   }
   .dark\:bg-black {
