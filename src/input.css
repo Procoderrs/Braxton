@@ -5,6 +5,7 @@
 @theme{
   --font-display:"Syne","sans-serif";
   --breakpoint-before-lg:62rem; /* 992px */
+  --breakpoint-after-lg:64rem;  /* 1024px */
   --breakpoint-before-sm:36rem;/* 576px */
   --breakpoint-before-xl:75rem; /* 1200px */
   --breakpoint-before-2xl:87.5rem; /* 1400px */
