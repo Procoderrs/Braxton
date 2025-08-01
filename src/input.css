@@ -118,6 +118,77 @@ html {
   }
 
 
+
+    /* Rotate + Bounce + Corner rounding */
+    @keyframes rotateBounce {
+      0% {
+        transform: rotate(0deg) translateY(0);
+        border-radius: 0;
+      }
+      24% {
+        transform: rotate(89deg) translateY(0);
+      }
+      25% {
+        transform: rotate(90deg) translateY(6px);
+        border-radius: 0 0 0 10px; /* bottom-left */
+      }
+      26% {
+        transform: rotate(91deg) translateY(0);
+        border-radius: 0;
+      }
+
+      49% {
+        transform: rotate(179deg) translateY(0);
+      }
+      50% {
+        transform: rotate(180deg) translateY(6px);
+        border-radius: 10px 0 0 0; /* bottom-right */
+      }
+      51% {
+        transform: rotate(181deg) translateY(0);
+        border-radius: 0;
+      }
+
+      74% {
+        transform: rotate(269deg) translateY(0);
+      }
+      75% {
+        transform: rotate(270deg) translateY(6px);
+        border-radius: 0 10px 0 0; /* top-left, won't visually round bottom */
+      }
+      76% {
+        transform: rotate(271deg) translateY(0);
+        border-radius: 0;
+      }
+
+      99% {
+        transform: rotate(359deg) translateY(0);
+      }
+      100% {
+        transform: rotate(360deg) translateY(6px);
+        border-radius: 0 0 10px 0; /* bottom-right */
+      }
+    }
+
+    /* Shadow fades out on corner bounce */
+    @keyframes shadowFade {
+      0%, 24%, 26%, 49%, 51%, 74%, 76%, 99% {
+        opacity: 0.6;
+      }
+      25%, 50%, 75%, 100% {
+        opacity: 0;
+      }
+    }
+
+    .box {
+      animation: rotateBounce 4s ease-in-out infinite;
+      transform-origin: center center;
+    }
+
+    .shadow {
+      animation: shadowFade 4s ease-in-out infinite;
+    }
+
  .nav-item.active {
   @apply border border-[#0000004D] dark:border-[#303033]  dark:text-white text-black rounded-2xl  ;
 }

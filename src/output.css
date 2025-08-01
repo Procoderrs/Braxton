@@ -7,6 +7,9 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-indigo-500: oklch(58.5% 0.233 277.117);
+    --color-purple-600: oklch(55.8% 0.288 302.321);
+    --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-black: #000;
     --color-white: #fff;
@@ -229,6 +232,9 @@
   .-bottom-\[300px\] {
     bottom: calc(300px * -1);
   }
+  .bottom-0 {
+    bottom: calc(var(--spacing) * 0);
+  }
   .bottom-5 {
     bottom: calc(var(--spacing) * 5);
   }
@@ -238,11 +244,17 @@
   .bottom-18 {
     bottom: calc(var(--spacing) * 18);
   }
+  .bottom-\[8px\] {
+    bottom: 8px;
+  }
   .-left-\[300px\] {
     left: calc(300px * -1);
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
+  }
+  .left-1\/2 {
+    left: calc(1/2 * 100%);
   }
   .left-12 {
     left: calc(var(--spacing) * 12);
@@ -386,8 +398,20 @@
   .h-\[4px\] {
     height: 4px;
   }
+  .h-\[8px\] {
+    height: 8px;
+  }
+  .h-\[30px\] {
+    height: 30px;
+  }
   .h-\[34px\] {
     height: 34px;
+  }
+  .h-\[40px\] {
+    height: 40px;
+  }
+  .h-\[80px\] {
+    height: 80px;
   }
   .h-\[100vh\] {
     height: 100vh;
@@ -434,11 +458,20 @@
   .w-\[15px\] {
     width: 15px;
   }
+  .w-\[30px\] {
+    width: 30px;
+  }
+  .w-\[40px\] {
+    width: 40px;
+  }
   .w-\[50\%\] {
     width: 50%;
   }
   .w-\[50px\] {
     width: 50px;
+  }
+  .w-\[60px\] {
+    width: 60px;
   }
   .w-\[180px\] {
     width: 180px;
@@ -470,8 +503,16 @@
   .flex-shrink-0 {
     flex-shrink: 0;
   }
+  .-translate-x-1\/2 {
+    --tw-translate-x: calc(calc(1/2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
   .translate-y-0 {
     --tw-translate-y: calc(var(--spacing) * 0);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-10 {
+    --tw-translate-y: calc(var(--spacing) * 10);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .transform {
@@ -608,6 +649,12 @@
   .border-white {
     border-color: var(--color-white);
   }
+  .bg-\[\#bdc1c8\] {
+    background-color: #bdc1c8;
+  }
+  .bg-\[\#e6ebf4\] {
+    background-color: #e6ebf4;
+  }
   .bg-black {
     background-color: var(--color-black);
   }
@@ -638,6 +685,10 @@
     --tw-gradient-from: var(--color-btn-primary-light);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
+  .from-indigo-500 {
+    --tw-gradient-from: var(--color-indigo-500);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
   .from-primary-dark {
     --tw-gradient-from: var(--color-primary-dark);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
@@ -652,6 +703,10 @@
   }
   .to-btn-secondary-light {
     --tw-gradient-to: var(--color-btn-secondary-light);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .to-purple-600 {
+    --tw-gradient-to: var(--color-purple-600);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
   .to-secondary-dark {
@@ -746,9 +801,6 @@
   .pt-5 {
     padding-top: calc(var(--spacing) * 5);
   }
-  .pt-18 {
-    padding-top: calc(var(--spacing) * 18);
-  }
   .pt-28 {
     padding-top: calc(var(--spacing) * 28);
   }
@@ -766,9 +818,6 @@
   }
   .pb-5 {
     padding-bottom: calc(var(--spacing) * 5);
-  }
-  .pb-8 {
-    padding-bottom: calc(var(--spacing) * 8);
   }
   .pb-10 {
     padding-bottom: calc(var(--spacing) * 10);
@@ -950,6 +999,20 @@
   }
   .underline {
     text-decoration-line: underline;
+  }
+  .opacity-0 {
+    opacity: 0%;
+  }
+  .opacity-100 {
+    opacity: 100%;
+  }
+  .shadow {
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-lg {
+    --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .shadow-md {
     --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
@@ -1626,6 +1689,67 @@ html {
   100% {
     transform: rotate(90deg) scale(1);
   }
+}
+@keyframes rotateBounce {
+  0% {
+    transform: rotate(0deg) translateY(0);
+    border-radius: 0;
+  }
+  24% {
+    transform: rotate(89deg) translateY(0);
+  }
+  25% {
+    transform: rotate(90deg) translateY(6px);
+    border-radius: 0 0 0 10px;
+  }
+  26% {
+    transform: rotate(91deg) translateY(0);
+    border-radius: 0;
+  }
+  49% {
+    transform: rotate(179deg) translateY(0);
+  }
+  50% {
+    transform: rotate(180deg) translateY(6px);
+    border-radius: 10px 0 0 0;
+  }
+  51% {
+    transform: rotate(181deg) translateY(0);
+    border-radius: 0;
+  }
+  74% {
+    transform: rotate(269deg) translateY(0);
+  }
+  75% {
+    transform: rotate(270deg) translateY(6px);
+    border-radius: 0 10px 0 0;
+  }
+  76% {
+    transform: rotate(271deg) translateY(0);
+    border-radius: 0;
+  }
+  99% {
+    transform: rotate(359deg) translateY(0);
+  }
+  100% {
+    transform: rotate(360deg) translateY(6px);
+    border-radius: 0 0 10px 0;
+  }
+}
+@keyframes shadowFade {
+  0%, 24%, 26%, 49%, 51%, 74%, 76%, 99% {
+    opacity: 0.6;
+  }
+  25%, 50%, 75%, 100% {
+    opacity: 0;
+  }
+}
+.box {
+  animation: rotateBounce 4s ease-in-out infinite;
+  transform-origin: center center;
+}
+.shadow {
+  animation: shadowFade 4s ease-in-out infinite;
 }
 .nav-item.active {
   border-radius: var(--radius-2xl);

@@ -19,9 +19,15 @@
 
   <!-- pre-animation -->
 
-  <div id="pre" class=" flex items-center flex-col justify-center h-screen bg-body-bg-dark">
-    <div class=" animate w-10 h-10 bg-gradient-to-br from-primary-dark rounded-lg to-secondary-dark"></div>
-    <div class=" w-8 h-[4px] mt-2 bg-black"></div>
+  <div id="pre" class=" flex items-center flex-col justify-center h-screen dark:bg-body-bg-dark bg-white" >
+   <div class="relative w-[40px] h-[40px]">
+    <!-- Shadow below the box (5px gap) -->
+    <div class="absolute bottom-0 left-1/2 w-[40px] h-[8px] rounded-full bg-[#bdc1c8] shadow "></div>
+    
+    <!-- Rotating + bouncing box -->
+    <div class="absolute bottom-[8px] left-1/2 -translate-x-1/2 w-[30px] h-[30px] bg-gradient-to-br   dark:from-primary-dark dark:to-secondary-dark    from-btn-primary-light to-btn-secondary-light  box shadow-lg"></div>
+  </div>
+   
   </div>
 
 
@@ -78,11 +84,11 @@
   <!-- main-content-loaded -->
   <div id="main-content" class=" hidden    w-full   ">
     <!-- Home-component -->
-    <div class="relative   ">
-      <div class=" before-lg:pl-[30px] before-lg:pr-[20px] before-xl:pl-[60px]  before-xl:pr-[60px] px-4">
+    <div class="relative    ">
+      <div class=" before-lg:pl-[30px] before-lg:pr-[20px] before-xl:pl-[60px]  before-xl:pr-[60px] py-4 px-4">
 
         <!-- splitting banner in two contaniners -->
-        <div class="flex flex-col before-lg:flex-row justify-between items-start  ">
+        <div class="flex flex-col before-lg:flex-row justify-between items-start    ">
           <!-- flex-left-div-start -->
           <div
             class="px-[30px] py-4 flex justify-between flex-col before-lg:h-[90vh] w-full  before-lg:w-[320px] overflow-y-auto  hide-scrollbar    before-lg:sticky top-8    border dark:border-dark border-section-badge  rounded-4xl z-0 bg-left-div-bg  dark:bg-text-portfolio-section    ">
