@@ -75,11 +75,18 @@ function updateParallax() {
 
   svgs.forEach((el) => {
     const speed = parseFloat(el.dataset.speed) || 0.6;
-    el.style.transform = `translateY(${scrollY * speed}px)`; // <-- FIXED!
+
+    // Move top SVG upward, bottom SVG upward
+    if (el.classList.contains('background__svg01')) {
+      el.style.transform = `translateY(${-scrollY * speed}px)`; // Move up
+    } else if (el.classList.contains('background__svg02')) {
+      el.style.transform = `translateY(${-scrollY * speed}px)`; // Move up
+    }
   });
 
   ticking = false;
 }
+
 
 window.addEventListener("scroll", () => {
   if (!ticking) {
