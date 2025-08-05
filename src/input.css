@@ -33,6 +33,10 @@
 
   --color-text-dark:#e9e9f1;
   --color-text-light:#424550;
+
+  --color-text-last:#a1a1af;
+
+  --color-dark:#121319;
   --color-text-cards:#ebf0f7;
 
   --color-border-dark:#303033;
@@ -44,7 +48,7 @@
   --color-text-inside-imgs:#c7c6d3;
   --color-text-portfolio-section:#22232c;
 
-  --color-text-color:#666a97;
+  --color-text-color:#666a79;
   --color-bg-color-cards:#e6ebf4;
 
 --scrollbar-track-color: #6b7280; /* Tailwind gray-500 */
@@ -267,6 +271,67 @@ html {
 .icon-svg.bounce-reverse {
     animation-name: bounce-twice-reverse;
 }
+
+
+/* Bounce forward on X axis */
+@keyframes bounce-horizontal {
+    0% {
+        transform: translateX(0);
+    }
+
+    60% {
+        transform: translateX(-200%);
+    }
+
+    61% {
+        transform: translateX(200%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Bounce reverse on X axis */
+@keyframes bounce-horizontal-reverse {
+    0% {
+        transform: translateX(0);
+    }
+
+    60% {
+        transform: translateX(200%);
+    }
+
+    61% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.icon-svg-horizontal {
+    transition: transform 0.3s ease;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+.icon-svg-horizontal.bounce-horizontal {
+    animation-name: bounce-horizontal;
+}
+
+.icon-svg-horizontal.bounce-horizontal-reverse {
+    animation-name: bounce-horizontal-reverse;
+}
+
+
+
+
+
+
+
  @keyframes spinForward {
   from {
     transform: rotate(0deg);

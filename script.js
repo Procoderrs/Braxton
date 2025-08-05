@@ -24,6 +24,26 @@ document.querySelectorAll('.icon-container').forEach(container => {
     });
 });
 
+
+/* horizontal-animation */
+document.querySelectorAll('.icon-container').forEach(container => {
+    const svg = container.querySelector('.icon-svg-horizontal');
+
+    container.addEventListener('mouseenter', () => {
+        svg.classList.remove('bounce-horizontal-reverse');
+        void svg.offsetWidth; // Reset animation
+        svg.classList.add('bounce-horizontal');
+    });
+
+    container.addEventListener('mouseleave', () => {
+        svg.classList.remove('bounce-horizontal');
+        void svg.offsetWidth; // Reset animation
+        svg.classList.add('bounce-horizontal-reverse');
+    });
+});
+
+
+
 /* checking dark and light theme */
 
 let themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
@@ -171,7 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const slide = document.createElement('div');
             slide.className = 'flex-shrink-0 w-full  flex flex-col justify-center';
             slide.innerHTML = `
-              <div class=" rounded-2xl md:p-8 p-6 border-1 border-border-dark ">
+              <div class=" rounded-2xl md:p-8 p-6 border-1 border-section-badge dark:border-border-dark ">
                 <div class="flex flex-row md:flex-row items-start gap-5 mb-6 ">
                   <img src="${t.img}" alt="${t.name}" class="md:w-[100px] md:h-[100px] w-[50px] h-auto object-cover rounded-2xl " />
                   <div class="flex-1 text-left">
