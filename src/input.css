@@ -27,11 +27,13 @@
 
   --color-primary-dark:#e1bac5;
   --color-secondary-dark:#cec4ef;
+  --color-btn:#717586;
 
   --color-profile-text:#c7c7de;
 
   --color-text-dark:#e9e9f1;
   --color-text-light:#424550;
+  --color-text-cards:#ebf0f7;
 
   --color-border-dark:#303033;
   --color-border-light:#0000004d;
@@ -41,7 +43,9 @@
 
   --color-text-inside-imgs:#c7c6d3;
   --color-text-portfolio-section:#22232c;
+
   --color-text-color:#666a97;
+  --color-bg-color-cards:#e6ebf4;
 
 --scrollbar-track-color: #6b7280; /* Tailwind gray-500 */
 

@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
         navItems.forEach((item) => {
           if (item.dataset.link === id) {
             // First, remove all previously added classes
-            item.classList.remove('active', 'active-1', 'active-2');
+            item.classList.remove('active', 'active-1');
 
             const width = window.innerWidth;
 
