@@ -203,7 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   </div>
                 </div>
                 <p class="text-[#424550] dark:text-[#c7c6d3] text-lg leading-relaxed">${t.text}</p>
-                <div class=" mt-4"><span class="text-xl text-[#424550] font-bold">  <a href="/">Project Page</a> </span>  <span class="text-xl text-[#424550] font-bold"> <i class="ri-arrow-right-line"></i> </span></div>
+                <div class=" icon-container  transition-all duration-200 ease-in-out overflow-hidden cursor-pointer mt-4"> <p class="text-xl text-[#424550] font-bold">  <a href="/">Project Page</a>   <span class="text-xl text-[#424550] font-bold"> <i class="ri-arrow-right-line icon-svg-horizontal translate-y-0"></i> </span> </p> </div>
               </div>
             `;
             feedbackWrapper.appendChild(slide);
