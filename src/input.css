@@ -47,6 +47,10 @@
 
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 /* Default: Light Mode Scrollbar */
 ::-webkit-scrollbar {
   width: 4px;
@@ -276,4 +280,5 @@ html {
     transform: rotate(0deg);
   }
 }
+
 

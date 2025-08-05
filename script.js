@@ -68,27 +68,26 @@ themeToggleBtn.addEventListener('click', function() {
 });
 
 const svgs = document.querySelectorAll("[data-speed]");
+let ticking = false;
 
-  let ticking = false;
+function updateParallax() {
+  const scrollY = window.scrollY;
 
-  function updateParallax() {
-    const scrollY = window.scrollY;
-
-    svgs.forEach((el) => {
-      const speed = parseFloat(el.dataset.speed) || 0.5;
-      el.style.transform = `translateY(${scrollY * speed}px)`;
-    });
-
-    ticking = false;
-  }
-
-  window.addEventListener("scroll", () => {
-    if (!ticking) {
-      window.requestAnimationFrame(updateParallax);
-      ticking = true;
-    }
+  svgs.forEach((el) => {
+    const speed = parseFloat(el.dataset.speed) || 0.5;
+    el.style.transform = `translateY(${scrollY * speed}px)`; // <-- FIXED!
   });
- 
+
+  ticking = false;
+}
+
+window.addEventListener("scroll", () => {
+  if (!ticking) {
+    window.requestAnimationFrame(updateParallax);
+    ticking = true;
+  }
+});
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const navItems = document.querySelectorAll('.nav-item');
@@ -165,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const slide = document.createElement('div');
             slide.className = 'flex-shrink-0 w-full  flex flex-col justify-center';
             slide.innerHTML = `
-              <div class=" rounded-2xl md:p-8 p-4 border-1 border-border-dark ">
+              <div class=" rounded-2xl md:p-8 p-6 border-1 border-border-dark ">
                 <div class="flex flex-row md:flex-row items-start gap-5 mb-6 ">
                   <img src="${t.img}" alt="${t.name}" class="md:w-[100px] md:h-[100px] w-[50px] h-auto object-cover rounded-2xl " />
                   <div class="flex-1 text-left">
@@ -217,14 +216,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
         initSlider();
 
+function getVisibleSpinText() {
+  return window.innerWidth >= 992
+    ? document.getElementById("spinTextLg")
+    : document.getElementById("spinTextSm");
+}
 
-
-const spinText = document.getElementById("spinText");
 let rotation = 0;
 let lastScrollY = window.scrollY;
 let isScrolling;
 let spinning = false;
-let direction = 1; // 1 for down, -1 for up
+let direction = 1;
 
 function startSpinning() {
   if (spinning) return;
@@ -233,9 +235,12 @@ function startSpinning() {
   function rotate() {
     if (!spinning) return;
 
-    // Rotate based on direction
     rotation += 4 * direction;
-    spinText.style.transform = `rotate(${rotation}deg)`;
+
+    const spinText = getVisibleSpinText();
+    if (spinText) {
+      spinText.style.transform = `rotate(${rotation}deg)`;
+    }
 
     requestAnimationFrame(rotate);
   }
@@ -245,8 +250,6 @@ function startSpinning() {
 
 window.addEventListener("scroll", () => {
   const currentScrollY = window.scrollY;
-
-  // Determine direction
   direction = currentScrollY > lastScrollY ? 1 : -1;
   lastScrollY = currentScrollY;
 
@@ -257,6 +260,32 @@ window.addEventListener("scroll", () => {
     spinning = false;
   }, 150);
 });
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const el = entry.target;
+
+      if (entry.isIntersecting) {
+        el.classList.add('opacity-100', 'translate-y-0');
+        el.classList.remove('opacity-0', 'translate-y-10');
+      } else {
+        el.classList.remove('opacity-100', 'translate-y-0');
+        el.classList.add('opacity-0', 'translate-y-10');
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
+
+// Setup transition class if not present
+document.querySelectorAll('.fade-up').forEach((el) => {
+  if (!el.classList.contains('transition-all')) {
+    el.classList.add('transition-all', 'duration-700', 'ease-in-out');
+  }
+  observer.observe(el);
+});
+
 
 
 
