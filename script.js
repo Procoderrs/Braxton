@@ -74,7 +74,7 @@ function updateParallax() {
   const scrollY = window.scrollY;
 
   svgs.forEach((el) => {
-    const speed = parseFloat(el.dataset.speed) || 0.5;
+    const speed = parseFloat(el.dataset.speed) || 0.2;
     el.style.transform = `translateY(${scrollY * speed}px)`; // <-- FIXED!
   });
 
