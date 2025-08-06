@@ -6,15 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <script>
-  if (
-    localStorage.getItem('color-theme') === 'dark' ||
-    (!localStorage.getItem('color-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)
-  ) {
-    document.documentElement.classList.add('dark');
-  } else {
-    document.documentElement.classList.remove('dark');
-  }
-</script>
+    if (
+      localStorage.getItem('color-theme') === 'dark' ||
+      (!localStorage.getItem('color-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
   <link rel="stylesheet" href="./src/output.css">
   <link rel="stylesheet" href="./src/input.css">
   <style>
@@ -31,15 +31,17 @@
 
   <!-- pre-animation -->
 
-  <div id="pre" class=" flex items-center flex-col justify-center h-screen dark:bg-body-bg-dark bg-white" >
-   <div class="relative w-[40px] h-[40px]">
-    <!-- Shadow below the box (5px gap) -->
-    <div class="absolute bottom-0 left-1/2 w-[40px] h-[8px] rounded-full bg-[#bdc1c8] shadow "></div>
-    
-    <!-- Rotating + bouncing box -->
-    <div class="absolute bottom-[8px] left-1/2 -translate-x-1/2 w-[30px] h-[30px] bg-gradient-to-br   dark:from-primary-dark dark:to-secondary-dark    from-btn-primary-light to-btn-secondary-light  box shadow-lg"></div>
-  </div>
-   
+  <div id="pre" class=" flex items-center flex-col justify-center h-screen dark:bg-body-bg-dark bg-white">
+    <div class="relative w-[40px] h-[40px]">
+      <!-- Shadow below the box (5px gap) -->
+      <div class="absolute bottom-0 left-1/2 w-[40px] h-[8px] rounded-full bg-[#bdc1c8] shadow "></div>
+
+      <!-- Rotating + bouncing box -->
+      <div
+        class="absolute bottom-[8px] left-1/2 -translate-x-1/2 w-[30px] h-[30px] bg-gradient-to-br   dark:from-primary-dark dark:to-secondary-dark    from-btn-primary-light to-btn-secondary-light  box shadow-lg">
+      </div>
+    </div>
+
   </div>
 
 
@@ -97,7 +99,7 @@
   <div id="main-content" class=" hidden    w-full   ">
 
 
-    
+
     <!-- Home-component -->
     <div class="relative    ">
       <div class=" before-lg:pl-[30px] before-lg:pr-[20px] before-xl:pl-[60px]  before-xl:pr-[60px] py-4 px-4 md:px-16">
@@ -111,34 +113,28 @@
               <div class="flex items-center gap-4 pb-2 ">
 
 
-                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 85 85"
-                  style="enable-background:new 0 0 85 85;" xml:space="preserve" class="gradient-fill">
-                  <style type="text/css">
-                    .gradient-fill {
-                      fill: #e1bacf;
-                      fill: #cec4ef;
-
-                    }
-                  </style>
-                  <g>
-                    <linearGradient id="gradientFill" gradientUnits="userSpaceOnUse" x1="9.9604" y1="75.0338"
-                      x2="75.0387" y2="9.9555">
-                      <stop offset="0" style="stop-color:#e1bac5;"></stop>
-                      <stop offset="1" style="stop-color:#cec4ef;"></stop>
-                    </linearGradient>
-                    <path class="gradient-fill" d="M51,0H34C15.2,0,0,15.2,0,34v17c0,14.3,8.9,26.6,21.4,31.6c0,0,0,0,0,0l0,0C25.3,84.1,29.5,85,34,85h17
-                    c6,0,11.7-1.6,16.6-4.3c0.1-0.1,0.2-0.1,0.3-0.2C78.1,74.6,85,63.6,85,51V34C85,15.2,69.8,0,51,0z M83,51c0,10.7-5.3,20.2-13.4,26
-                    v-2.5v-3.9h3.9v-3.9h-3.9v-3.9h3.9v-3.9h-3.9H67v-3.9V51h-3.9v3.9v3.9h2.6v3.9v3.9v3.9h-3.9h-3.9v3.9h3.9h3.9v3.9v1
-                    C61.3,81.7,56.3,83,51,83H34c-4.5,0-8.7-0.9-12.6-2.6v-2v-3.9h3.9h3.9v-3.9h-3.9h-3.9v-3.9v-3.9v-3.9H24v-3.9V51h-3.9v3.9v3.9h-2.6
-                    h-3.9v3.9h3.9v3.9h-3.9v3.9h3.9v3.9v3.9C8.2,72.8,2,62.6,2,51V34C2,16.4,16.4,2,34,2h17c17.6,0,32,14.4,32,32V51z M50.1,54.9H54
-                    v3.9v3.9h-3.9v-3.9V54.9z M33.1,54.9H37v3.9v3.9h-3.9v-3.9V54.9z M27.9,51H24v-3.9v-3.9v-3.9h3.9v3.9v3.9V51z M31.8,39.3h-3.9v-3.9
-                    h3.9V39.3z M31.8,43.2v-3.9h3.9v3.9H31.8z M63.1,47.1V51h-3.9v-3.9v-3.9v-3.9h3.9v3.9V47.1z M35.7,47.1v-3.9h3.9h3.9h3.9h3.9v3.9
-                    h-3.9h-3.9h-3.9H35.7z M59.2,39.3h-3.9v-3.9h3.9V39.3z M55.3,43.2h-3.9v-3.9h3.9V43.2z"></path>
-                  </g>
-                </svg>
-                <p class="text-[28px] font-bold dark:text-[#e9e9f1]  text-text-portfolio-section leading-7  ">
+               <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 85 85"
+     class="gradient-icon" style="enable-background:new 0 0 85 85;" xml:space="preserve">
+  <defs>
+    <linearGradient id="gradientFill" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="var(--gradient-from)"/>
+      <stop offset="1" stop-color="var(--gradient-to)"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <path fill="url(#gradientFill)" d="M51,0H34C15.2,0,0,15.2,0,34v17c0,14.3,8.9,26.6,21.4,31.6c0,0,0,0,0,0l0,0C25.3,84.1,29.5,85,34,85h17
+    c6,0,11.7-1.6,16.6-4.3c0.1-0.1,0.2-0.1,0.3-0.2C78.1,74.6,85,63.6,85,51V34C85,15.2,69.8,0,51,0z M83,51c0,10.7-5.3,20.2-13.4,26
+    v-2.5v-3.9h3.9v-3.9h-3.9v-3.9h3.9v-3.9h-3.9H67v-3.9V51h-3.9v3.9v3.9h2.6v3.9v3.9v3.9h-3.9h-3.9v3.9h3.9h3.9v3.9v1
+    C61.3,81.7,56.3,83,51,83H34c-4.5,0-8.7-0.9-12.6-2.6v-2v-3.9h3.9h3.9v-3.9h-3.9h-3.9v-3.9v-3.9v-3.9H24v-3.9V51h-3.9v3.9v3.9h-2.6
+    h-3.9v3.9h3.9v3.9h-3.9v3.9h3.9v3.9v3.9C8.2,72.8,2,62.6,2,51V34C2,16.4,16.4,2,34,2h17c17.6,0,32,14.4,32,32V51z M50.1,54.9H54
+    v3.9v3.9h-3.9v-3.9V54.9z M33.1,54.9H37v3.9v3.9h-3.9v-3.9V54.9z M27.9,51H24v-3.9v-3.9v-3.9h3.9v3.9v3.9V51z M31.8,39.3h-3.9v-3.9
+    h3.9V39.3z M31.8,43.2v-3.9h3.9v3.9H31.8z M63.1,47.1V51h-3.9v-3.9v-3.9v-3.9h3.9v3.9V47.1z M35.7,47.1v-3.9h3.9h3.9h3.9h3.9v3.9
+    h-3.9h-3.9h-3.9H35.7z M59.2,39.3h-3.9v-3.9h3.9V39.3z M55.3,43.2h-3.9v-3.9h3.9V43.2z"/>
+  </g>
+</svg>
+                <span  class="text-[28px] font-bold dark:text-[#e9e9f1]  text-text-portfolio-section leading-7">
                   <span>Alex</span><br><span>Walker</span>
-                </p>
+                </span>
 
               </div>
               <div>
@@ -222,9 +218,9 @@
               </ul>
               <button
                 class="text-white  icon-container xl:hover:scale-110 transition-all duration-200 ease-in-out overflow-hidden  dark:text-black bg-gradient-to-br  dark:from-primary-dark dark:to-secondary-dark  from-btn-primary-light to-btn-secondary-light mt-2 rounded-[2.6rem] font-bold px-4 py-3">
-                <p class="icon-svg translate-y-0">
+                <span class="icon-svg translate-y-0">
                   Let's Work together
-                </p>
+                </span>
               </button>
             </div>
           </div>
@@ -238,45 +234,57 @@
               <header
                 class="flex  items-center justify-center  before-lg:mx-0 before-lg:justify-between    rounded-[25px] backdrop-blur-sm w-auto before-lg:w-full px-4 before-lg:px-0">
                 <ul id="navbar" class="before-xl:flex hidden gap-4 backdrop-blur-sm">
-                  <li data-link="home" class="nav-item active border px-9 py-3 rounded-2xl font-bold  ">
+                  <li data-link="home" class="nav-item active border px-5 py-3
+                   rounded-[2.2rem] font-bold  ">
                     <a href="#home">Home</a>
                   </li>
-                  <li data-link="portfolio" class="nav-item px-9 py-3 rounded-[2.6rem] font-bold ">
+                  <li data-link="portfolio" class="nav-item px-5 py-3 rounded-[2.2rem]  font-bold ">
                     <a href="#portfolio">Portfolio</a>
                   </li>
-                  <li data-link="about" class="nav-item px-9 py-3 rounded-[2.6rem] font-bold ">
+                  <li data-link="about" class="nav-item px-5 py-3 rounded-[2.2rem]  font-bold ">
                     <a href="#about">About Me</a>
                   </li>
-                  <li data-link="resume" class="nav-item px-9 py-3 rounded-[2.6rem] font-bold ">
+                  <li data-link="resume" class="nav-item px-5 py-3 rounded-[2.2rem]  font-bold ">
                     <a href="#resume">Resume</a>
                   </li>
-                  <li data-link="contact" class="nav-item px-9 py-3 rounded-[2.6rem] font-bold ">
+                  <li data-link="contact" class="nav-item px-5 py-3 rounded-[2.2rem]  font-bold ">
                     <a href="#contact">Contact</a>
                   </li>
                 </ul>
                 <!-- flex-text-list-items-navigation-before-1200 -->
                 <ul id="navbar"
                   class="gap-3 items-center  before-lg:justify-start  flex before-xl:hidden w-auto before-lg:w-full flex-[1]">
-                  <li data-link="home" class=" nav-item w-7 h-7 before-lg:w-12 before-lg:h-12 rounded-full before-lg:rounded-[22px] flex items-center justify-center p-1"><a
-                      href="#home">
+                  <li data-link="home"
+                    class=" nav-item w-7 h-7 before-lg:w-12 before-lg:h-12 rounded-full before-lg:rounded-[22px] flex items-center justify-center p-1">
+                    <a href="#home">
                       <i class="ri-home-line dark:text-black text-white before-lg:text-btn"></i> </a>
                   </li>
-                  <li data-link="portfolio" class=" nav-item w-7 h-7 before-lg:w-12 before-lg:h-12 rounded-full before-lg:rounded-[22px]   flex items-center justify-center p-1"><a
-                      href="#portfolio">
-                      <i class="ri-layout-grid-line dark:text-black text-white  before-lg:text-btn before-lg:dark:text-white"></i> </a>
+                  <li data-link="portfolio"
+                    class=" nav-item w-7 h-7 before-lg:w-12 before-lg:h-12 rounded-full before-lg:rounded-[22px]   flex items-center justify-center p-1">
+                    <a href="#portfolio">
+                      <i
+                        class="ri-layout-grid-line dark:text-black text-white  before-lg:text-btn before-lg:dark:text-white"></i>
+                    </a>
                   </li>
-                  <li data-link="about"  class=" nav-item w-7 h-7 before-lg:w-12 before-lg:h-12 rounded-full before-lg:rounded-[22px]   flex items-center justify-center p-1"><a
-                      href="#about">
-                      <i class="ri-user-line dark:text-black text-white  before-lg:text-btn before-lg:dark:text-white"></i> </a>
+                  <li data-link="about"
+                    class=" nav-item w-7 h-7 before-lg:w-12 before-lg:h-12 rounded-full before-lg:rounded-[22px]   flex items-center justify-center p-1">
+                    <a href="#about">
+                      <i
+                        class="ri-user-line dark:text-black text-white  before-lg:text-btn before-lg:dark:text-white"></i>
+                    </a>
                   </li>
-                  <li  data-link="resume"  class=" nav-item w-7 h-7 before-lg:w-12 before-lg:h-12 rounded-full 
-                  before-lg:rounded-[22px]   flex items-center justify-center p-1"><a
-                      href="#resume">
-                      <i class="ri-message-2-line dark:text-black text-white  before-lg:text-btn before-lg:dark:text-white"></i> </a>
+                  <li data-link="resume" class=" nav-item w-7 h-7 before-lg:w-12 before-lg:h-12 rounded-full 
+                  before-lg:rounded-[22px]   flex items-center justify-center p-1"><a href="#resume">
+                      <i
+                        class="ri-message-2-line dark:text-black text-white  before-lg:text-btn before-lg:dark:text-white"></i>
+                    </a>
                   </li>
-                  <li data-link="contact" class=" nav-item w-7 h-7  before-lg:w-12 before-lg:h-12 rounded-full before-lg:rounded-[22px]  flex items-center justify-center p-1"><a
-                      href="#contact">
-                      <i class="ri-mail-line dark:text-black text-white  before-lg:text-btn before-lg:dark:text-white"></i> </a>
+                  <li data-link="contact"
+                    class=" nav-item w-7 h-7  before-lg:w-12 before-lg:h-12 rounded-full before-lg:rounded-[22px]  flex items-center justify-center p-1">
+                    <a href="#contact">
+                      <i
+                        class="ri-mail-line dark:text-black text-white  before-lg:text-btn before-lg:dark:text-white"></i>
+                    </a>
                   </li>
                 </ul>
 
@@ -299,8 +307,8 @@
                   <button
                     class=" icon-container xl:hover:scale-110   transition-all duration-200 ease-in-out overflow-hidden text-white dark:text-black bg-gradient-to-br   dark:from-primary-dark
               dark:to-secondary-dark    from-btn-primary-light to-btn-secondary-light rounded-[20px] px-5 py-3    gap-2 flex font-bold w-full ">
-                    <p class="hidden before-lg:inline icon-svg translate-y-0" >Let's Talk
-                       <i class="ri-message-2-line hidden before-lg:inline icon-svg translate-y-0"></i>
+                    <p class="hidden before-lg:inline icon-svg translate-y-0">Let's Talk
+                      <i class="ri-message-2-line hidden before-lg:inline icon-svg translate-y-0"></i>
                     </p>
                     <span> <i class="ri-message-2-line icon-svg before-lg:hidden translate-y-0"></i></span>
                   </button>
@@ -309,42 +317,46 @@
             </div>
             <!-- hero Section -->
             <section id="home" data-section
-              class="before-lg:h-[calc(100vh-76px)]  pb-26  after-lg:h-screen  fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out     before-lg:flex before-lg:items-end relative overflow-hidden">
-              
-              <div class=" hidden before-lg:inline overflow-hidden before-lg:absolute bottom-24 xl:-mr-[45px] before-lg:right-4 z-[50] ">
-                    <div class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out w-[180px] h-[180px] flex items-center justify-center">
-                      <!-- SVG Circle with Rotating Text -->
-                      <svg viewBox="0 0 300 300" id="spinTextLg" class="w-[180px]  h-[180px] absolute" fill="none">
-                        <defs>
-                          <path id="circlePath" d="M150 150 m-85,0 a85,85 0 1,1 170,0 a85,85 0 1,1 -170,0" />
-                        </defs>
-                        <text class="dark:fill-white fill-black font-bold text-[18px] -tracking-[4px] uppercase">
-                          <textPath href="#circlePath" startOffset="0" textLength="628">
-                            scroll for more * scroll for more * scroll for
-                          </textPath>
-                        </text>
-                      </svg>
+              class="before-lg:h-[calc(100vh-76px)] pb-24    after-lg:h-screen  fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out     before-lg:flex before-lg:items-end relative overflow-hidden">
 
-                      <!-- Center "A" Button -->
-                       <div
-                            class="icon-container xl:hover:scale-110 transition-all duration-200 ease-in-out overflow-hidden cursor-pointer ">
-                           <svg  class="icon-svg z-0 text-black dark:text-text-dark  translate-y-0 flex items-center justify-center" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36"
-                          fill="currentColor">
-                          <path fill="none" d="M0 0h24v24H0z"></path>
-                          <path
-                            d="M13.0001 1.99974L11.0002 1.9996L11.0002 18.1715L7.05044 14.2218L5.63623 15.636L12.0002 22L18.3642 15.636L16.9499 14.2218L13.0002 18.1716L13.0001 1.99974Z">
-                          </path>
-                        </svg>
-                        </div>
+              <div
+                class=" hidden before-lg:inline overflow-hidden before-lg:absolute bottom-24 xl:-mr-[45px] before-lg:right-4 z-[50] ">
+                <div
+                  class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out w-[180px] h-[180px] flex items-center justify-center">
+                  <!-- SVG Circle with Rotating Text -->
+                  <svg viewBox="0 0 300 300" id="spinTextLg" class="w-[180px]  h-[180px] absolute" fill="none">
+                    <defs>
+                      <path id="circlePath" d="M150 150 m-85,0 a85,85 0 1,1 170,0 a85,85 0 1,1 -170,0" />
+                    </defs>
+                    <text class="dark:fill-white fill-black font-bold text-[18px] -tracking-[4px] uppercase">
+                      <textPath href="#circlePath" startOffset="0" textLength="628">
+                        scroll for more * scroll for more * scroll for
+                      </textPath>
+                    </text>
+                  </svg>
 
-
-
-                    </div>
+                  <!-- Center "A" Button -->
+                  <div
+                    class="icon-container xl:hover:scale-110 transition-all duration-200 ease-in-out overflow-hidden cursor-pointer ">
+                    <svg
+                      class="icon-svg z-0 text-black dark:text-text-dark  translate-y-0 flex items-center justify-center"
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path
+                        d="M13.0001 1.99974L11.0002 1.9996L11.0002 18.1715L7.05044 14.2218L5.63623 15.636L12.0002 22L18.3642 15.636L16.9499 14.2218L13.0002 18.1716L13.0001 1.99974Z">
+                      </path>
+                    </svg>
                   </div>
-              <div class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out before-lg:bottom-0  ">
+
+
+
+                </div>
+              </div>
+              <div
+                class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out before-lg:bottom-0  ">
                 <div
                   class="  fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mb-4 border border-[#d1d5e0]  dark:border-border-dark w-fit px-4 py-1  rounded-2xl ">
-                  <p>
+                  
                     <span class="dark:text-text-dark text-text-light"> <svg xmlns="http://www.w3.org/2000/svg"
                         class="inline" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13"
                         fill="currentColor">
@@ -353,12 +365,12 @@
                   C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"></path>
                       </svg></span>
                     <span class="dark:text-text-dark text-[13px] text-text-light font-bold">Let's meet!</span>
-                  </p>
+                  
                 </div>
-                <p class=" md:text-[50px] fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out  mb-8 text-wrap   text-[35px] before-xl:text-[60px] leading-[50px] before-lg:leading-[68px] before-xl:w-[700px]     font-bold   w-[280] md:leading-[60px] before-lg:w-full text-transparent bg-clip-text bg-gradient-to-br 
+                <h1 class=" md:text-[50px] fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out  mb-8 text-wrap   text-[35px] before-xl:text-[60px] leading-[50px] before-lg:leading-[68px] before-xl:w-[700px]     font-bold   w-[280] md:leading-[60px] before-lg:w-full text-transparent bg-clip-text bg-gradient-to-br 
             from-primary-light to-secondary-light
             dark:from-primary-dark dark:to-secondary-dark ">
-                  I'm Alex Walker <br> Digital designers and illustrator.</p>
+                  I'm Alex Walker <br> Digital designers and illustrator.</h1>
 
                 <div
                   class="flex flex-col fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out before-lg:flex-row before-lg:items-center gap-x-64 before-lg:justify-between items-start justify-start ">
@@ -367,7 +379,7 @@
                   <div
                     class="flex fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out flex-col before-sm:flex-row before-sm:items-center items-start before-sm:justify-start w-full gap-5 pt-5 relative">
                     <!-- My Works Button -->
-                    <button class=" icon-container xl:hover:scale-110 transition-all duration-200 ease-in-out overflow-hidden  flex items-center  justify-center gap-2 px-5 py-2 rounded-[20px] font-bold 
+                    <button class=" icon-container  transition-all duration-200 ease-in-out overflow-hidden  flex items-center  justify-center gap-2 px-5 py-2 rounded-[20px] font-bold 
          border border-border-light dark:border-border-dark
                        text-white dark:text-black
          before-lg:text-text-light before-lg:dark:text-text-dark
@@ -380,16 +392,16 @@
         
           before-sm:w-fit w-full h-[50px]  ">
 
-                      <p class="icon-svg translate-y-0">My Works
-         <i class="ri-layout-grid-line icon-svg translate-y-0"></i>
-                      </p>
-                     
+                      <span class="icon-svg translate-y-0">My Works
+                        <i class="ri-layout-grid-line icon-svg translate-y-0"></i>
+                      </span>
+
                     </button>
 
 
 
                     <!-- Download CV Button -->
-                    <button class=" icon-container xl:hover:scale-110 transition-all  duration-200 ease-in-out overflow-hidden flex items-center  justify-center gap-2 px-5 py-2 rounded-[20px] font-bold 
+                    <button class=" icon-container  transition-all  duration-200 ease-in-out overflow-hidden flex items-center  justify-center gap-2 px-5 py-2 rounded-[20px] font-bold 
          border before-lg:border-transparent before-lg:dark:border-transparent  dark:border-border-dark
 
          before-lg:text-btn before-lg:dark:text-text-dark 
@@ -397,21 +409,23 @@
 
        dark:text-[#e9e9f1]
          text-btn before-sm:w-fit w-full h-[50px]">
-                      <p class="icon-svg translate-y-0">Download CV
-<i class="ri-download-2-line icon-svg translate-y-0"></i>
-                      </p>
-                      
+                      <span class="icon-svg translate-y-0">Download CV
+                        <i class="ri-download-2-line icon-svg translate-y-0"></i>
+                      </span>
+
                     </button>
-                    
+
                   </div>
-                  <div class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out before-lg:hidden inline overflow-hidden  -ml-8  z-[50] ">
+                  <div
+                    class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out before-lg:hidden inline overflow-hidden  -ml-8  z-[50] ">
                     <div class=" w-[180px] h-[180px] flex items-center justify-center">
                       <!-- SVG Circle with Rotating Text -->
                       <svg viewBox="0 0 300 300" id="spinTextSm" class="w-[180px]  h-[180px] absolute" fill="none">
                         <defs>
                           <path id="circlePath" d="M150 150 m-85,0 a85,85 0 1,1 170,0 a85,85 0 1,1 -170,0" />
                         </defs>
-                        <text class="dark:fill-white fill-text-portfolio-section font-bold text-[18px] -tracking-[4px] uppercase">
+                        <text
+                          class="dark:fill-white fill-text-portfolio-section font-bold text-[18px] -tracking-[4px] uppercase">
                           <textPath href="#circlePath" startOffset="0" textLength="628">
                             scroll for more * scroll for more * scroll for
                           </textPath>
@@ -419,16 +433,18 @@
                       </svg>
 
                       <!-- Center "A" Button -->
-                       <div
-                            class="icon-container xl:hover:scale-110 transition-all duration-200 ease-in-out overflow-hidden cursor-pointer ">
-                           <svg  class="icon-svg z-0 text-text-portfolio-section dark:text-text-dark  translate-y-0 flex items-center justify-center" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36"
+                      <div
+                        class="icon-container xl:hover:scale-110 transition-all duration-200 ease-in-out overflow-hidden cursor-pointer ">
+                        <svg
+                          class="icon-svg z-0 text-text-portfolio-section dark:text-text-dark  translate-y-0 flex items-center justify-center"
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36"
                           fill="currentColor">
                           <path fill="none" d="M0 0h24v24H0z"></path>
                           <path
                             d="M13.0001 1.99974L11.0002 1.9996L11.0002 18.1715L7.05044 14.2218L5.63623 15.636L12.0002 22L18.3642 15.636L16.9499 14.2218L13.0002 18.1716L13.0001 1.99974Z">
                           </path>
                         </svg>
-                        </div>
+                      </div>
 
 
 
@@ -440,22 +456,27 @@
             <!-- hero section-end -->
 
             <!-- portfolio-section-start -->
-            <section id="portfolio" data-section class="before-lg:pt-28  fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out   pt-10  pb-10 z-0 ">
-              <div class="  border border-section-badge dark:border-border-dark w-fit px-3 py-1 mb-4 gap-2  rounded-2xl ">
-                <p>
-                  <span class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out  dark:text-text-dark text-text-light"> <svg xmlns="http://www.w3.org/2000/svg"
-                      class="inline" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13" fill="currentColor">
+            <section id="portfolio" data-section
+              class="before-lg:pt-28  fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out   pt-10  pb-10 z-0 ">
+              <div
+                class="  border border-section-badge dark:border-border-dark w-fit px-3 py-1 mb-4 gap-2  rounded-2xl ">
+               
+                  <span
+                    class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out  dark:text-text-dark text-text-light">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="inline" x="0px" y="0px" width="13px" height="13px"
+                      viewBox="0 0 13 13" fill="currentColor">
                       <path fill="text-[#cec4cf]" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
                   C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
                   C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"></path>
                     </svg></span>
-                  <span class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out  dark:text-text-dark font-bold text-[13px] text-text-light ">Portfolio</span>
-                </p>
+                  <span
+                    class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out  dark:text-text-dark font-bold text-[13px] text-text-light ">Portfolio</span>
+                
               </div>
               <div>
-                <p
+                <h2
                   class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out  text-[34px] before-xl:text-[46px] before-xl:w-[660px]  leading-[50px]    font-bold before-lg:w-[560px] md:w-[550px]  text-transparent bg-clip-text bg-gradient-to-br  from-primary-light to-secondary-light    dark:from-primary-dark dark:to-secondary-dark ">
-                  Check out my featured projects</p>
+                  Check out my featured projects</h2>
 
               </div>
               <!-- grid-start -->
@@ -465,7 +486,8 @@
                   <!-- row-1 -->
                   <div class="grid grid-cols-1 md:grid-cols-2 z-0  gap-3 ">
                     <!-- You can add two more images similarly -->
-                    <div class="fade-up opacity-0 translate-y-10 ease-in-out  relative group transition-all duration-700 before-lg:hover:scale-[1.08] mt-7  z-0">
+                    <div
+                      class="fade-up opacity-0 translate-y-10 ease-in-out  relative group transition-all duration-700 before-lg:hover:scale-[1.08] mt-7  z-0">
 
                       <!-- Image -->
                       <figure>
@@ -482,12 +504,13 @@
                           Illustration
                         </span>
                         <span
-                           class="px-[14px] text-[15px] height-[34px]  py-2 dark:bg-white  dark:text-dark bg-black text-text-cards rounded-[15px]  shadow-md lining-nums">
+                          class="px-[14px] text-[15px] height-[34px]  py-2 dark:bg-white  dark:text-dark bg-black text-text-cards rounded-[15px]  shadow-md lining-nums">
                           3D render
                         </span>
                       </div>
                     </div>
-                    <div class="fade-up opacity-0 translate-y-10  ease-in-out  relative group transition-all duration-700 before-lg:hover:hover:scale-[1.08] mt-7  z-0">
+                    <div
+                      class="fade-up opacity-0 translate-y-10  ease-in-out  relative group transition-all duration-700 before-lg:hover:hover:scale-[1.08] mt-7  z-0">
 
                       <!-- Image -->
                       <figure>
@@ -499,14 +522,13 @@
 
                       <!-- Overlay Tags -->
                       <div class="absolute bottom-8 left-8 flex-wrap flex items-center gap-5">
-                        <span
-                          class="px-[14px] text-[15px]  py-2 dark:bg-black dark:text-text-dark bg-bg-color-cards text-text-portfolio-section
+                        <span class="px-[14px] text-[15px]  py-2 dark:bg-black dark:text-text-dark bg-bg-color-cards text-text-portfolio-section
                           rounded-[15px] h-[34px] shadow-md">
-                         UI Design
+                          UI Design
                         </span>
                         <span
                           class="px-[14px] text-[15px] h-[34px] py-2 dark:bg-black dark:text-text-dark bg-bg-color-cards text-text-portfolio-section rounded-[15px] text-sm shadow-md">
-                         Figma
+                          Figma
                         </span>
                       </div>
                     </div>
@@ -515,7 +537,8 @@
                   <!-- row-2 -->
                   <div class="grid grid-cols-1 md:grid-cols-2 z-0  gap-3 ">
                     <!-- You can add two more images similarly -->
-                    <div class=" fade-up opacity-0 translate-y-10 ease-in-out relative group transition-all duration-700 before-lg:hover:hover:scale-[1.08] mt-7  z-0">
+                    <div
+                      class=" fade-up opacity-0 translate-y-10 ease-in-out relative group transition-all duration-700 before-lg:hover:hover:scale-[1.08] mt-7  z-0">
 
                       <!-- Image -->
                       <figure>
@@ -537,7 +560,8 @@
                         </span>
                       </div>
                     </div>
-                    <div class="fade-up opacity-0 translate-y-10 ease-in-out  relative group transition-all duration-700 before-lg:hover:hover:scale-[1.08] mt-7  z-0">
+                    <div
+                      class="fade-up opacity-0 translate-y-10 ease-in-out  relative group transition-all duration-700 before-lg:hover:hover:scale-[1.08] mt-7  z-0">
 
                       <!-- Image -->
                       <figure>
@@ -570,8 +594,9 @@
 
             <!-- About Me section-start -->
             <section id="about" data-section class="before-lg:pt-28  pt-16 pb-10 z-0">
-              <div class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mb-4  border border-section-badge dark:border-border-dark w-fit px-3 py-1 gap-3  rounded-2xl ">
-                <p class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out">
+              <div
+                class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mb-4  border border-section-badge dark:border-border-dark w-fit px-3 py-1 gap-3  rounded-2xl ">
+               
                   <span class=" dark:text-text-dark text-text-light"> <svg xmlns="http://www.w3.org/2000/svg"
                       class="inline" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13" fill="currentColor">
                       <path fill="text-[#cec4cf]" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
@@ -579,30 +604,28 @@
                   C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"></path>
                     </svg></span>
                   <span class="dark:text-text-dark font-bold text-[13px] text-text-light">About Me</span>
-                </p>
+                
               </div>
               <div>
-                <p class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out  text-[34px] before-xl:text-[46px] before-xl:w-[700px]  leading-[40px] text-wrap before-lg:leading-[50px]   font-bold  before-lg:w-[560px]  md:w-[550px]  text-transparent bg-clip-text bg-gradient-to-br 
+                <h3 class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out  text-[34px] before-xl:text-[46px] before-xl:w-[700px]  leading-[40px] text-wrap before-lg:leading-[50px]   font-bold  before-lg:w-[560px]  md:w-[550px]  text-transparent bg-clip-text bg-gradient-to-br 
             from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark">
-                  Turning complex problems into simple design</p>
+                  Turning complex problems into simple design</h3>
 
               </div>
 
               <!-- project-section -->
-              <div class="flex md:flex-row  flex-col items-center mt-7 justify-between gap-y-4 ">
+              <div class="flex md:flex-row  flex-col  mt-7 items-stretch justify-between gap-y-4 ">
                 <!-- single-item-outer-div -->
-                 <div class="md:w-1/3 w-full md:px-3.5 ">
+                <div class="md:w-1/3 w-full md:px-3.5 ">
                   <!-- single-item-inner-div -->
                   <div
-                    class="fade-up min-h-[150px] opacity-0 translate-y-10 transition-all duration-700 ease-in-out p-[14px] before-lg:p-[30px]  border border-section-badge dark:border-border-dark rounded-[36px] flex items-center text-center justify-center flex-col">
-                    <p
-                      class="text-[60px]   lining-nums font-bold text-transparent bg-clip-text bg-gradient-to-br from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark">
-                      <span class="">40</span> <span
-                        class=" text-transparent bg-clip-text bg-gradient-to-br from-primary-light  to-secondary-light dark:from-primary-dark dark:to-secondary-dark -ml-4">+</span>
-                    </p>
-                    <p
-                      class="font-bold md:text-sm  xl:text-base  text-text-portfolio-section leading-4  -mt-3  pb-4   dark:text-text-dark ">
-                      Happy clients</p>
+                    class="fade-up min-h-[150px]  opacity-0 translate-y-10 transition-all duration-700 ease-in-out p-[30px]  border border-section-badge dark:border-border-dark rounded-[36px] flex items-center text-center justify-center flex-col">
+                    
+                      <span class="text-[60px]   lining-nums font-bold text-transparent bg-clip-text bg-gradient-to-br from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark">40+</span> 
+                      
+                    <span
+                      class="font-bold text-text-portfolio-section leading-4 text-wrap  -mt-3  pb-4   dark:text-text-dark ">
+                      Happy clients</span>
                   </div>
                 </div>
 
@@ -610,15 +633,13 @@
                 <div class="md:w-1/3 w-full md:px-3.5 ">
                   <!-- single-item-inner-div -->
                   <div
-                    class="fade-up min-h-[170px] opacity-0 translate-y-10 transition-all duration-700 ease-in-out p-[14px] before-lg:p-[30px]  border border-section-badge dark:border-border-dark rounded-[36px] flex items-center text-center justify-center flex-col">
-                    <p
-                      class="text-[60px]   lining-nums font-bold text-transparent bg-clip-text bg-gradient-to-br from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark">
-                      <span class="">2</span> <span
-                        class=" text-transparent bg-clip-text bg-gradient-to-br from-primary-light  to-secondary-light dark:from-primary-dark dark:to-secondary-dark -ml-4">+</span>
-                    </p>
-                    <p
-                      class="font-bold md:text-sm  xl:text-base  text-text-portfolio-section leading-4  -mt-3     dark:text-text-dark ">
-                      Years of experience</p>
+                    class="fade-up min-h-[170px] opacity-0 translate-y-10 transition-all duration-700 ease-in-out p-[30px]  border border-section-badge dark:border-border-dark rounded-[36px] flex items-center text-center justify-center flex-col">
+                   
+                      <span class="text-[60px]   lining-nums font-bold text-transparent bg-clip-text bg-gradient-to-br from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark">2+</span> 
+                    
+                    <span
+                      class="font-bold block  text-text-portfolio-section leading-4 text-wrap   -mt-2  pb-2.5      dark:text-text-dark">
+                      Years of experience</span>
                   </div>
                 </div>
 
@@ -626,15 +647,12 @@
                 <div class="md:w-1/3 w-full md:px-3.5 ">
                   <!-- single-item-inner-div -->
                   <div
-                    class="fade-up min-h-[150px] opacity-0 translate-y-10 transition-all duration-700 ease-in-out p-[14px] before-lg:p-[30px]  border border-section-badge dark:border-border-dark rounded-[36px] flex items-center text-center justify-center flex-col">
-                    <p
-                      class="text-[60px]   lining-nums font-bold text-transparent bg-clip-text bg-gradient-to-br from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark">
-                      <span class="">50</span> <span
-                        class=" text-transparent bg-clip-text bg-gradient-to-br from-primary-light  to-secondary-light dark:from-primary-dark dark:to-secondary-dark -ml-4">+</span>
-                    </p>
-                    <p
-                      class="font-bold md:text-sm  xl:text-base  text-text-portfolio-section leading-4  -mt-3  pb-4   dark:text-text-dark ">
-                      Projects done</p>
+                    class="fade-up min-h-[150px] opacity-0 translate-y-10 transition-all duration-700 ease-in-out  p-[30px]  border border-section-badge dark:border-border-dark rounded-[36px] flex items-center text-center justify-center flex-col">
+                   
+                      <span class="text-[60px]   lining-nums font-bold text-transparent bg-clip-text bg-gradient-to-br from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark">50+</span> 
+                    <span
+                      class="font-bold   text-text-portfolio-section leading-4  text-wrap  -mt-3  pb-4   dark:text-text-dark ">
+                      Projects done</span>
                   </div>
                 </div>
               </div>
@@ -643,24 +661,24 @@
                 <div>
                   <p
                     class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-xl text-text-light      dark:text-text-dark font-normal  mb-7 ">
-                    <span>I wonder if I've been changed in the night? Let me think. Was I the same when I got up this
+                   I wonder if I've been changed in the night? Let me think. Was I the same when I got up this
                       morning? I almost think I can remember feeling a little different. But if I'm not the same,
-                      the</span> <span> <a href="/" class="underline">next question</a></span> <span>'Who in the world
-                      am I?' Ah, that's the great puzzle!</span>
+                      the <span> <a href="/" class="underline">next question</a></span> 'Who in the world
+                      am I?' Ah, that's the great puzzle!
                   </p>
                   <p
                     class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out lining-nums text-xl text-text-light  dark:text-text-dark mb-7 ">
-                    <span>Be what you would seem to be - or, if you'd like it put more simply - never imagine yourself
-                      not to be otherwise than what it might appear to others that what you were or might have</span>
-                    <span><a href="/" class="underline">been</a></span>
-                    <span>was not otherwise than what you had been would have appeared to them to be otherwise.</span>
+                    Be what you would seem to be - or, if you'd like it put more simply - never imagine yourself
+                      not to be otherwise than what it might appear to others that what you were or 
+                    <span><a href="/" class="underline"> might have been</a></span>
+                    was not otherwise than what you had been would have appeared to them to be otherwise.
                   </p>
                   <button
-                    class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out icon-container xl:hover:scale-110 transition-all duration-200 ease-in-out overflow-hidden flex items-center cursor-pointer w-full before-sm:w-fit justify-center gap-2 px-6 py-2 rounded-4xl font-bold border border-border-dark dark:text-black    bg-transparent bg-gradient-to-br dark:from-primary-dark dark:to-secondary-dark text-text-dark from-btn-primary-light to-btn-secondary-light">
-                    <p class="icon-svg translate-y-0">Download CV
-                    <i class="ri-download-2-fill w-4 h-4 -mt-1 icon-svg translate-y-0"></i>
-
-                    </p>
+                    class=" fade-up opacity-0 translate-y-10 h-[50px] px-5 icon-container xl:hover:scale-110 transition-all duration-200 ease-in-out overflow-hidden flex items-center cursor-pointer w-full before-sm:w-fit justify-center gap-2   rounded-[22px] font-bold dark:text-black    bg-transparent bg-gradient-to-br dark:from-primary-dark dark:to-secondary-dark text-text-dark from-btn-primary-light to-btn-secondary-light">
+                    <a href="/"><span class="icon-svg translate-y-0">Download CV
+                      <i class="ri-download-2-fill w-4 h-4 -mt-1 icon-svg translate-y-0"></i>
+                    </span></a>
+                    
                   </button>
                 </div>
                 <!-- grid-1-end -->
@@ -669,47 +687,47 @@
                 <div class="pt-4">
                   <!-- credentials-name -->
                   <div class="mb-[26px]">
-                    <h6>
+                    
                       <small
                         class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mb-1 text-[13px] font-normal text-black dark:text-text-dark">Name</small>
                       <br>
                       <span
                         class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out font-bold text-black  dark:text-text-dark  ">
                         Alex Walker</span>
-                    </h6>
+                    
                   </div>
                   <!-- credentials-phone -->
                   <div class="mb-[26px]">
-                    <h6>
+                    
                       <small
                         class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mb-1 text-[13px] font-normal text-black dark:text-text-dark ">Phone</small>
                       <br>
                       <span
                         class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out font-bold lining-nums text-black dark:text-text-dark ">+1
                         212 -708-9400</span>
-                    </h6>
+                    
                   </div>
 
 
                   <div class="mb-[26px]">
-                    <h6>
+                   
                       <small
                         class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mb-1 text-[13px] font-normal text-black dark:text-text-dark  ">Email</small>
                       <br>
                       <span
                         class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out font-bold text-black dark:text-text-dark ">
                         hello@yourdomain.com</span>
-                    </h6>
+                    
                   </div>
                   <div class="mb-[26px]">
-                    <h6>
+                    
                       <small
                         class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mb-1 text-[13px] font-normal text-black dark:text-text-dark  ">Location</small>
                       <br>
                       <span
                         class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out font-bold text-black dark:text-text-dark">Odesa,
                         Ukrain</span>
-                    </h6>
+                    
                   </div>
                 </div>
               </div>
@@ -721,7 +739,9 @@
                 <div class=" border border-section-badge dark:border-border-dark rounded-2xl">
                   <!-- upper-text-div -->
                   <div class="p-[30px]">
-                    <h6 class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[26px] font-bold  leading-8 dark:text-text-dark ">Frontend <br> development</h6>
+                    <h2
+                      class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[26px] font-bold  leading-8 dark:text-text-dark ">
+                      Frontend <br> development</h2>
                     <!-- small-boxes-design -->
                     <div class="mt-[7px] flex items-start flex-wrap  ">
                       <span
@@ -735,7 +755,9 @@
 
                     </div>
 
-                    <p class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-lg mt-[23px] lining-nums text-text-light dark:text-text-inside-imgs">I work with
+                    <p
+                      class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-lg mt-[23px] lining-nums text-text-light dark:text-text-inside-imgs">
+                      I work with
                       HTML/CSS,Framer. and WordPress.</p>
                   </div>
                   <div>
@@ -748,9 +770,12 @@
                 <div class=" border border-section-badge dark:border-border-dark rounded-2xl">
                   <!-- upper-text-div -->
                   <div class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out p-[30px]">
-                    <h6 class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[26px] leading-8 font-bold dark:text-text-dark ">Digital art and <br> graphic design</h6>
+                    <h2
+                      class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[26px] leading-8 font-bold dark:text-text-dark ">
+                      Digital art and <br> graphic design</h2>
                     <!-- small-boxes-design -->
-                    <div class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mt-[7px] flex items-start flex-wrap ">
+                    <div
+                      class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mt-[7px] flex items-start flex-wrap ">
                       <span
                         class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out bg-transparent border border-border-dark rounded-2xl  text-text-light flex items-center justify-center   h-[34px]  px-[14px] my-0.5 mr-[10px] dark:text-text-inside-imgs ">
                         Illustrations
@@ -762,7 +787,9 @@
 
                     </div>
 
-                    <p class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-lg mt-[23px] lining-nums text-text-light dark:text-text-inside-imgs">I use Adobe
+                    <p
+                      class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-lg mt-[23px] lining-nums text-text-light dark:text-text-inside-imgs">
+                      I use Adobe
                       Photoshop,
                       Fresco and Blender to create illustrations and 3D renders for my clients and stocks.</p>
                   </div>
@@ -776,9 +803,12 @@
                 <div class=" border border-section-badge dark:border-border-dark rounded-2xl">
                   <!-- upper-text-div -->
                   <div class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out p-[30px]">
-                    <h6 class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[26px] leading-8 font-bold  dark:text-text-dark">SEO/Digital <br> marketing solutions</h6>
+                    <h2
+                      class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[26px] leading-8 font-bold  dark:text-text-dark">
+                      SEO/Digital <br> marketing solutions</h2>
                     <!-- small-boxes-design -->
-                    <div class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mt-[7px] flex items-start flex-wrap  ">
+                    <div
+                      class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mt-[7px] flex items-start flex-wrap  ">
                       <span
                         class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out bg-transparent border border-border-dark rounded-2xl  text-text-light flex items-center justify-center   h-[34px]  px-[14px] my-0.5 mr-[10px] dark:text-text-inside-imgs">
                         Social Media
@@ -790,7 +820,9 @@
 
                     </div>
 
-                    <p class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-lg mt-[23px] lining-nums text-text-light dark:text-text-inside-imgs">Social media
+                    <p
+                      class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-lg mt-[23px] lining-nums text-text-light dark:text-text-inside-imgs">
+                      Social media
                       content
                       plans, media monitoring, email and text messaging and search engine optimization.</p>
                   </div>
@@ -804,9 +836,12 @@
                 <div class=" border border-section-badge dark:border-border-dark rounded-2xl">
                   <!-- upper-text-div -->
                   <div class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out p-[30px]">
-                    <h6 class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[26px] leading-8 font-bold dark:text-text-dark ">Brans<br> Identity</h6>
+                    <h2
+                      class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[26px] leading-8 font-bold dark:text-text-dark ">
+                      Brans<br> Identity</h2>
                     <!-- small-boxes-design -->
-                    <div class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mt-[7px] flex items-start flex-wrap ">
+                    <div
+                      class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mt-[7px] flex items-start flex-wrap ">
                       <span
                         class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out bg-transparent border border-border-dark rounded-2xl  text-text-light flex items-center justify-center   h-[34px]  px-[14px] my-0.5 mr-[10px] dark:text-text-inside-imgs ">
                         Logo Design
@@ -818,7 +853,9 @@
 
                     </div>
 
-                    <p class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-lg mt-[23px] lining-nums text-text-light dark:text-text-inside-imgs">I help my
+                    <p
+                      class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-lg mt-[23px] lining-nums text-text-light dark:text-text-inside-imgs">
+                      I help my
                       clients to
                       develop a personality and brand voice, design the brand look and logo.</p>
                   </div>
@@ -834,8 +871,8 @@
 
             <section id="resume" data-section class="before-lg:pt-28 pt-16 pb-10 z-0 ">
               <div class="">
-                <div class="  border border-section-badge dark:border-border-dark w-fit px-3 py-1 mb-4  rounded-2xl ">
-                  <p class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out">
+                <div class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out  border border-section-badge dark:border-border-dark w-fit px-3 py-1 mb-4  rounded-2xl ">
+                  
                     <span class="dark:text-paragraph-content text-text-light"> <svg xmlns="http://www.w3.org/2000/svg"
                         class="inline" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13"
                         fill="currentColor">
@@ -844,15 +881,14 @@
                   C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"></path>
                       </svg></span>
                     <span class="dark:text-text-dark font-bold text-text-light text-[13px]">Resume</span>
-                  </p>
-
-
                 </div>
                 <div class=" mb-[130px] ">
-                  <h3
+                  <h4
                     class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out max-w-[700px] text-[34px] md:text-[38px] leading-[40px]  font-bold text-transparent bg-clip-text bg-gradient-to-br from-primary-light to-secondary-light dark:from-primary-dark  dark:to-secondary-dark ">
-                    Educational and practical experience </h3>
-                  <p class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-text-light dark:text-text-inside-imgs mt-[36px] lining-nums  text-xl">Be what you would
+                    Educational and practical experience </h4>
+                  <p
+                    class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-text-light dark:text-text-inside-imgs mt-[36px] lining-nums  text-xl">
+                    Be what you would
                     seem to
                     be - or, if you'd like it put more simply - never imagine yourself not to be otherwise than what it
                     might appear to others that what you were or might have been was not otherwise than what you had
@@ -865,33 +901,47 @@
                 <div class="mb-[130px]">
 
 
-                  <div class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mb-[41px] border-b border-section-badge dark:border-border-dark pb-[41px]">
-                    <h4 class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[28px]  font-bold text-text-portfolio-section dark:text-text-inside-imgs">My
-                      education</h4>
+                  <div
+                    class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mb-[41px] border-b border-section-badge dark:border-border-dark pb-[41px]">
+                    <h3
+                      class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[28px]  font-bold text-text-portfolio-section dark:text-text-inside-imgs">
+                      My
+                      education</h3>
                   </div>
                   <!-- education-details-block -->
                   <!-- main-block -->
                   <div class="">
                     <!-- 1st block -->
-                    <div class="border-b border-section-badge dark:border-border-dark md:flex-row flex-col py-[44px] flex">
+                    <div
+                      class="border-b border-section-badge dark:border-border-dark md:flex-row flex-col py-[44px] flex">
 
                       <!-- 1st list -->
                       <!-- date-block -->
-                      <div class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out flex md:w-2/12 items-start flex-wrap">
-                        <span class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out lining-nums text-[15px] text-text-light dark:text-text-inside-imgs">2015 - 2016 </span>
+                      <div
+                        class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out flex md:w-2/12 items-start flex-wrap">
+                        <span
+                          class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out lining-nums text-[15px] text-text-light dark:text-text-inside-imgs">2015
+                          - 2016 </span>
                       </div>
                       <!-- details-block -->
-                      <div class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out md:w-5/12 leading-6">
-                        <h5 class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out pr-4 text-[22px] font-bold text-wrap text-text-portfolio-section dark:text-text-inside-imgs">Drawing
+                      <div
+                        class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out md:w-5/12 leading-6">
+                        <h3
+                          class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out pr-4 text-[22px] font-bold text-wrap text-text-portfolio-section dark:text-text-inside-imgs">
+                          Drawing
                           Concentration
-                        </h5>
-                        <p class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[15px] pr-4  pb-4 text-text-light dark:text-text-inside-imgs mt-[3px]"> <span>Course
-                            by </span><span class="font-bold"><a href="/">New York Academy of Art</a></span></p>
+                        </h3>
+                        <p
+                          class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[15px] pr-4  pb-4 text-text-light dark:text-text-inside-imgs mt-[3px]  ">
+                          <span class="">Course
+                            by </span><a class="font-bold" href="/">New York Academy of Art</a></p>
                       </div>
 
                       <!-- description-block -->
-                      <div class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out md:w-5/12 text-wrap leading-6">
-                        <p class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-lg text-text-light dark:text-text-inside-imgs">
+                      <div
+                        class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out md:w-5/12 text-wrap leading-6">
+                        <p
+                          class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-lg text-text-light dark:text-text-inside-imgs">
                           Intensive drawing courses that present the fundamental principles of drawing.
 
 
@@ -903,25 +953,33 @@
                     </div>
 
                     <!-- 2nd block -->
-                    <div class="border-b border-section-badge dark:border-border-dark py-[44px] md:flex-row flex-col flex">
+                    <div
+                      class="border-b border-section-badge dark:border-border-dark py-[44px] md:flex-row flex-col flex">
 
                       <!-- 2nd list -->
                       <!-- date-block -->
-                      <div class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out flex md:w-2/12 items-start leading-6">
-                        <span class="lining-nums text-text-light text-[15px] dark:text-text-inside-imgs">2019 - 2021 </span>
+                      <div
+                        class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out flex md:w-2/12 items-start leading-6">
+                        <span class="lining-nums text-text-light text-[15px] dark:text-text-inside-imgs">2019 - 2021
+                        </span>
                       </div>
                       <!-- details-block -->
                       <div class="md:w-5/12 leading-6">
-                        <h5 class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out pr-3 text-[22px] font-bold text-text-portfolio-section dark:text-text-inside-imgs">
+                        <h3
+                          class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out pr-3 text-[22px] font-bold text-text-portfolio-section dark:text-text-inside-imgs">
                           UI/UX Design
-                          Specialization</h5>
-                        <p class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[15px] pr-4 text-text-light pb-4 dark:text-text-inside-imgs mt-[3px]"> <span>Course
-                            by </span><span class="font-bold"><a href="/">California Institute of Arts</a></span></p>
+                          Specialization</h3>
+                        <p
+                          class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[15px] pr-4 text-text-light pb-4 dark:text-text-inside-imgs mt-[3px]">
+                          <span>Course
+                            by </span> <a class="font-bold" href="/">California Institute of Arts</a>
+                        </p>
                       </div>
 
                       <!-- description-block -->
                       <div class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out md:w-5/12">
-                        <p class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-lg text-text-light dark:text-text-inside-imgs leading-6">
+                        <p
+                          class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-lg text-text-light dark:text-text-inside-imgs leading-6">
                           Research, design, and prototype effective, visually-driven websites and apps.
 
 
@@ -932,24 +990,34 @@
 
                     </div>
                     <!-- 3rd block -->
-                    <div class="border-b border-section-badge dark:border-border-dark  py-[44px] md:flex-row flex-col flex">
+                    <div
+                      class="border-b border-section-badge dark:border-border-dark  py-[44px] md:flex-row flex-col flex">
 
                       <!-- 3rd list -->
                       <!-- date-block -->
-                      <div class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out flex md:w-2/12 items-start leading-8">
-                        <span class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out lining-nums text-text-light dark:text-text-inside-imgs">2022 </span>
+                      <div
+                        class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out flex md:w-2/12 items-start leading-8">
+                        <span
+                          class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out lining-nums text-text-light dark:text-text-inside-imgs">2022
+                        </span>
                       </div>
                       <!-- details-block -->
-                      <div class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out md:w-5/12 leading-6">
-                        <h5 class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out pr-3 text-[22px] font-bold text-text-portfolio-section dark:text-text-inside-imgs">
-                          UI/UX Designer</h5>
-                        <p class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[15px] text-text-light dark:text-text-inside-imgs mt-[3px]"> <span>Course
-                            by</span><span class="font-bold"><a href="/">Coursera</a></span></p>
+                      <div
+                        class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out md:w-5/12 leading-6">
+                        <h3
+                          class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out pr-3 text-[22px] font-bold text-text-portfolio-section dark:text-text-inside-imgs">
+                          UI/UX Designer</h3>
+                        <p
+                          class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[15px] text-text-light dark:text-text-inside-imgs mt-[3px]">
+                          <span>Course
+                            by</span> <a class="font-bold" href="/">Coursera</a></p>
                       </div>
 
                       <!-- description-block -->
-                      <div class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out md:w-5/12 leading-6">
-                        <p class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-lg text-text-light dark:text-text-inside-imgs ">
+                      <div
+                        class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out md:w-5/12 leading-6">
+                        <p
+                          class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-lg text-text-light dark:text-text-inside-imgs ">
                           This cource is about how to complete the design process from beginning to end.
 
                         </p>
@@ -965,32 +1033,41 @@
                 <div class="mb-[130px]">
 
 
-                  <div class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mb-[41px] border-b border-section-badge dark:border-border-dark pb-[41px]">
-                    <h4 class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[28px] font-bold text-text-portfolio-section dark:text-text-inside-imgs">Work
-                      experience</h4>
+                  <div
+                    class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mb-[41px] border-b border-section-badge dark:border-border-dark pb-[41px]">
+                    <h3
+                      class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[28px] font-bold text-text-portfolio-section dark:text-text-inside-imgs">
+                      Work
+                      experience</h3>
                   </div>
                   <!-- education-details-block -->
                   <!-- main-block -->
                   <div class="">
                     <!-- 1st block -->
-                    <div class="border-b border-section-badge dark:border-border-dark py-[44px] gap-4 md:flex-row flex-col flex">
+                    <div
+                      class="border-b border-section-badge dark:border-border-dark py-[44px] gap-4 md:flex-row flex-col flex">
 
                       <!-- 1st list -->
                       <!-- date-block -->
                       <div class="flex md:w-2/12 items-start">
-                        <span class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out lining-nums text-[15px] text-text-light dark:text-text-inside-imgs">2018 - 2019 </span>
+                        <span
+                          class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out lining-nums text-[15px] text-text-light dark:text-text-inside-imgs">2018
+                          - 2019 </span>
                       </div>
                       <!-- details-block -->
                       <div class="md:w-5/12 leading-6">
-                        <h5 class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out pr-3 text-[22px] font-bold text-text-portfolio-section dark:text-text-inside-imgs">
-                          Illustrator</h5>
-                        <p class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[15px] text-text-light dark:text-text-inside-imgs mt-[3px]"> <span> in the
-                          </span><span class="font-bold"><a href="/">Creative Mind</a></span> <span>agency</span></p>
+                        <h3
+                          class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out pr-3 text-[22px] font-bold text-text-portfolio-section dark:text-text-inside-imgs">
+                          Illustrator</h3>
+                        <p
+                          class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[15px] text-text-light dark:text-text-inside-imgs mt-[3px]"> in the 
+                           <a class="font-bold" href="/">Creative Mind</a> agency</p>
                       </div>
 
                       <!-- description-block -->
                       <div class="md:w-5/12">
-                        <p class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-lg text-[#424550] dark:text-text-inside-imgs">
+                        <p
+                          class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-lg text-[#424550] dark:text-text-inside-imgs">
                           I created original images for a range of digital and printed products.
 
                         </p>
@@ -1001,24 +1078,30 @@
                     </div>
 
                     <!-- 2nd block -->
-                    <div class="border-b border-section-badge dark:border-border-dark py-[44px] md:flex-row  gap-4 flex-col flex">
+                    <div
+                      class="border-b border-section-badge dark:border-border-dark py-[44px] md:flex-row  gap-4 flex-col flex">
 
                       <!-- 2nd list -->
                       <!-- date-block -->
                       <div class="flex md:w-2/12 items-start">
-                        <span class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out lining-nums text-[15px] text-text-light dark:text-text-inside-imgs">2019 - 2021 </span>
+                        <span
+                          class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out lining-nums text-[15px] text-text-light dark:text-text-inside-imgs">2019
+                          - 2021 </span>
                       </div>
                       <!-- details-block -->
                       <div class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out md:w-5/12">
-                        <h5 class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out pr-3 text-[22px] font-bold text-text-portfolio-section dark:text-text-inside-imgs">
-                          Graphic Designer</h5>
-                        <p class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[15px] text-text-light dark:text-text-inside-imgs mt-[3px]"> <span>in the
-                          </span><span class="font-bold"><a href="/">Moon light</a></span> <span>agency</span></p>
+                        <h3
+                          class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out pr-3 text-[22px] font-bold text-text-portfolio-section dark:text-text-inside-imgs">
+                          Graphic Designer</h3>
+                        <p
+                          class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[15px] text-text-light dark:text-text-inside-imgs mt-[3px]"> in the
+                          <a class="font-bold" href="/"> Moon light</a> agency</p>
                       </div>
 
                       <!-- description-block -->
                       <div class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out md:w-5/12">
-                        <p class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-lg text-text-light dark:text-text-inside-imgs">
+                        <p
+                          class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-lg text-text-light dark:text-text-inside-imgs">
                           My job was to create adverts, branding, signage and other media products.
 
                         </p>
@@ -1028,24 +1111,31 @@
 
                     </div>
                     <!-- 3rd block -->
-                    <div class="border-b border-section-badge dark:border-border-dark py-[44px] md:flex-row flex-col gap-4 flex">
+                    <div
+                      class="border-b border-section-badge dark:border-border-dark py-[44px] md:flex-row flex-col gap-4 flex">
 
                       <!-- 3rd list -->
                       <!-- date-block -->
-                      <div class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out flex md:w-2/12 items-start">
-                        <span class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out lining-nums text-text-light text-[15px] dark:text-text-inside-imgs">2021 - now </span>
+                      <div
+                        class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out flex md:w-2/12 items-start">
+                        <span
+                          class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out lining-nums text-text-light text-[15px] dark:text-text-inside-imgs">2021
+                          - now </span>
                       </div>
                       <!-- details-block -->
                       <div class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out md:w-5/12">
-                        <h5 class="pr-3 text-[22px] font-bold text-text-portfolio-section dark:text-text-inside-imgs">
-                          UI/UX Designer</h5>
-                        <p class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[15px] text-text-light dark:text-text-inside-imgs mt-[3px]"> <span>in
-                            the</span><span class="font-bold"><a href="/">Moon Light</a></span><span>agency</span></p>
+                        <h3 class="pr-3 text-[22px] font-bold text-text-portfolio-section dark:text-text-inside-imgs">
+                          UI/UX Designer</h3>
+                        <p
+                          class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[15px] text-text-light dark:text-text-inside-imgs mt-[3px]">
+                          in
+                            the<a class="font-bold" href="/">Moon Light</a>agency</p>
                       </div>
 
                       <!-- description-block -->
                       <div class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out md:w-5/12">
-                        <p class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-lg text-[#424550] dark:text-text-inside-imgs">
+                        <p
+                          class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-lg text-[#424550] dark:text-text-inside-imgs">
                           I am actively involved in creating user interfaces for mobile apps and websites.
                         </p>
 
@@ -1059,27 +1149,33 @@
 
                 <!-- favorite tools-block -->
                 <div class=" mb-[130px]">
-                  <div class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out before-lg:mb-[41px]   ">
-                    <h4 class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[30px] font-bold text-text-portfolio-section dark:text-text-inside-imgs">My
-                      favourite tools</h4>
+                  <div
+                    class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out before-lg:mb-[41px]   ">
+                    <h3
+                      class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-[30px] font-bold text-text-portfolio-section dark:text-text-inside-imgs">
+                      My
+                      favourite tools</h3>
                   </div>
                   <!-- tools-block-upper-div -->
                   <div class="   flex flex-wrap  ">
                     <!-- single-item -->
                     <div class="md:w-1/3 before-xl:w-[20%]  w-[50%] px-1  mt-8 flex ">
-                      <div class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out w-full p-6 md:p-8 border border-section-badge dark:border-border-dark text-center flex flex-col items-center justify-center rounded-3xl">
+                      <div
+                        class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out w-full p-6 md:p-8 border border-section-badge dark:border-border-dark text-center flex flex-col items-center justify-center rounded-3xl">
                         <img src="./src/images/icon-photoshop.svg" class="md:w-24 before-sm:w-20 w-16 h-auto" alt="">
-                        <p
+                        <span
                           class="mt-2 text-base text-center  font-bold lining-nums text-text-portfolio-section dark:text-text-inside-imgs">
-                          Photoshop</p>
+                          Photoshop</span>
                       </div>
                     </div>
                     <div class="px-1 md:w-1/3 w-[50%] before-xl:w-[20%] mt-8 flex ">
                       <div
                         class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out w-full p-6 md:p-8 border flex items-center flex-col justify-center dark:border-border-dark border-section-badge text-center rounded-3xl">
                         <img src="./src/images/icon-figma.svg" class="md:w-24 before-sm:w-20  w-16 h-auto" alt="">
-                        <p class="mt-2 text-base text-center  font-bold lining-nums text-text-portfolio-section dark:text-text-inside-imgs">figma
-                        </p>
+                        <span
+                          class="mt-2 text-base text-center  font-bold lining-nums text-text-portfolio-section dark:text-text-inside-imgs">
+                          figma
+                        </span>
                       </div>
                     </div>
                     <div class="px-1 md:w-1/3 w-[50%] before-xl:w-[20%]  mt-8 flex ">
@@ -1095,45 +1191,45 @@
                       <div
                         class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out w-full p-6 md:p-8 border flex items-center flex-col justify-center dark:border-border-dark border-section-badge text-center rounded-3xl">
                         <img src="./src/images/icon-scketch.svg" class="md:w-24  before-sm:w-20  w-16 h-auto" alt="">
-                        <p
+                        <span
                           class="mt-2 text-base text-center  font-bold lining-nums text-text-portfolio-section dark:text-text-inside-imgs">
-                          Sketch</p>
+                          Sketch</span>
                       </div>
                     </div>
                     <div class="px-1 md:w-1/3  w-[50%] before-xl:w-[20%] mt-8 flex ">
                       <div
                         class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out w-full p-6 md:p-8 border flex items-center flex-col justify-center dark:border-border-dark border-section-badge text-center rounded-3xl">
                         <img src="./src/images/icon-blender.svg" class="md:w-24 before-sm:w-20  w-16 h-auto" alt="">
-                        <p
+                        <span
                           class="mt-2 text-base text-center  font-bold lining-nums text-text-portfolio-section dark:text-text-inside-imgs">
-                          Blender</p>
+                          Blender</span>
                       </div>
                     </div>
                     <div class="px-1 md:w-1/3 w-[50%] before-xl:w-[20%]  mt-8 flex ">
                       <div
                         class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out w-full p-6 md:p-8 border flex items-center flex-col justify-center dark:border-border-dark border-section-badge text-center rounded-3xl">
                         <img src="./src/images/icon-html.svg" class=" md:w-24 before-sm:w-20  w-16 h-auto" alt="">
-                        <p
+                        <span
                           class="mt-2 text-base text-center  font-bold lining-nums text-text-portfolio-section dark:text-text-inside-imgs">
-                          HTML5</p>
+                          HTML5</span>
                       </div>
                     </div>
                     <div class="px-1 md:w-1/3 w-[50%] before-xl:w-[20%]  mt-8 flex ">
                       <div
                         class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out w-full p-6 md:p-8 border flex items-center flex-col justify-center dark:border-border-dark border-section-badge text-center rounded-3xl">
                         <img src="./src/images/icon-css.svg" class="md:w-24 before-sm:w-20  w-16 h-auto" alt="">
-                        <p
+                        <span
                           class="mt-2 text-base text-center  font-bold lining-nums text-text-portfolio-section dark:text-text-inside-imgs">
-                          CSS3</p>
+                          CSS3</span>
                       </div>
                     </div>
                     <div class="px-1 md:w-1/3 w-[50%] before-xl:w-[20%]   mt-8 flex ">
                       <div
                         class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out w-full p-6 md:p-8 border flex items-center flex-col justify-center dark:border-border-dark border-section-badge text-center rounded-3xl">
                         <img src="./src/images/icon-notion.svg" class="md:w-24 before-sm:w-20  w-16 h-auto" alt="">
-                        <p
+                        <span
                           class="mt-2 text-base text-center  font-bold lining-nums text-[#22232c] dark:text-text-inside-imgs">
-                          Notion</p>
+                          Notion</span>
                       </div>
                     </div>
                   </div>
@@ -1148,8 +1244,9 @@
 
             <!-- Testimonials -->
             <section>
-              <div class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out  border border-section-badge dark:border-border-dark w-fit px-3 py-1  rounded-2xl mb-4 ">
-                <p class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out">
+              <div
+                class=" fade-up  border border-section-badge dark:border-border-dark w-fit px-3 py-1  rounded-2xl mb-4 fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out">
+                
                   <span class="dark:text-text-dark text-text-light"> <svg xmlns="http://www.w3.org/2000/svg"
                       class="inline" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13" fill="currentColor">
                       <path fill="text-[#cec4cf]" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
@@ -1157,19 +1254,20 @@
                   C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"></path>
                     </svg></span>
                   <span class="dark:text-text-dark font-bold text-[13px] text-text-light">Testimonials</span>
-                </p>
+                
 
 
               </div>
               <!-- client-say-about-me -->
               <div class="mb-8">
-                <h6
+                <h5
                   class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out max-w-[700px] md:text-[38px] text-[34px] leading-[30px] font-bold text-transparent bg-clip-text bg-gradient-to-br from-primary-light to-secondary-light dark:from-primary-dark  dark:to-secondary-dark ">
-                  Clients say about me</h6>
+                  Clients say about me</h5>
               </div>
               <!-- Feedback Container -->
               <div class="relative overflow-hidden    rounded-2xl">
-                <div id="feedbackWrapper" class="flex fade-up opacity-0 translate-y-10 transition-all ease-in-out     duration-700 "></div>
+                <div id="feedbackWrapper"
+                  class="flex transition-transform duration-700 ease-in-out w-[100%]"></div>
               </div>
 
               <div class="flex justify-start gap-5 mt-8 px-5 pb-5">
@@ -1190,10 +1288,10 @@
             </section>
 
             <!-- Contact-us-section start -->
-            <section  id="contact" data-section="" class="before-lg:pt-28 pt-16 pb-10 z-0 ">
+            <section id="contact" data-section="" class="before-lg:pt-28 pt-16 pb-10 z-0 ">
               <div class="">
-                <div class="  mb-4 border border-section-badge dark:border-border-dark w-fit px-4 py-1  rounded-2xl ">
-                  <p class="fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out">
+                <div class="  mb-4 border border-section-badge dark:border-border-dark w-fit px-4 py-1 fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out rounded-2xl ">
+                
                     <span class="dark:text-text-dark text-text-light"> <svg xmlns="http://www.w3.org/2000/svg"
                         class="inline" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13"
                         fill="currentColor">
@@ -1202,7 +1300,7 @@
                   C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"></path>
                       </svg></span>
                     <span class="dark:text-text-dark font-bold text-[13px] text-text-light">Contact</span>
-                  </p>
+                 
                 </div>
                 <div class="mb-12">
                   <h6
@@ -1217,30 +1315,35 @@
 
                       <!-- 1st row -->
                       <div class="flex  flex-col md:flex-row w-full">
-                        <div class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mb-12 md:w-1/2 md:px-[15px]">
+                        <div
+                          class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mb-12 md:w-1/2 md:px-4">
                           <input type="text" name="Name" placeholder="Your Name*"
-                            class="relative  text-xl  w-full  outline-none px-4 py-[14px] font-bold focus:border-secondary-light dark:focus:border-primary-dark dark:border-text-portfolio-section border-b-2 border-section-badge text-text-portfolio-section dark:text-text-dark">
+                            class="relative  text-xl  w-full  outline-none px-1 py-[14px] font-bold focus:border-secondary-light dark:focus:border-primary-dark dark:border-text-portfolio-section border-b-2 border-section-badge text-text-portfolio-section dark:text-text-dark">
                         </div>
-                        <div class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mb-12 md:w-1/2 md:px-[15px]">
+                        <div
+                          class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mb-12 md:w-1/2 md:px-4">
                           <input type="text" name="Company" placeholder="Company Name*"
-                            class="relative  text-xl  w-full  outline-none px-4 py-[14px] focus:border-secondary-light dark:focus:border-primary-dark dark:border-text-portfolio-section border-b-2 border-section-badge font-bold  dark:text-text-dark text-text-portfolio-section">
+                            class="relative  text-xl  w-full  outline-none px-1 py-[14px] focus:border-secondary-light dark:focus:border-primary-dark dark:border-text-portfolio-section border-b-2 border-section-badge font-bold  dark:text-text-dark text-text-portfolio-section">
                         </div>
                       </div>
 
                       <!-- 2nd-row -->
                       <div class="flex   flex-col md:flex-row w-full">
-                        <div class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mb-12 md:w-1/2 md:px-[15px]">
+                        <div
+                          class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mb-12 md:w-1/2 md:px-4">
                           <input type="email" name="Your Email" placeholder="Email Address*"
-                            class="relative focus:border-secondary-light dark:focus:border-primary-dark dark:border-text-portfolio-section   dark:text-text-dark  text-xl  w-full  outline-none px-4 py-[14px] font-bold border-b-2 border-section-badge text-text-portfolio-section">
+                            class="relative focus:border-secondary-light dark:focus:border-primary-dark dark:border-text-portfolio-section   dark:text-text-dark  text-xl  w-full  outline-none px-1 py-[14px] font-bold border-b-2 border-section-badge text-text-portfolio-section">
                         </div>
-                        <div class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mb-12 md:w-1/2 md:px-[15px]">
+                        <div
+                          class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mb-12 md:w-1/2 md:px-4">
                           <input type="number" name="Phone" placeholder="Phone Number*"
-                            class="relative text-xl  w-full dark:text-text-dark  outline-none px-4 py-[14px] font-bold border-b-2 border-section-badge dark:border-text-portfolio-section  text-text-portfolio-section">
+                            class="relative text-xl  w-full dark:text-text-dark  outline-none px-1 py-[14px] font-bold border-b-2 border-section-badge dark:border-text-portfolio-section  text-text-portfolio-section">
                         </div>
                       </div>
-                      <div class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mb-12 w-full">
+                      <div
+                        class=" fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out mb-12 w-full">
                         <textarea name="Message" placeholder="A Few Words*"
-                          class="relative text-xl  w-full  outline-none focus:border-secondary-light dark:focus:border-primary-dark dark:border-text-portfolio-section border-b-2 font-bold  dark:text-text-dark  px-4 py-[14px]  border-section-badge text-[#22232c]"></textarea>
+                          class="relative text-xl  w-full h-[160px] resize-none  outline-none focus:border-secondary-light dark:focus:border-primary-dark dark:border-text-portfolio-section border-b-2 font-bold  dark:text-text-dark  px-1 py-[14px]  border-section-badge text-[#22232c]"></textarea>
                       </div>
                       <button
                         class="text-white w-fit fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out dark:text-black bg-gradient-to-br   dark:from-primary-dark dark:to-secondary-dark    from-primary-light to-secondary-light rounded-2xl  mt-2 gap-1 flex font-bold p-3">
@@ -1255,77 +1358,79 @@
 
 
                 <!-- cards-icon -->
-               <div class="flex flex-wrap justify-start mt-36 md:px-4 w-full  mb-12">
-  
-  <!-- Item -->
-  <div class="md:w-[30%] w-[50%] flex px-2 py-2 ">
-    <div
-      class="relative w-full p-8 fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out  border flex items-center justify-center border-section-badge dark:border-border-dark rounded-2xl transform  hover:scale-105">
-      <i
-        class="ri-dribbble-line text-[60px] text-section-badge dark:text-[#58585e] dark:hover:text-white hover:text-black transition-all duration-500 ease-in-out"></i>
+               <div class="grid grid-wrap grid-cols-2 items-stretch md:grid-cols-3 justify-start mt-36 w-full gap-x-2 gap-y-4 before-xl:grid-cols-5 mb-12">
+
+  <!-- Item 1 -->
+  <div class="flex">
+    <div class="relative w-full group border flex items-center justify-center border-section-badge dark:border-border-dark rounded-[36px] transform fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out hover:scale-105">
+      <i class="ri-dribbble-line text-[60px] py-4 text-section-badge dark:text-[#58585e] transition-all duration-500 ease-in-out group-hover:text-black dark:group-hover:text-white"></i>
     </div>
   </div>
 
-  <!-- Repeat for others -->
-  <div class="md:w-[30%] w-[50%] flex px-2 py-2">
-    <div
-      class="relative w-full p-8   border flex items-center justify-center dark:border-border-dark border-section-badge rounded-2xl transform fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out hover:scale-105">
-      <i
-        class="ri-behance-fill text-[60px] text-section-badge hover:text-black dark:text-[#58585e] dark:hover:text-white transition-all duration-500 ease-in-out"></i>
+  <!-- Item 2 -->
+  <div class="flex">
+    <div class="relative w-full group border flex items-center justify-center dark:border-border-dark border-section-badge rounded-[36px] transform fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out hover:scale-105">
+      <i class="ri-behance-fill text-[60px] py-4 text-section-badge dark:text-[#58585e] transition-all duration-500 ease-in-out group-hover:text-black dark:group-hover:text-white"></i>
     </div>
   </div>
 
-  <div class="md:w-[30%] w-[50%] flex px-2 py-2">
-    <div
-      class="relative w-full p-8  border flex items-center justify-center dark:border-border-dark border-section-badge rounded-2xl transform fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out hover:scale-105">
-      <i
-        class="ri-instagram-line text-[60px] text-section-badge hover:text-black dark:text-[#58585e] dark:hover:text-white transition-all duration-500 ease-in-out"></i>
+  <!-- Item 3 -->
+  <div class="flex">
+    <div class="relative w-full group border flex items-center justify-center dark:border-border-dark border-section-badge rounded-[36px] transform fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out hover:scale-105">
+      <i class="ri-instagram-line py-4 text-[60px] text-section-badge dark:text-[#58585e] transition-all duration-500 ease-in-out group-hover:text-black dark:group-hover:text-white"></i>
     </div>
   </div>
 
-  <div class="md:w-[30%] w-[50%] flex px-2 py-2">
-    <div
-      class="relative w-full p-8  border flex items-center justify-center dark:border-border-dark border-section-badge rounded-2xl transform fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out hover:scale-105">
-      <i
-        class="ri-twitch-line text-[60px] text-section-badge hover:text-black dark:text-[#58585e] dark:hover:text-white transition-all duration-500 ease-in-out"></i>
+  <!-- Item 4 -->
+  <div class="flex">
+    <div class="relative w-full group border flex items-center justify-center dark:border-border-dark border-section-badge rounded-[36px] transform fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out hover:scale-105">
+      <i class="ri-twitch-line text-[60px] py-4 text-section-badge dark:text-[#58585e] transition-all duration-500 ease-in-out group-hover:text-black dark:group-hover:text-white"></i>
     </div>
   </div>
 
-  <div class="md:w-[30%] w-[50%] flex px-2 py-2">
-    <div
-      class="relative w-full p-8 border flex items-center justify-center dark:border-border-dark border-section-badge rounded-2xl transform fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out hover:scale-105">
-      <i
-        class="ri-pinterest-line text-[60px] text-section-badge hover:text-black dark:text-[#58585e] dark:hover:text-white fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out ease-in-out"></i>
+  <!-- Item 5 -->
+  <div class="flex">
+    <div class="relative w-full group border flex items-center justify-center dark:border-border-dark border-section-badge rounded-[36px] transform fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out hover:scale-105">
+      <i class="ri-pinterest-line py-4 text-[60px] text-section-badge dark:text-[#58585e] transition-all duration-500 ease-in-out group-hover:text-black dark:group-hover:text-white"></i>
     </div>
   </div>
+
 </div>
+
 
                 <div class=" mb-12">
                   <p
                     class="max-w-[700px] md:text-[30px] text-[26px] font-bold text-transparent md:leading-[40px] leading-[30px] before-lg:leading-[46px] bg-clip-text bg-gradient-to-br from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out">
                     Want to know more about me, tell me about your project or just to say hello? Drop me a line and I'll
                     get back as soon as possible.
-                  </p> 
+                  </p>
                 </div>
-                <div class="flex pb-[4.3rem] pt-[3.3rem] border-t border-section-badge dark:border-border-dark flex-col md:flex-row">
-                  <div class="flex mb-3 fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out flex-col before-lg:w-1/3 w-full">
-                    <p class="font-bold fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out  lining-nums dark:text-text-dark text-text-portfolio-section">Location
+                <div
+                  class="flex pb-[4.3rem] pt-[3.3rem] border-t border-section-badge dark:border-border-dark flex-col md:flex-row">
+                  <div
+                    class="flex mb-3 fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out flex-col before-lg:w-1/3 w-full">
+                    <p
+                      class="font-bold fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out  lining-nums dark:text-text-dark text-text-portfolio-section">
+                      Location
                     </p>
-                    <p class="font-normal fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-base lining-nums dark:text-text-last text-text-color">
+                    <p
+                      class="font-normal fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out text-base lining-nums dark:text-text-last text-text-color">
                       <a href="/">Odesa, Ukrain</a>
                     </p>
 
                   </div>
                   <div class="flex  mb-3 flex-col before-lg:w-1/3 w-full">
                     <p class="font-bold text-base lining-nums dark:text-text-dark text-text-portfolio-section">Phone</p>
-                    <p class="font-normal text-base fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out lining-nums dark:text-text-last text-text-color">
+                    <p
+                      class="font-normal text-base fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out lining-nums dark:text-text-last text-text-color">
                       <a href="/">+1 212-708-9400</a>
                     </p>
 
                   </div>
                   <div class="flex  mb-3 flex-col before-lg:w-1/3 w-full">
                     <p class="font-bold text-base lining-nums dark:text-text-dark text-text-portfolio-section">Email</p>
-                    <p class="font-normal text-base fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out lining-nums dark:text-text-last text-text-color">
+                    <p
+                      class="font-normal text-base fade-up opacity-0 translate-y-10 transition-all duration-700 ease-in-out lining-nums dark:text-text-last text-text-color">
                       <a href="/">hello@alexwalker.com</a>
                     </p>
 

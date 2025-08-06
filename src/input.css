@@ -351,3 +351,16 @@ html {
 }
 
 
+
+.gradient-icon {
+  --gradient-from: #8f56cc;    /* primary-light */
+  --gradient-to: #5d4ec4;      /* secondary-light */
+}
+
+.dark .gradient-icon {
+  --gradient-from: #e1bac5;    /* primary-dark (example) */
+  --gradient-to: #cec4ef;      /* secondary-dark (example) */
+}
+
+
+

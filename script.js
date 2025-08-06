@@ -184,14 +184,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let currentIndex = 0;
         let autoPlayInterval;
-        const slideDuration = 5000;
+        const slideDuration = 3000;
 
         function initSlider() {
           testimonials.forEach((t) => {
             const slide = document.createElement('div');
-            slide.className = 'flex-shrink-0 w-full  flex flex-col justify-center';
+           slide.className = 'flex-shrink-0 w-full flex flex-col justify-center';
+           slide.style.flexBasis = '100%';  // ensures each slide takes full width
+
             slide.innerHTML = `
-              <div class=" rounded-2xl md:p-8 p-6 border-1 border-section-badge dark:border-border-dark ">
+            <div class=""> 
+              <div class=" rounded-2xl  md:p-8 p-6 border-1 border-section-badge            dark:border-border-dark ">
                 <div class="flex flex-row md:flex-row items-start gap-5 mb-6 ">
                   <img src="${t.img}" alt="${t.name}" class="md:w-[100px] md:h-[100px] w-[50px] h-auto object-cover rounded-2xl " />
                   <div class="flex-1 text-left">
@@ -204,6 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 <p class="text-[#424550] dark:text-[#c7c6d3] text-lg leading-relaxed">${t.text}</p>
                 <div class=" icon-container  transition-all duration-200 ease-in-out overflow-hidden cursor-pointer mt-4"> <p class="text-xl text-[#424550] font-bold">  <a href="/">Project Page</a>   <span class="text-xl text-[#424550] font-bold"> <i class="ri-arrow-right-line icon-svg-horizontal translate-y-0"></i> </span> </p> </div>
+              </div>
               </div>
             `;
             feedbackWrapper.appendChild(slide);
